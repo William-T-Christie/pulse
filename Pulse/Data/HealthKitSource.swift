@@ -242,30 +242,39 @@ final class HealthKitSource {
 
     private func workouts(start: Date, end: Date) async throws -> [WorkoutRecord] {
         let results = try await samples(HKObjectType.workoutType(), start: start, end: end)
-        var out: [WorkoutRecord] = []
-        for case let w as HKWorkout in results {
-            let hr = try await workoutHeartRate(w)
-            var record = WorkoutRecord(
-                id: w.uuid.uuidString,
-                activityType: w.workoutActivityType.displayName,
-                start: w.startDate,
-                end: w.endDate,
-                durationSeconds: w.duration,
-                hrSamples: hr
-            )
-            if let energy = w.statistics(for: quantityType(.activeEnergyBurned))?.sumQuantity() {
-                record.activeEnergy = energy.doubleValue(for: .kilocalorie())
+        let hkWorkouts = results.compactMap { $0 as? HKWorkout }
+        // HR samples fetch is one query per workout; run them concurrently.
+        return try await withThrowingTaskGroup(of: WorkoutRecord.self) { group in
+            for w in hkWorkouts {
+                group.addTask { try await self.workoutRecord(w) }
             }
-            if let distance = w.totalDistance {
-                record.distanceMeters = distance.doubleValue(for: .meter())
-            }
-            if !hr.isEmpty {
-                record.avgHR = hr.map(\.bpm).reduce(0, +) / Double(hr.count)
-                record.maxHR = hr.map(\.bpm).max()
-            }
-            out.append(record)
+            var out: [WorkoutRecord] = []
+            for try await record in group { out.append(record) }
+            return out.sorted { $0.start < $1.start }
         }
-        return out
+    }
+
+    private func workoutRecord(_ w: HKWorkout) async throws -> WorkoutRecord {
+        let hr = try await workoutHeartRate(w)
+        var record = WorkoutRecord(
+            id: w.uuid.uuidString,
+            activityType: w.workoutActivityType.displayName,
+            start: w.startDate,
+            end: w.endDate,
+            durationSeconds: w.duration,
+            hrSamples: hr
+        )
+        if let energy = w.statistics(for: quantityType(.activeEnergyBurned))?.sumQuantity() {
+            record.activeEnergy = energy.doubleValue(for: .kilocalorie())
+        }
+        if let distance = w.totalDistance {
+            record.distanceMeters = distance.doubleValue(for: .meter())
+        }
+        if !hr.isEmpty {
+            record.avgHR = hr.map(\.bpm).reduce(0, +) / Double(hr.count)
+            record.maxHR = hr.map(\.bpm).max()
+        }
+        return record
     }
 
     private func workoutHeartRate(_ workout: HKWorkout) async throws -> [HRSample] {

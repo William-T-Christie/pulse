@@ -243,6 +243,9 @@ struct SleepPanel: View {
                                 .foregroundStyle(Theme.ink3)
                         }
                     }
+                    if let night = card.day.sleep, hasStages(night) {
+                        stageBar(night)
+                    }
                 } else {
                     Text("No sleep recorded last night.")
                         .font(.body(13))
@@ -250,6 +253,54 @@ struct SleepPanel: View {
                 }
             }
         }
+    }
+
+    // MARK: Stages (graduated ink, no color)
+
+    private func hasStages(_ night: SleepNight) -> Bool {
+        let stages = [night.deepSeconds, night.remSeconds, night.coreSeconds]
+        return stages.compactMap { $0 }.filter { $0 > 0 }.count >= 2
+    }
+
+    private func stageBar(_ night: SleepNight) -> some View {
+        let deep = night.deepSeconds ?? 0
+        let rem = night.remSeconds ?? 0
+        let core = night.coreSeconds ?? 0
+        let awake = night.awakeSeconds ?? 0
+        let total = max(deep + rem + core + awake, 1)
+        let stages: [(String, Double, Double)] = [
+            ("Deep", deep, 0.82),
+            ("REM", rem, 0.55),
+            ("Core", core, 0.28),
+            ("Awake", awake, 0.10),
+        ].filter { $0.1 > 0 }
+
+        return VStack(alignment: .leading, spacing: 8) {
+            GeometryReader { geo in
+                HStack(spacing: 2) {
+                    ForEach(stages, id: \.0) { stage in
+                        RoundedRectangle(cornerRadius: 2, style: .continuous)
+                            .fill(Theme.ink.opacity(stage.2))
+                            .frame(width: max(3, (geo.size.width - CGFloat(stages.count - 1) * 2) * stage.1 / total))
+                    }
+                }
+            }
+            .frame(height: 8)
+            HStack(spacing: 12) {
+                ForEach(stages, id: \.0) { stage in
+                    HStack(spacing: 4) {
+                        RoundedRectangle(cornerRadius: 1)
+                            .fill(Theme.ink.opacity(stage.2))
+                            .frame(width: 6, height: 6)
+                        Text("\(stage.0) \(Fmt.hours(stage.1 / 3600))")
+                            .font(.label(10))
+                            .foregroundStyle(Theme.ink3)
+                    }
+                }
+                Spacer()
+            }
+        }
+        .padding(.top, 2)
     }
 }
 
