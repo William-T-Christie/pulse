@@ -1,0 +1,6822 @@
+{
+ "source": "demo",
+ "days": [
+  {
+   "dateKey": "2025-12-21",
+   "restingHR": 58.0,
+   "hrvMs": 56.0,
+   "vo2Max": 47.2,
+   "sleep": {
+    "start": "2025-12-20T23:18:00-07:00",
+    "end": "2025-12-21T07:06:00-07:00",
+    "asleepSeconds": 28080.0,
+    "coreSeconds": 28080.0
+   },
+   "bodyMassLb": 178.4,
+   "activeEnergy": 330.0,
+   "basalEnergy": 1710.0,
+   "distanceMeters": 8368.59,
+   "steps": 11179.0,
+   "flightsClimbed": 4.0,
+   "exerciseMinutes": 18.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2025-12-22",
+   "restingHR": 59.0,
+   "hrvMs": 57.0,
+   "vo2Max": 47.3,
+   "sleep": {
+    "start": "2025-12-21T23:18:00-07:00",
+    "end": "2025-12-22T07:19:00-07:00",
+    "asleepSeconds": 28860.0,
+    "coreSeconds": 28860.0
+   },
+   "activeEnergy": 555.0,
+   "basalEnergy": 1716.0,
+   "distanceMeters": 3701.49,
+   "steps": 6043.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 55.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2025-12-23",
+   "restingHR": 59.0,
+   "hrvMs": 59.0,
+   "vo2Max": 47.3,
+   "sleep": {
+    "start": "2025-12-22T23:18:00-07:00",
+    "end": "2025-12-23T07:30:00-07:00",
+    "asleepSeconds": 29520.0,
+    "coreSeconds": 29520.0
+   },
+   "activeEnergy": 585.0,
+   "basalEnergy": 1722.0,
+   "distanceMeters": 4007.27,
+   "steps": 6632.0,
+   "flightsClimbed": 10.0,
+   "exerciseMinutes": 57.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2025-12-24",
+   "restingHR": 60.0,
+   "hrvMs": 60.0,
+   "vo2Max": 47.4,
+   "sleep": {
+    "start": "2025-12-23T23:18:00-07:00",
+    "end": "2025-12-24T07:38:00-07:00",
+    "asleepSeconds": 30000.0,
+    "coreSeconds": 30000.0
+   },
+   "activeEnergy": 416.0,
+   "basalEnergy": 1727.0,
+   "distanceMeters": 5697.08,
+   "steps": 8132.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 25.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2025-12-25",
+   "restingHR": 61.0,
+   "hrvMs": 61.0,
+   "vo2Max": 47.5,
+   "sleep": {
+    "start": "2025-12-24T23:18:00-07:00",
+    "end": "2025-12-25T07:44:00-07:00",
+    "asleepSeconds": 30360.0,
+    "coreSeconds": 30360.0
+   },
+   "activeEnergy": 615.0,
+   "basalEnergy": 1732.0,
+   "distanceMeters": 4441.79,
+   "steps": 7450.0,
+   "flightsClimbed": 11.0,
+   "exerciseMinutes": 60.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2025-12-26",
+   "activeEnergy": 420.0,
+   "basalEnergy": 1737.0,
+   "distanceMeters": 6001.24,
+   "steps": 8668.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 27.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2025-12-27",
+   "restingHR": 62.0,
+   "hrvMs": 63.0,
+   "vo2Max": 47.6,
+   "sleep": {
+    "start": "2025-12-26T23:18:00-07:00",
+    "end": "2025-12-27T07:42:00-07:00",
+    "asleepSeconds": 30240.0,
+    "coreSeconds": 30240.0
+   },
+   "activeEnergy": 592.0,
+   "basalEnergy": 1742.0,
+   "distanceMeters": 4586.63,
+   "steps": 7650.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 61.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2025-12-28",
+   "restingHR": 62.0,
+   "hrvMs": 63.0,
+   "vo2Max": 47.7,
+   "sleep": {
+    "start": "2025-12-27T23:18:00-07:00",
+    "end": "2025-12-28T07:35:00-07:00",
+    "asleepSeconds": 29820.0,
+    "coreSeconds": 29820.0
+   },
+   "activeEnergy": 374.0,
+   "basalEnergy": 1746.0,
+   "distanceMeters": 5970.67,
+   "steps": 8513.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 26.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2025-12-29",
+   "restingHR": 62.0,
+   "hrvMs": 64.0,
+   "vo2Max": 47.7,
+   "sleep": {
+    "start": "2025-12-28T23:18:00-07:00",
+    "end": "2025-12-29T07:25:00-07:00",
+    "asleepSeconds": 29220.0,
+    "coreSeconds": 29220.0
+   },
+   "activeEnergy": 530.0,
+   "basalEnergy": 1749.0,
+   "distanceMeters": 4379.03,
+   "steps": 7147.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 59.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2025-12-30",
+   "restingHR": 70.0,
+   "hrvMs": 46.0,
+   "vo2Max": 47.8,
+   "sleep": {
+    "start": "2025-12-29T23:18:00-07:00",
+    "end": "2025-12-30T05:31:00-07:00",
+    "asleepSeconds": 22380.0,
+    "coreSeconds": 22380.0
+   },
+   "activeEnergy": 494.0,
+   "basalEnergy": 1751.0,
+   "distanceMeters": 4168.2,
+   "steps": 6692.0,
+   "flightsClimbed": 3.0,
+   "exerciseMinutes": 57.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2025-12-31",
+   "restingHR": 62.0,
+   "hrvMs": 64.0,
+   "vo2Max": 47.9,
+   "sleep": {
+    "start": "2025-12-30T23:18:00-07:00",
+    "end": "2025-12-31T07:00:00-07:00",
+    "asleepSeconds": 27720.0,
+    "coreSeconds": 27720.0
+   },
+   "activeEnergy": 272.0,
+   "basalEnergy": 1753.0,
+   "distanceMeters": 5344.63,
+   "steps": 7165.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 20.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-01-01",
+   "restingHR": 61.0,
+   "hrvMs": 64.0,
+   "vo2Max": 47.9,
+   "sleep": {
+    "start": "2025-12-31T23:18:00-07:00",
+    "end": "2026-01-01T06:48:00-07:00",
+    "asleepSeconds": 27000.0,
+    "coreSeconds": 27000.0
+   },
+   "activeEnergy": 438.0,
+   "basalEnergy": 1755.0,
+   "distanceMeters": 3587.23,
+   "steps": 5521.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 52.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-01-02",
+   "restingHR": 61.0,
+   "hrvMs": 63.0,
+   "vo2Max": 48.0,
+   "sleep": {
+    "start": "2026-01-01T23:18:00-07:00",
+    "end": "2026-01-02T06:38:00-07:00",
+    "asleepSeconds": 26400.0,
+    "coreSeconds": 26400.0
+   },
+   "activeEnergy": 236.0,
+   "basalEnergy": 1755.0,
+   "distanceMeters": 4713.77,
+   "steps": 5944.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 15.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-01-03",
+   "restingHR": 60.0,
+   "hrvMs": 62.0,
+   "vo2Max": 48.0,
+   "sleep": {
+    "start": "2026-01-02T23:18:00-07:00",
+    "end": "2026-01-03T06:31:00-07:00",
+    "asleepSeconds": 25980.0,
+    "coreSeconds": 25980.0
+   },
+   "activeEnergy": 427.0,
+   "basalEnergy": 1755.0,
+   "distanceMeters": 2943.49,
+   "steps": 4329.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 47.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-01-04",
+   "restingHR": 68.0,
+   "hrvMs": 44.0,
+   "vo2Max": 48.1,
+   "sleep": {
+    "start": "2026-01-03T23:18:00-07:00",
+    "end": "2026-01-04T04:45:00-07:00",
+    "asleepSeconds": 19620.0,
+    "coreSeconds": 19620.0
+   },
+   "bodyMassLb": 177.6,
+   "activeEnergy": 252.0,
+   "basalEnergy": 1754.0,
+   "distanceMeters": 4103.83,
+   "steps": 4877.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 11.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-01-05",
+   "restingHR": 59.0,
+   "hrvMs": 60.0,
+   "vo2Max": 48.1,
+   "sleep": {
+    "start": "2026-01-04T23:18:00-07:00",
+    "end": "2026-01-05T06:28:00-07:00",
+    "asleepSeconds": 25800.0,
+    "coreSeconds": 25800.0
+   },
+   "activeEnergy": 468.0,
+   "basalEnergy": 1752.0,
+   "distanceMeters": 2430.11,
+   "steps": 3497.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 44.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-01-06",
+   "restingHR": 58.0,
+   "hrvMs": 59.0,
+   "vo2Max": 48.2,
+   "sleep": {
+    "start": "2026-01-05T23:18:00-07:00",
+    "end": "2026-01-06T06:33:00-07:00",
+    "asleepSeconds": 26100.0,
+    "coreSeconds": 26100.0
+   },
+   "activeEnergy": 501.0,
+   "basalEnergy": 1749.0,
+   "distanceMeters": 2269.18,
+   "steps": 3300.0,
+   "flightsClimbed": 7.0,
+   "exerciseMinutes": 43.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-01-07",
+   "restingHR": 58.0,
+   "hrvMs": 58.0,
+   "vo2Max": 48.2,
+   "sleep": {
+    "start": "2026-01-06T23:18:00-07:00",
+    "end": "2026-01-07T06:41:00-07:00",
+    "asleepSeconds": 26580.0,
+    "coreSeconds": 26580.0
+   },
+   "activeEnergy": 347.0,
+   "basalEnergy": 1746.0,
+   "distanceMeters": 3637.12,
+   "steps": 4307.0,
+   "flightsClimbed": 7.0,
+   "exerciseMinutes": 9.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-01-08",
+   "restingHR": 57.0,
+   "hrvMs": 57.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-01-07T23:18:00-07:00",
+    "end": "2026-01-08T06:53:00-07:00",
+    "asleepSeconds": 27300.0,
+    "coreSeconds": 27300.0
+   },
+   "activeEnergy": 570.0,
+   "basalEnergy": 1742.0,
+   "distanceMeters": 2188.71,
+   "steps": 3404.0,
+   "flightsClimbed": 10.0,
+   "exerciseMinutes": 44.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-01-09",
+   "restingHR": 56.0,
+   "hrvMs": 55.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-01-08T23:18:00-07:00",
+    "end": "2026-01-09T07:05:00-07:00",
+    "asleepSeconds": 28020.0,
+    "coreSeconds": 28020.0
+   },
+   "activeEnergy": 407.0,
+   "basalEnergy": 1738.0,
+   "distanceMeters": 7258.14,
+   "steps": 9447.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 12.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-01-10",
+   "restingHR": 56.0,
+   "hrvMs": 54.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-01-09T23:18:00-07:00",
+    "end": "2026-01-10T07:18:00-07:00",
+    "asleepSeconds": 28800.0,
+    "coreSeconds": 28800.0
+   },
+   "activeEnergy": 612.0,
+   "basalEnergy": 1733.0,
+   "distanceMeters": 2447.81,
+   "steps": 4114.0,
+   "flightsClimbed": 11.0,
+   "exerciseMinutes": 48.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-01-11",
+   "restingHR": 55.0,
+   "hrvMs": 53.0,
+   "vo2Max": 48.4,
+   "sleep": {
+    "start": "2026-01-10T23:18:00-07:00",
+    "end": "2026-01-11T07:29:00-07:00",
+    "asleepSeconds": 29460.0,
+    "coreSeconds": 29460.0
+   },
+   "activeEnergy": 424.0,
+   "basalEnergy": 1728.0,
+   "distanceMeters": 4137.62,
+   "steps": 5671.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 16.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-01-12",
+   "restingHR": 55.0,
+   "hrvMs": 51.0,
+   "vo2Max": 48.4,
+   "sleep": {
+    "start": "2026-01-11T23:18:00-07:00",
+    "end": "2026-01-12T07:38:00-07:00",
+    "asleepSeconds": 30000.0,
+    "coreSeconds": 30000.0
+   },
+   "activeEnergy": 603.0,
+   "basalEnergy": 1723.0,
+   "distanceMeters": 2977.29,
+   "steps": 5210.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 53.0,
+   "standHours": 5.0
+  },
+  {
+   "dateKey": "2026-01-13",
+   "restingHR": 54.0,
+   "hrvMs": 50.0,
+   "vo2Max": 48.4,
+   "sleep": {
+    "start": "2026-01-12T23:18:00-07:00",
+    "end": "2026-01-13T07:44:00-07:00",
+    "asleepSeconds": 30360.0,
+    "coreSeconds": 30360.0
+   },
+   "activeEnergy": 580.0,
+   "basalEnergy": 1717.0,
+   "distanceMeters": 3299.16,
+   "steps": 5794.0,
+   "flightsClimbed": 6.0,
+   "exerciseMinutes": 55.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-01-14",
+   "restingHR": 54.0,
+   "hrvMs": 50.0,
+   "vo2Max": 48.5,
+   "sleep": {
+    "start": "2026-01-13T23:18:00-07:00",
+    "end": "2026-01-14T07:45:00-07:00",
+    "asleepSeconds": 30420.0,
+    "coreSeconds": 30420.0
+   },
+   "activeEnergy": 359.0,
+   "basalEnergy": 1711.0,
+   "distanceMeters": 5069.43,
+   "steps": 7368.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 24.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-01-15",
+   "restingHR": 54.0,
+   "hrvMs": 49.0,
+   "vo2Max": 48.5,
+   "sleep": {
+    "start": "2026-01-14T23:18:00-07:00",
+    "end": "2026-01-15T07:42:00-07:00",
+    "asleepSeconds": 30240.0,
+    "coreSeconds": 30240.0
+   },
+   "activeEnergy": 513.0,
+   "basalEnergy": 1705.0,
+   "distanceMeters": 3926.8,
+   "steps": 6792.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 59.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-01-16",
+   "restingHR": 54.0,
+   "hrvMs": 48.0,
+   "vo2Max": 48.5,
+   "sleep": {
+    "start": "2026-01-15T23:18:00-07:00",
+    "end": "2026-01-16T07:35:00-07:00",
+    "asleepSeconds": 29820.0,
+    "coreSeconds": 29820.0
+   },
+   "activeEnergy": 288.0,
+   "basalEnergy": 1699.0,
+   "distanceMeters": 5632.7,
+   "steps": 8161.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 27.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-01-17",
+   "restingHR": 54.0,
+   "hrvMs": 48.0,
+   "vo2Max": 48.5,
+   "sleep": {
+    "start": "2026-01-16T23:18:00-07:00",
+    "end": "2026-01-17T07:25:00-07:00",
+    "asleepSeconds": 29220.0,
+    "coreSeconds": 29220.0
+   },
+   "activeEnergy": 450.0,
+   "basalEnergy": 1694.0,
+   "distanceMeters": 4391.9,
+   "steps": 7335.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 61.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-01-18",
+   "bodyMassLb": 176.5,
+   "activeEnergy": 241.0,
+   "basalEnergy": 1688.0,
+   "distanceMeters": 5988.37,
+   "steps": 8439.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 27.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-01-19",
+   "restingHR": 55.0,
+   "hrvMs": 48.0,
+   "vo2Max": 48.5,
+   "sleep": {
+    "start": "2026-01-18T23:18:00-07:00",
+    "end": "2026-01-19T07:01:00-07:00",
+    "asleepSeconds": 27780.0,
+    "coreSeconds": 27780.0
+   },
+   "activeEnergy": 425.0,
+   "basalEnergy": 1684.0,
+   "distanceMeters": 4586.63,
+   "steps": 7300.0,
+   "flightsClimbed": 3.0,
+   "exerciseMinutes": 60.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-01-20",
+   "restingHR": 56.0,
+   "hrvMs": 49.0,
+   "vo2Max": 48.5,
+   "sleep": {
+    "start": "2026-01-19T23:18:00-07:00",
+    "end": "2026-01-20T06:48:00-07:00",
+    "asleepSeconds": 27000.0,
+    "coreSeconds": 27000.0
+   },
+   "activeEnergy": 433.0,
+   "basalEnergy": 1679.0,
+   "distanceMeters": 4552.83,
+   "steps": 7065.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 58.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-01-21",
+   "restingHR": 56.0,
+   "hrvMs": 49.0,
+   "vo2Max": 48.5,
+   "sleep": {
+    "start": "2026-01-20T23:18:00-07:00",
+    "end": "2026-01-21T06:38:00-07:00",
+    "asleepSeconds": 26400.0,
+    "coreSeconds": 26400.0
+   },
+   "activeEnergy": 263.0,
+   "basalEnergy": 1675.0,
+   "distanceMeters": 5874.11,
+   "steps": 7729.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 22.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-01-22",
+   "restingHR": 57.0,
+   "hrvMs": 50.0,
+   "vo2Max": 48.5,
+   "sleep": {
+    "start": "2026-01-21T23:18:00-07:00",
+    "end": "2026-01-22T06:31:00-07:00",
+    "asleepSeconds": 25980.0,
+    "coreSeconds": 25980.0
+   },
+   "activeEnergy": 482.0,
+   "basalEnergy": 1672.0,
+   "distanceMeters": 4230.97,
+   "steps": 6246.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 53.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-01-23",
+   "restingHR": 58.0,
+   "hrvMs": 51.0,
+   "vo2Max": 48.5,
+   "sleep": {
+    "start": "2026-01-22T23:18:00-07:00",
+    "end": "2026-01-23T06:27:00-07:00",
+    "asleepSeconds": 25740.0,
+    "coreSeconds": 25740.0
+   },
+   "activeEnergy": 327.0,
+   "basalEnergy": 1669.0,
+   "distanceMeters": 5425.1,
+   "steps": 6777.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 17.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-01-24",
+   "restingHR": 59.0,
+   "hrvMs": 52.0,
+   "vo2Max": 48.5,
+   "sleep": {
+    "start": "2026-01-23T23:18:00-07:00",
+    "end": "2026-01-24T06:28:00-07:00",
+    "asleepSeconds": 25800.0,
+    "coreSeconds": 25800.0
+   },
+   "activeEnergy": 553.0,
+   "basalEnergy": 1667.0,
+   "distanceMeters": 3667.69,
+   "steps": 5218.0,
+   "flightsClimbed": 11.0,
+   "exerciseMinutes": 48.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-01-25",
+   "restingHR": 59.0,
+   "hrvMs": 53.0,
+   "vo2Max": 48.5,
+   "sleep": {
+    "start": "2026-01-24T23:18:00-07:00",
+    "end": "2026-01-25T06:33:00-07:00",
+    "asleepSeconds": 26100.0,
+    "coreSeconds": 26100.0
+   },
+   "activeEnergy": 394.0,
+   "basalEnergy": 1666.0,
+   "distanceMeters": 4794.24,
+   "steps": 5764.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 12.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-01-26",
+   "restingHR": 60.0,
+   "hrvMs": 55.0,
+   "vo2Max": 48.5,
+   "sleep": {
+    "start": "2026-01-25T23:18:00-07:00",
+    "end": "2026-01-26T06:41:00-07:00",
+    "asleepSeconds": 26580.0,
+    "coreSeconds": 26580.0
+   },
+   "activeEnergy": 605.0,
+   "basalEnergy": 1665.0,
+   "distanceMeters": 3023.96,
+   "steps": 4300.0,
+   "flightsClimbed": 10.0,
+   "exerciseMinutes": 44.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-01-27",
+   "restingHR": 61.0,
+   "hrvMs": 56.0,
+   "vo2Max": 48.5,
+   "sleep": {
+    "start": "2026-01-26T23:18:00-07:00",
+    "end": "2026-01-27T06:52:00-07:00",
+    "asleepSeconds": 27240.0,
+    "coreSeconds": 27240.0
+   },
+   "activeEnergy": 615.0,
+   "basalEnergy": 1665.0,
+   "distanceMeters": 2735.88,
+   "steps": 3977.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 43.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-01-28",
+   "restingHR": 61.0,
+   "hrvMs": 57.0,
+   "vo2Max": 48.4,
+   "sleep": {
+    "start": "2026-01-27T23:18:00-07:00",
+    "end": "2026-01-28T07:05:00-07:00",
+    "asleepSeconds": 28020.0,
+    "coreSeconds": 28020.0
+   },
+   "activeEnergy": 421.0,
+   "basalEnergy": 1666.0,
+   "distanceMeters": 7467.36,
+   "steps": 9515.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 9.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-01-29",
+   "restingHR": 62.0,
+   "hrvMs": 59.0,
+   "vo2Max": 48.4,
+   "sleep": {
+    "start": "2026-01-28T23:18:00-07:00",
+    "end": "2026-01-29T07:17:00-07:00",
+    "asleepSeconds": 28740.0,
+    "coreSeconds": 28740.0
+   },
+   "activeEnergy": 594.0,
+   "basalEnergy": 1668.0,
+   "distanceMeters": 2299.75,
+   "steps": 3676.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 43.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-01-30",
+   "restingHR": 70.0,
+   "hrvMs": 42.0,
+   "vo2Max": 48.4,
+   "sleep": {
+    "start": "2026-01-29T23:18:00-07:00",
+    "end": "2026-01-30T05:47:00-07:00",
+    "asleepSeconds": 23340.0,
+    "coreSeconds": 23340.0
+   },
+   "activeEnergy": 376.0,
+   "basalEnergy": 1670.0,
+   "distanceMeters": 3637.12,
+   "steps": 4750.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 11.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-01-31",
+   "restingHR": 62.0,
+   "hrvMs": 61.0,
+   "vo2Max": 48.4,
+   "sleep": {
+    "start": "2026-01-30T23:18:00-07:00",
+    "end": "2026-01-31T07:38:00-07:00",
+    "asleepSeconds": 30000.0,
+    "coreSeconds": 30000.0
+   },
+   "activeEnergy": 532.0,
+   "basalEnergy": 1673.0,
+   "distanceMeters": 2172.61,
+   "steps": 3896.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 46.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-02-01",
+   "restingHR": 62.0,
+   "hrvMs": 62.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-01-31T23:18:00-07:00",
+    "end": "2026-02-01T07:44:00-07:00",
+    "asleepSeconds": 30360.0,
+    "coreSeconds": 30360.0
+   },
+   "bodyMassLb": 175.8,
+   "activeEnergy": 306.0,
+   "basalEnergy": 1677.0,
+   "distanceMeters": 3685.4,
+   "steps": 5208.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 15.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-02-02",
+   "restingHR": 62.0,
+   "hrvMs": 63.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-02-01T23:18:00-07:00",
+    "end": "2026-02-02T07:45:00-07:00",
+    "asleepSeconds": 30420.0,
+    "coreSeconds": 30420.0
+   },
+   "activeEnergy": 464.0,
+   "basalEnergy": 1681.0,
+   "distanceMeters": 2397.92,
+   "steps": 4553.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 51.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-02-03",
+   "restingHR": 61.0,
+   "hrvMs": 63.0,
+   "vo2Max": 48.2,
+   "sleep": {
+    "start": "2026-02-02T23:18:00-07:00",
+    "end": "2026-02-03T07:42:00-07:00",
+    "asleepSeconds": 30240.0,
+    "coreSeconds": 30240.0
+   },
+   "activeEnergy": 439.0,
+   "basalEnergy": 1686.0,
+   "distanceMeters": 2608.75,
+   "steps": 4954.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 54.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-02-04",
+   "restingHR": 61.0,
+   "hrvMs": 64.0,
+   "vo2Max": 48.2,
+   "sleep": {
+    "start": "2026-02-03T23:18:00-07:00",
+    "end": "2026-02-04T07:35:00-07:00",
+    "asleepSeconds": 29820.0,
+    "coreSeconds": 29820.0
+   },
+   "activeEnergy": 237.0,
+   "basalEnergy": 1691.0,
+   "distanceMeters": 4345.23,
+   "steps": 6444.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 22.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-02-05",
+   "restingHR": 61.0,
+   "hrvMs": 64.0,
+   "vo2Max": 48.2,
+   "sleep": {
+    "start": "2026-02-04T23:18:00-07:00",
+    "end": "2026-02-05T07:26:00-07:00",
+    "asleepSeconds": 29280.0,
+    "coreSeconds": 29280.0
+   },
+   "activeEnergy": 427.0,
+   "basalEnergy": 1697.0,
+   "distanceMeters": 3202.59,
+   "steps": 5824.0,
+   "flightsClimbed": 6.0,
+   "exerciseMinutes": 58.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-02-06",
+   "restingHR": 60.0,
+   "hrvMs": 64.0,
+   "vo2Max": 48.1,
+   "sleep": {
+    "start": "2026-02-05T23:18:00-07:00",
+    "end": "2026-02-06T07:14:00-07:00",
+    "asleepSeconds": 28560.0,
+    "coreSeconds": 28560.0
+   },
+   "activeEnergy": 251.0,
+   "basalEnergy": 1702.0,
+   "distanceMeters": 4972.87,
+   "steps": 7235.0,
+   "flightsClimbed": 6.0,
+   "exerciseMinutes": 26.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-02-07",
+   "restingHR": 59.0,
+   "hrvMs": 64.0,
+   "vo2Max": 48.0,
+   "sleep": {
+    "start": "2026-02-06T23:18:00-07:00",
+    "end": "2026-02-07T07:01:00-07:00",
+    "asleepSeconds": 27780.0,
+    "coreSeconds": 27780.0
+   },
+   "activeEnergy": 466.0,
+   "basalEnergy": 1708.0,
+   "distanceMeters": 3846.33,
+   "steps": 6517.0,
+   "flightsClimbed": 10.0,
+   "exerciseMinutes": 61.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-02-08",
+   "restingHR": 58.0,
+   "hrvMs": 63.0,
+   "vo2Max": 48.0,
+   "sleep": {
+    "start": "2026-02-07T23:18:00-07:00",
+    "end": "2026-02-08T06:49:00-07:00",
+    "asleepSeconds": 27060.0,
+    "coreSeconds": 27060.0
+   },
+   "activeEnergy": 308.0,
+   "basalEnergy": 1714.0,
+   "distanceMeters": 5568.33,
+   "steps": 7761.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 27.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-02-09",
+   "restingHR": 58.0,
+   "hrvMs": 62.0,
+   "vo2Max": 47.9,
+   "sleep": {
+    "start": "2026-02-08T23:18:00-07:00",
+    "end": "2026-02-09T06:38:00-07:00",
+    "asleepSeconds": 26400.0,
+    "coreSeconds": 26400.0
+   },
+   "activeEnergy": 534.0,
+   "basalEnergy": 1720.0,
+   "distanceMeters": 4345.23,
+   "steps": 6839.0,
+   "flightsClimbed": 11.0,
+   "exerciseMinutes": 60.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-02-10",
+   "activeEnergy": 378.0,
+   "basalEnergy": 1725.0,
+   "distanceMeters": 5954.57,
+   "steps": 7889.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 25.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-02-11",
+   "restingHR": 56.0,
+   "hrvMs": 60.0,
+   "vo2Max": 47.8,
+   "sleep": {
+    "start": "2026-02-10T23:18:00-07:00",
+    "end": "2026-02-11T06:27:00-07:00",
+    "asleepSeconds": 25740.0,
+    "coreSeconds": 25740.0
+   },
+   "activeEnergy": 405.0,
+   "basalEnergy": 1731.0,
+   "distanceMeters": 6035.04,
+   "steps": 7803.0,
+   "flightsClimbed": 7.0,
+   "exerciseMinutes": 23.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-02-12",
+   "restingHR": 56.0,
+   "hrvMs": 59.0,
+   "vo2Max": 47.8,
+   "sleep": {
+    "start": "2026-02-11T23:18:00-07:00",
+    "end": "2026-02-12T06:28:00-07:00",
+    "asleepSeconds": 25800.0,
+    "coreSeconds": 25800.0
+   },
+   "activeEnergy": 611.0,
+   "basalEnergy": 1736.0,
+   "distanceMeters": 4570.54,
+   "steps": 6576.0,
+   "flightsClimbed": 7.0,
+   "exerciseMinutes": 55.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-02-13",
+   "restingHR": 55.0,
+   "hrvMs": 58.0,
+   "vo2Max": 47.7,
+   "sleep": {
+    "start": "2026-02-12T23:18:00-07:00",
+    "end": "2026-02-13T06:32:00-07:00",
+    "asleepSeconds": 26040.0,
+    "coreSeconds": 26040.0
+   },
+   "activeEnergy": 425.0,
+   "basalEnergy": 1740.0,
+   "distanceMeters": 5920.78,
+   "steps": 7354.0,
+   "flightsClimbed": 3.0,
+   "exerciseMinutes": 18.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-02-14",
+   "restingHR": 55.0,
+   "hrvMs": 57.0,
+   "vo2Max": 47.6,
+   "sleep": {
+    "start": "2026-02-13T23:18:00-07:00",
+    "end": "2026-02-14T06:41:00-07:00",
+    "asleepSeconds": 26580.0,
+    "coreSeconds": 26580.0
+   },
+   "activeEnergy": 604.0,
+   "basalEnergy": 1744.0,
+   "distanceMeters": 4298.56,
+   "steps": 6007.0,
+   "flightsClimbed": 3.0,
+   "exerciseMinutes": 50.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-02-15",
+   "restingHR": 54.0,
+   "hrvMs": 55.0,
+   "vo2Max": 47.6,
+   "sleep": {
+    "start": "2026-02-14T23:18:00-07:00",
+    "end": "2026-02-15T06:52:00-07:00",
+    "asleepSeconds": 27240.0,
+    "coreSeconds": 27240.0
+   },
+   "bodyMassLb": 174.6,
+   "activeEnergy": 392.0,
+   "basalEnergy": 1748.0,
+   "distanceMeters": 5505.57,
+   "steps": 6705.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 13.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-02-16",
+   "restingHR": 54.0,
+   "hrvMs": 54.0,
+   "vo2Max": 47.5,
+   "sleep": {
+    "start": "2026-02-15T23:18:00-07:00",
+    "end": "2026-02-16T07:04:00-07:00",
+    "asleepSeconds": 27960.0,
+    "coreSeconds": 27960.0
+   },
+   "activeEnergy": 551.0,
+   "basalEnergy": 1751.0,
+   "distanceMeters": 7288.72,
+   "steps": 10039.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 45.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-02-17",
+   "restingHR": 54.0,
+   "hrvMs": 53.0,
+   "vo2Max": 47.4,
+   "sleep": {
+    "start": "2026-02-16T23:18:00-07:00",
+    "end": "2026-02-17T07:17:00-07:00",
+    "asleepSeconds": 28740.0,
+    "coreSeconds": 28740.0
+   },
+   "activeEnergy": 515.0,
+   "basalEnergy": 1753.0,
+   "distanceMeters": 3444.0,
+   "steps": 5004.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 44.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-02-18",
+   "restingHR": 54.0,
+   "hrvMs": 51.0,
+   "vo2Max": 47.3,
+   "sleep": {
+    "start": "2026-02-17T23:18:00-07:00",
+    "end": "2026-02-18T07:29:00-07:00",
+    "asleepSeconds": 29460.0,
+    "coreSeconds": 29460.0
+   },
+   "activeEnergy": 290.0,
+   "basalEnergy": 1754.0,
+   "distanceMeters": 4552.83,
+   "steps": 5739.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 9.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-02-19",
+   "restingHR": 54.0,
+   "hrvMs": 50.0,
+   "vo2Max": 47.3,
+   "sleep": {
+    "start": "2026-02-18T23:18:00-07:00",
+    "end": "2026-02-19T07:38:00-07:00",
+    "asleepSeconds": 30000.0,
+    "coreSeconds": 30000.0
+   },
+   "activeEnergy": 451.0,
+   "basalEnergy": 1755.0,
+   "distanceMeters": 2816.35,
+   "steps": 4503.0,
+   "flightsClimbed": 3.0,
+   "exerciseMinutes": 43.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-02-20",
+   "restingHR": 63.0,
+   "hrvMs": 32.0,
+   "vo2Max": 47.2,
+   "sleep": {
+    "start": "2026-02-19T23:18:00-07:00",
+    "end": "2026-02-20T06:01:00-07:00",
+    "asleepSeconds": 24180.0,
+    "coreSeconds": 24180.0
+   },
+   "activeEnergy": 242.0,
+   "basalEnergy": 1755.0,
+   "distanceMeters": 3989.56,
+   "steps": 5371.0,
+   "flightsClimbed": 3.0,
+   "exerciseMinutes": 10.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-02-21",
+   "restingHR": 55.0,
+   "hrvMs": 49.0,
+   "vo2Max": 47.1,
+   "sleep": {
+    "start": "2026-02-20T23:18:00-07:00",
+    "end": "2026-02-21T07:45:00-07:00",
+    "asleepSeconds": 30420.0,
+    "coreSeconds": 30420.0
+   },
+   "activeEnergy": 425.0,
+   "basalEnergy": 1754.0,
+   "distanceMeters": 2349.64,
+   "steps": 4274.0,
+   "flightsClimbed": 7.0,
+   "exerciseMinutes": 45.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-02-22",
+   "restingHR": 56.0,
+   "hrvMs": 48.0,
+   "vo2Max": 47.1,
+   "sleep": {
+    "start": "2026-02-21T23:18:00-07:00",
+    "end": "2026-02-22T07:43:00-07:00",
+    "asleepSeconds": 30300.0,
+    "coreSeconds": 30300.0
+   },
+   "activeEnergy": 92.0,
+   "basalEnergy": 1752.0,
+   "distanceMeters": 609.94,
+   "steps": 1226.0,
+   "flightsClimbed": 7.0,
+   "exerciseMinutes": 13.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-02-23",
+   "restingHR": 56.0,
+   "hrvMs": 48.0,
+   "vo2Max": 47.0,
+   "sleep": {
+    "start": "2026-02-22T23:18:00-07:00",
+    "end": "2026-02-23T07:36:00-07:00",
+    "asleepSeconds": 29880.0,
+    "coreSeconds": 29880.0
+   },
+   "activeEnergy": 451.0,
+   "basalEnergy": 1750.0,
+   "distanceMeters": 2172.61,
+   "steps": 4346.0,
+   "flightsClimbed": 10.0,
+   "exerciseMinutes": 49.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-02-24",
+   "restingHR": 57.0,
+   "hrvMs": 48.0,
+   "vo2Max": 46.9,
+   "sleep": {
+    "start": "2026-02-23T23:18:00-07:00",
+    "end": "2026-02-24T07:26:00-07:00",
+    "asleepSeconds": 29280.0,
+    "coreSeconds": 29280.0
+   },
+   "activeEnergy": 480.0,
+   "basalEnergy": 1747.0,
+   "distanceMeters": 2219.29,
+   "steps": 4493.0,
+   "flightsClimbed": 11.0,
+   "exerciseMinutes": 52.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-02-25",
+   "restingHR": 58.0,
+   "hrvMs": 48.0,
+   "vo2Max": 46.8,
+   "sleep": {
+    "start": "2026-02-24T23:18:00-07:00",
+    "end": "2026-02-25T07:14:00-07:00",
+    "asleepSeconds": 28560.0,
+    "coreSeconds": 28560.0
+   },
+   "activeEnergy": 325.0,
+   "basalEnergy": 1744.0,
+   "distanceMeters": 3798.05,
+   "steps": 5723.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 21.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-02-26",
+   "restingHR": 59.0,
+   "hrvMs": 49.0,
+   "vo2Max": 46.8,
+   "sleep": {
+    "start": "2026-02-25T23:18:00-07:00",
+    "end": "2026-02-26T07:01:00-07:00",
+    "asleepSeconds": 27780.0,
+    "coreSeconds": 27780.0
+   },
+   "activeEnergy": 551.0,
+   "basalEnergy": 1739.0,
+   "distanceMeters": 2541.15,
+   "steps": 4908.0,
+   "flightsClimbed": 10.0,
+   "exerciseMinutes": 57.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-02-27",
+   "restingHR": 59.0,
+   "hrvMs": 49.0,
+   "vo2Max": 46.7,
+   "sleep": {
+    "start": "2026-02-26T23:18:00-07:00",
+    "end": "2026-02-27T06:49:00-07:00",
+    "asleepSeconds": 27060.0,
+    "coreSeconds": 27060.0
+   },
+   "activeEnergy": 392.0,
+   "basalEnergy": 1735.0,
+   "distanceMeters": 4264.76,
+   "steps": 6211.0,
+   "flightsClimbed": 6.0,
+   "exerciseMinutes": 25.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-02-28",
+   "restingHR": 60.0,
+   "hrvMs": 50.0,
+   "vo2Max": 46.6,
+   "sleep": {
+    "start": "2026-02-27T23:18:00-07:00",
+    "end": "2026-02-28T06:38:00-07:00",
+    "asleepSeconds": 26400.0,
+    "coreSeconds": 26400.0
+   },
+   "activeEnergy": 604.0,
+   "basalEnergy": 1730.0,
+   "distanceMeters": 3122.13,
+   "steps": 5439.0,
+   "flightsClimbed": 6.0,
+   "exerciseMinutes": 60.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-03-01",
+   "restingHR": 61.0,
+   "hrvMs": 51.0,
+   "vo2Max": 46.6,
+   "sleep": {
+    "start": "2026-02-28T23:18:00-07:00",
+    "end": "2026-03-01T06:31:00-07:00",
+    "asleepSeconds": 25980.0,
+    "coreSeconds": 25980.0
+   },
+   "bodyMassLb": 174.1,
+   "activeEnergy": 424.0,
+   "basalEnergy": 1724.0,
+   "distanceMeters": 4892.41,
+   "steps": 6723.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 27.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-03-02",
+   "restingHR": 69.0,
+   "hrvMs": 34.0,
+   "vo2Max": 46.5,
+   "sleep": {
+    "start": "2026-03-01T23:18:00-07:00",
+    "end": "2026-03-02T04:46:00-07:00",
+    "asleepSeconds": 19680.0,
+    "coreSeconds": 19680.0
+   },
+   "activeEnergy": 611.0,
+   "basalEnergy": 1719.0,
+   "distanceMeters": 3765.86,
+   "steps": 5918.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 61.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-03-03",
+   "restingHR": 62.0,
+   "hrvMs": 53.0,
+   "vo2Max": 46.4,
+   "sleep": {
+    "start": "2026-03-02T23:18:00-07:00",
+    "end": "2026-03-03T06:28:00-07:00",
+    "asleepSeconds": 25800.0,
+    "coreSeconds": 25800.0
+   },
+   "activeEnergy": 595.0,
+   "basalEnergy": 1713.0,
+   "distanceMeters": 4057.16,
+   "steps": 6108.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 60.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-03-04",
+   "restingHR": 62.0,
+   "hrvMs": 55.0,
+   "vo2Max": 46.4,
+   "sleep": {
+    "start": "2026-03-03T23:18:00-07:00",
+    "end": "2026-03-04T06:32:00-07:00",
+    "asleepSeconds": 26040.0,
+    "coreSeconds": 26040.0
+   },
+   "activeEnergy": 378.0,
+   "basalEnergy": 1707.0,
+   "distanceMeters": 5746.97,
+   "steps": 7288.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 25.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-03-05",
+   "activeEnergy": 535.0,
+   "basalEnergy": 1701.0,
+   "distanceMeters": 4472.37,
+   "steps": 6350.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 57.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-03-06",
+   "restingHR": 62.0,
+   "hrvMs": 57.0,
+   "vo2Max": 46.2,
+   "sleep": {
+    "start": "2026-03-05T23:18:00-07:00",
+    "end": "2026-03-06T06:52:00-07:00",
+    "asleepSeconds": 27240.0,
+    "coreSeconds": 27240.0
+   },
+   "activeEnergy": 309.0,
+   "basalEnergy": 1696.0,
+   "distanceMeters": 6018.95,
+   "steps": 7421.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 20.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-03-07",
+   "restingHR": 62.0,
+   "hrvMs": 59.0,
+   "vo2Max": 46.2,
+   "sleep": {
+    "start": "2026-03-06T23:18:00-07:00",
+    "end": "2026-03-07T07:04:00-07:00",
+    "asleepSeconds": 27960.0,
+    "coreSeconds": 27960.0
+   },
+   "activeEnergy": 466.0,
+   "basalEnergy": 1690.0,
+   "distanceMeters": 8127.19,
+   "steps": 11108.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 52.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-03-08",
+   "restingHR": 62.0,
+   "hrvMs": 60.0,
+   "vo2Max": 46.1,
+   "sleep": {
+    "start": "2026-03-07T23:18:00-07:00",
+    "end": "2026-03-08T07:17:00-07:00",
+    "asleepSeconds": 28740.0,
+    "coreSeconds": 28740.0
+   },
+   "activeEnergy": 251.0,
+   "basalEnergy": 1685.0,
+   "distanceMeters": 5954.57,
+   "steps": 7336.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 15.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-03-09",
+   "restingHR": 61.0,
+   "hrvMs": 61.0,
+   "vo2Max": 46.1,
+   "sleep": {
+    "start": "2026-03-08T23:18:00-07:00",
+    "end": "2026-03-09T07:28:00-07:00",
+    "asleepSeconds": 29400.0,
+    "coreSeconds": 29400.0
+   },
+   "activeEnergy": 427.0,
+   "basalEnergy": 1680.0,
+   "distanceMeters": 4345.23,
+   "steps": 6176.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 47.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-03-10",
+   "restingHR": 61.0,
+   "hrvMs": 62.0,
+   "vo2Max": 46.0,
+   "sleep": {
+    "start": "2026-03-09T23:18:00-07:00",
+    "end": "2026-03-10T07:37:00-07:00",
+    "asleepSeconds": 29940.0,
+    "coreSeconds": 29940.0
+   },
+   "activeEnergy": 426.0,
+   "basalEnergy": 1676.0,
+   "distanceMeters": 4119.92,
+   "steps": 6014.0,
+   "flightsClimbed": 10.0,
+   "exerciseMinutes": 45.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-03-11",
+   "restingHR": 60.0,
+   "hrvMs": 63.0,
+   "vo2Max": 46.0,
+   "sleep": {
+    "start": "2026-03-10T23:18:00-07:00",
+    "end": "2026-03-11T07:43:00-07:00",
+    "asleepSeconds": 30300.0,
+    "coreSeconds": 30300.0
+   },
+   "activeEnergy": 249.0,
+   "basalEnergy": 1673.0,
+   "distanceMeters": 5294.74,
+   "steps": 6861.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 10.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-03-12",
+   "restingHR": 59.0,
+   "hrvMs": 63.0,
+   "vo2Max": 45.9,
+   "sleep": {
+    "start": "2026-03-11T23:18:00-07:00",
+    "end": "2026-03-12T07:45:00-07:00",
+    "asleepSeconds": 30420.0,
+    "coreSeconds": 30420.0
+   },
+   "activeEnergy": 464.0,
+   "basalEnergy": 1670.0,
+   "distanceMeters": 3524.46,
+   "steps": 5594.0,
+   "flightsClimbed": 11.0,
+   "exerciseMinutes": 43.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-03-13",
+   "restingHR": 59.0,
+   "hrvMs": 64.0,
+   "vo2Max": 45.9,
+   "sleep": {
+    "start": "2026-03-12T23:18:00-07:00",
+    "end": "2026-03-13T07:43:00-07:00",
+    "asleepSeconds": 30300.0,
+    "coreSeconds": 30300.0
+   },
+   "activeEnergy": 306.0,
+   "basalEnergy": 1668.0,
+   "distanceMeters": 4651.0,
+   "steps": 6397.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 9.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-03-14",
+   "restingHR": 58.0,
+   "hrvMs": 64.0,
+   "vo2Max": 45.8,
+   "sleep": {
+    "start": "2026-03-13T23:18:00-07:00",
+    "end": "2026-03-14T07:36:00-07:00",
+    "asleepSeconds": 29880.0,
+    "coreSeconds": 29880.0
+   },
+   "activeEnergy": 532.0,
+   "basalEnergy": 1666.0,
+   "distanceMeters": 2880.73,
+   "steps": 5114.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 44.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-03-15",
+   "restingHR": 57.0,
+   "hrvMs": 64.0,
+   "vo2Max": 45.8,
+   "sleep": {
+    "start": "2026-03-14T23:18:00-07:00",
+    "end": "2026-03-15T07:26:00-07:00",
+    "asleepSeconds": 29280.0,
+    "coreSeconds": 29280.0
+   },
+   "bodyMassLb": 172.8,
+   "activeEnergy": 376.0,
+   "basalEnergy": 1665.0,
+   "distanceMeters": 4057.16,
+   "steps": 5929.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 12.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-03-16",
+   "restingHR": 56.0,
+   "hrvMs": 64.0,
+   "vo2Max": 45.8,
+   "sleep": {
+    "start": "2026-03-15T23:18:00-07:00",
+    "end": "2026-03-16T07:14:00-07:00",
+    "asleepSeconds": 28560.0,
+    "coreSeconds": 28560.0
+   },
+   "activeEnergy": 593.0,
+   "basalEnergy": 1665.0,
+   "distanceMeters": 2397.92,
+   "steps": 4713.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 48.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-03-17",
+   "restingHR": 56.0,
+   "hrvMs": 63.0,
+   "vo2Max": 45.7,
+   "sleep": {
+    "start": "2026-03-16T23:18:00-07:00",
+    "end": "2026-03-17T07:02:00-07:00",
+    "asleepSeconds": 27840.0,
+    "coreSeconds": 27840.0
+   },
+   "activeEnergy": 611.0,
+   "basalEnergy": 1666.0,
+   "distanceMeters": 2236.99,
+   "steps": 4538.0,
+   "flightsClimbed": 3.0,
+   "exerciseMinutes": 50.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-03-18",
+   "restingHR": 55.0,
+   "hrvMs": 62.0,
+   "vo2Max": 45.7,
+   "sleep": {
+    "start": "2026-03-17T23:18:00-07:00",
+    "end": "2026-03-18T06:50:00-07:00",
+    "asleepSeconds": 27120.0,
+    "coreSeconds": 27120.0
+   },
+   "activeEnergy": 425.0,
+   "basalEnergy": 1667.0,
+   "distanceMeters": 3621.02,
+   "steps": 5465.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 19.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-03-19",
+   "restingHR": 55.0,
+   "hrvMs": 61.0,
+   "vo2Max": 45.7,
+   "sleep": {
+    "start": "2026-03-18T23:18:00-07:00",
+    "end": "2026-03-19T06:39:00-07:00",
+    "asleepSeconds": 26460.0,
+    "coreSeconds": 26460.0
+   },
+   "activeEnergy": 605.0,
+   "basalEnergy": 1669.0,
+   "distanceMeters": 2188.71,
+   "steps": 4368.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 55.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-03-20",
+   "restingHR": 54.0,
+   "hrvMs": 60.0,
+   "vo2Max": 45.7,
+   "sleep": {
+    "start": "2026-03-19T23:18:00-07:00",
+    "end": "2026-03-20T06:31:00-07:00",
+    "asleepSeconds": 25980.0,
+    "coreSeconds": 25980.0
+   },
+   "activeEnergy": 394.0,
+   "basalEnergy": 1672.0,
+   "distanceMeters": 3748.16,
+   "steps": 5421.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 24.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-03-21",
+   "restingHR": 54.0,
+   "hrvMs": 59.0,
+   "vo2Max": 45.7,
+   "sleep": {
+    "start": "2026-03-20T23:18:00-07:00",
+    "end": "2026-03-21T06:28:00-07:00",
+    "asleepSeconds": 25800.0,
+    "coreSeconds": 25800.0
+   },
+   "activeEnergy": 553.0,
+   "basalEnergy": 1676.0,
+   "distanceMeters": 2494.48,
+   "steps": 4471.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 59.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-03-22",
+   "restingHR": 54.0,
+   "hrvMs": 58.0,
+   "vo2Max": 45.6,
+   "sleep": {
+    "start": "2026-03-21T23:18:00-07:00",
+    "end": "2026-03-22T06:28:00-07:00",
+    "asleepSeconds": 25800.0,
+    "coreSeconds": 25800.0
+   },
+   "activeEnergy": 328.0,
+   "basalEnergy": 1680.0,
+   "distanceMeters": 4184.29,
+   "steps": 5632.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 27.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-03-23",
+   "restingHR": 54.0,
+   "hrvMs": 57.0,
+   "vo2Max": 45.6,
+   "sleep": {
+    "start": "2026-03-22T23:18:00-07:00",
+    "end": "2026-03-23T06:32:00-07:00",
+    "asleepSeconds": 26040.0,
+    "coreSeconds": 26040.0
+   },
+   "activeEnergy": 293.0,
+   "basalEnergy": 1684.0,
+   "distanceMeters": 4472.37,
+   "steps": 5818.0,
+   "flightsClimbed": 4.0,
+   "exerciseMinutes": 27.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-03-24",
+   "restingHR": 54.0,
+   "hrvMs": 55.0,
+   "vo2Max": 45.6,
+   "sleep": {
+    "start": "2026-03-23T23:18:00-07:00",
+    "end": "2026-03-24T06:40:00-07:00",
+    "asleepSeconds": 26520.0,
+    "coreSeconds": 26520.0
+   },
+   "activeEnergy": 453.0,
+   "basalEnergy": 1689.0,
+   "distanceMeters": 3345.83,
+   "steps": 5029.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 61.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-03-25",
+   "restingHR": 55.0,
+   "hrvMs": 54.0,
+   "vo2Max": 45.6,
+   "sleep": {
+    "start": "2026-03-24T23:18:00-07:00",
+    "end": "2026-03-25T06:51:00-07:00",
+    "asleepSeconds": 27180.0,
+    "coreSeconds": 27180.0
+   },
+   "activeEnergy": 243.0,
+   "basalEnergy": 1695.0,
+   "distanceMeters": 5116.1,
+   "steps": 6342.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 26.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-03-26",
+   "restingHR": 55.0,
+   "hrvMs": 53.0,
+   "vo2Max": 45.6,
+   "sleep": {
+    "start": "2026-03-25T23:18:00-07:00",
+    "end": "2026-03-26T07:04:00-07:00",
+    "asleepSeconds": 27960.0,
+    "coreSeconds": 27960.0
+   },
+   "activeEnergy": 425.0,
+   "basalEnergy": 1700.0,
+   "distanceMeters": 7517.25,
+   "steps": 10341.0,
+   "flightsClimbed": 11.0,
+   "exerciseMinutes": 58.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-03-27",
+   "restingHR": 56.0,
+   "hrvMs": 51.0,
+   "vo2Max": 45.6,
+   "sleep": {
+    "start": "2026-03-26T23:18:00-07:00",
+    "end": "2026-03-27T07:16:00-07:00",
+    "asleepSeconds": 28680.0,
+    "coreSeconds": 28680.0
+   },
+   "activeEnergy": 241.0,
+   "basalEnergy": 1706.0,
+   "distanceMeters": 5679.37,
+   "steps": 6942.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 22.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-03-28",
+   "activeEnergy": 449.0,
+   "basalEnergy": 1712.0,
+   "distanceMeters": 4425.7,
+   "steps": 6179.0,
+   "flightsClimbed": 10.0,
+   "exerciseMinutes": 53.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-03-29",
+   "restingHR": 57.0,
+   "hrvMs": 49.0,
+   "vo2Max": 45.6,
+   "sleep": {
+    "start": "2026-03-28T23:18:00-07:00",
+    "end": "2026-03-29T07:37:00-07:00",
+    "asleepSeconds": 29940.0,
+    "coreSeconds": 29940.0
+   },
+   "bodyMassLb": 172.3,
+   "activeEnergy": 288.0,
+   "basalEnergy": 1718.0,
+   "distanceMeters": 6001.24,
+   "steps": 7460.0,
+   "flightsClimbed": 7.0,
+   "exerciseMinutes": 17.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-03-30",
+   "restingHR": 58.0,
+   "hrvMs": 49.0,
+   "vo2Max": 45.6,
+   "sleep": {
+    "start": "2026-03-29T23:18:00-07:00",
+    "end": "2026-03-30T07:43:00-07:00",
+    "asleepSeconds": 30300.0,
+    "coreSeconds": 30300.0
+   },
+   "activeEnergy": 512.0,
+   "basalEnergy": 1723.0,
+   "distanceMeters": 4586.63,
+   "steps": 6596.0,
+   "flightsClimbed": 7.0,
+   "exerciseMinutes": 48.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-03-31",
+   "restingHR": 59.0,
+   "hrvMs": 48.0,
+   "vo2Max": 45.7,
+   "sleep": {
+    "start": "2026-03-30T23:18:00-07:00",
+    "end": "2026-03-31T07:45:00-07:00",
+    "asleepSeconds": 30420.0,
+    "coreSeconds": 30420.0
+   },
+   "activeEnergy": 548.0,
+   "basalEnergy": 1729.0,
+   "distanceMeters": 4539.96,
+   "steps": 6700.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 46.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-04-01",
+   "restingHR": 59.0,
+   "hrvMs": 48.0,
+   "vo2Max": 45.7,
+   "sleep": {
+    "start": "2026-03-31T23:18:00-07:00",
+    "end": "2026-04-01T07:43:00-07:00",
+    "asleepSeconds": 30300.0,
+    "coreSeconds": 30300.0
+   },
+   "activeEnergy": 390.0,
+   "basalEnergy": 1734.0,
+   "distanceMeters": 5840.31,
+   "steps": 7736.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 10.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-04-02",
+   "restingHR": 68.0,
+   "hrvMs": 30.0,
+   "vo2Max": 45.7,
+   "sleep": {
+    "start": "2026-04-01T23:18:00-07:00",
+    "end": "2026-04-02T05:55:00-07:00",
+    "asleepSeconds": 23820.0,
+    "coreSeconds": 23820.0
+   },
+   "activeEnergy": 603.0,
+   "basalEnergy": 1739.0,
+   "distanceMeters": 4184.29,
+   "steps": 6621.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 43.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-04-03",
+   "restingHR": 61.0,
+   "hrvMs": 48.0,
+   "vo2Max": 45.7,
+   "sleep": {
+    "start": "2026-04-02T23:18:00-07:00",
+    "end": "2026-04-03T07:27:00-07:00",
+    "asleepSeconds": 29340.0,
+    "coreSeconds": 29340.0
+   },
+   "activeEnergy": 424.0,
+   "basalEnergy": 1743.0,
+   "distanceMeters": 5375.21,
+   "steps": 7500.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 9.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-04-04",
+   "restingHR": 61.0,
+   "hrvMs": 49.0,
+   "vo2Max": 45.8,
+   "sleep": {
+    "start": "2026-04-03T23:18:00-07:00",
+    "end": "2026-04-04T07:15:00-07:00",
+    "asleepSeconds": 28620.0,
+    "coreSeconds": 28620.0
+   },
+   "activeEnergy": 612.0,
+   "basalEnergy": 1747.0,
+   "distanceMeters": 3604.93,
+   "steps": 6193.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 43.0,
+   "standHours": 5.0
+  },
+  {
+   "dateKey": "2026-04-05",
+   "restingHR": 62.0,
+   "hrvMs": 49.0,
+   "vo2Max": 45.8,
+   "sleep": {
+    "start": "2026-04-04T23:18:00-07:00",
+    "end": "2026-04-05T07:02:00-07:00",
+    "asleepSeconds": 27840.0,
+    "coreSeconds": 27840.0
+   },
+   "activeEnergy": 407.0,
+   "basalEnergy": 1750.0,
+   "distanceMeters": 4731.47,
+   "steps": 6910.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 11.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-04-06",
+   "restingHR": 62.0,
+   "hrvMs": 50.0,
+   "vo2Max": 45.8,
+   "sleep": {
+    "start": "2026-04-05T23:18:00-07:00",
+    "end": "2026-04-06T06:50:00-07:00",
+    "asleepSeconds": 27120.0,
+    "coreSeconds": 27120.0
+   },
+   "activeEnergy": 571.0,
+   "basalEnergy": 1752.0,
+   "distanceMeters": 2977.29,
+   "steps": 5521.0,
+   "flightsClimbed": 4.0,
+   "exerciseMinutes": 46.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-04-07",
+   "restingHR": 62.0,
+   "hrvMs": 51.0,
+   "vo2Max": 45.9,
+   "sleep": {
+    "start": "2026-04-06T23:18:00-07:00",
+    "end": "2026-04-07T06:40:00-07:00",
+    "asleepSeconds": 26520.0,
+    "coreSeconds": 26520.0
+   },
+   "activeEnergy": 537.0,
+   "basalEnergy": 1754.0,
+   "distanceMeters": 2689.21,
+   "steps": 5129.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 49.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-04-08",
+   "restingHR": 70.0,
+   "hrvMs": 34.0,
+   "vo2Max": 45.9,
+   "sleep": {
+    "start": "2026-04-07T23:18:00-07:00",
+    "end": "2026-04-08T04:50:00-07:00",
+    "asleepSeconds": 19920.0,
+    "coreSeconds": 19920.0
+   },
+   "activeEnergy": 311.0,
+   "basalEnergy": 1755.0,
+   "distanceMeters": 3896.22,
+   "steps": 5776.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 17.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-04-09",
+   "restingHR": 62.0,
+   "hrvMs": 53.0,
+   "vo2Max": 45.9,
+   "sleep": {
+    "start": "2026-04-08T23:18:00-07:00",
+    "end": "2026-04-09T06:28:00-07:00",
+    "asleepSeconds": 25800.0,
+    "coreSeconds": 25800.0
+   },
+   "activeEnergy": 468.0,
+   "basalEnergy": 1755.0,
+   "distanceMeters": 2269.18,
+   "steps": 4383.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 54.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-04-10",
+   "restingHR": 62.0,
+   "hrvMs": 55.0,
+   "vo2Max": 46.0,
+   "sleep": {
+    "start": "2026-04-09T23:18:00-07:00",
+    "end": "2026-04-10T06:28:00-07:00",
+    "asleepSeconds": 25800.0,
+    "coreSeconds": 25800.0
+   },
+   "activeEnergy": 252.0,
+   "basalEnergy": 1754.0,
+   "distanceMeters": 3637.12,
+   "steps": 5146.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 22.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-04-11",
+   "restingHR": 61.0,
+   "hrvMs": 56.0,
+   "vo2Max": 46.0,
+   "sleep": {
+    "start": "2026-04-10T23:18:00-07:00",
+    "end": "2026-04-11T06:32:00-07:00",
+    "asleepSeconds": 26040.0,
+    "coreSeconds": 26040.0
+   },
+   "activeEnergy": 428.0,
+   "basalEnergy": 1753.0,
+   "distanceMeters": 2188.71,
+   "steps": 3921.0,
+   "flightsClimbed": 11.0,
+   "exerciseMinutes": 58.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-04-12",
+   "restingHR": 61.0,
+   "hrvMs": 58.0,
+   "vo2Max": 46.1,
+   "sleep": {
+    "start": "2026-04-11T23:18:00-07:00",
+    "end": "2026-04-12T06:40:00-07:00",
+    "asleepSeconds": 26520.0,
+    "coreSeconds": 26520.0
+   },
+   "bodyMassLb": 171.0,
+   "activeEnergy": 236.0,
+   "basalEnergy": 1751.0,
+   "distanceMeters": 3717.58,
+   "steps": 4861.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 26.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-04-13",
+   "restingHR": 60.0,
+   "hrvMs": 59.0,
+   "vo2Max": 46.1,
+   "sleep": {
+    "start": "2026-04-12T23:18:00-07:00",
+    "end": "2026-04-13T06:50:00-07:00",
+    "asleepSeconds": 27120.0,
+    "coreSeconds": 27120.0
+   },
+   "activeEnergy": 438.0,
+   "basalEnergy": 1748.0,
+   "distanceMeters": 2430.11,
+   "steps": 3850.0,
+   "flightsClimbed": 10.0,
+   "exerciseMinutes": 61.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-04-14",
+   "restingHR": 59.0,
+   "hrvMs": 60.0,
+   "vo2Max": 46.2,
+   "sleep": {
+    "start": "2026-04-13T23:18:00-07:00",
+    "end": "2026-04-14T07:03:00-07:00",
+    "asleepSeconds": 27900.0,
+    "coreSeconds": 27900.0
+   },
+   "activeEnergy": 462.0,
+   "basalEnergy": 1745.0,
+   "distanceMeters": 6195.97,
+   "steps": 8718.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 61.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-04-15",
+   "restingHR": 59.0,
+   "hrvMs": 61.0,
+   "vo2Max": 46.3,
+   "sleep": {
+    "start": "2026-04-14T23:18:00-07:00",
+    "end": "2026-04-15T07:16:00-07:00",
+    "asleepSeconds": 28680.0,
+    "coreSeconds": 28680.0
+   },
+   "activeEnergy": 304.0,
+   "basalEnergy": 1741.0,
+   "distanceMeters": 4391.9,
+   "steps": 5292.0,
+   "flightsClimbed": 4.0,
+   "exerciseMinutes": 26.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-04-16",
+   "restingHR": 58.0,
+   "hrvMs": 62.0,
+   "vo2Max": 46.3,
+   "sleep": {
+    "start": "2026-04-15T23:18:00-07:00",
+    "end": "2026-04-16T07:28:00-07:00",
+    "asleepSeconds": 29400.0,
+    "coreSeconds": 29400.0
+   },
+   "activeEnergy": 529.0,
+   "basalEnergy": 1736.0,
+   "distanceMeters": 3265.36,
+   "steps": 4624.0,
+   "flightsClimbed": 4.0,
+   "exerciseMinutes": 59.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-04-17",
+   "restingHR": 57.0,
+   "hrvMs": 63.0,
+   "vo2Max": 46.4,
+   "sleep": {
+    "start": "2026-04-16T23:18:00-07:00",
+    "end": "2026-04-17T07:37:00-07:00",
+    "asleepSeconds": 29940.0,
+    "coreSeconds": 29940.0
+   },
+   "activeEnergy": 374.0,
+   "basalEnergy": 1731.0,
+   "distanceMeters": 5035.64,
+   "steps": 6086.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 23.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-04-18",
+   "restingHR": 56.0,
+   "hrvMs": 63.0,
+   "vo2Max": 46.4,
+   "sleep": {
+    "start": "2026-04-17T23:18:00-07:00",
+    "end": "2026-04-18T07:43:00-07:00",
+    "asleepSeconds": 30300.0,
+    "coreSeconds": 30300.0
+   },
+   "activeEnergy": 592.0,
+   "basalEnergy": 1726.0,
+   "distanceMeters": 3896.22,
+   "steps": 5518.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 55.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-04-19",
+   "restingHR": 56.0,
+   "hrvMs": 64.0,
+   "vo2Max": 46.5,
+   "sleep": {
+    "start": "2026-04-18T23:18:00-07:00",
+    "end": "2026-04-19T07:45:00-07:00",
+    "asleepSeconds": 30420.0,
+    "coreSeconds": 30420.0
+   },
+   "activeEnergy": 420.0,
+   "basalEnergy": 1721.0,
+   "distanceMeters": 5616.61,
+   "steps": 7033.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 18.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-04-20",
+   "activeEnergy": 615.0,
+   "basalEnergy": 1715.0,
+   "distanceMeters": 4379.03,
+   "steps": 6437.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 50.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-04-21",
+   "restingHR": 55.0,
+   "hrvMs": 64.0,
+   "vo2Max": 46.6,
+   "sleep": {
+    "start": "2026-04-20T23:18:00-07:00",
+    "end": "2026-04-21T07:37:00-07:00",
+    "asleepSeconds": 29940.0,
+    "coreSeconds": 29940.0
+   },
+   "activeEnergy": 606.0,
+   "basalEnergy": 1709.0,
+   "distanceMeters": 4522.26,
+   "steps": 6818.0,
+   "flightsClimbed": 3.0,
+   "exerciseMinutes": 47.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-04-22",
+   "restingHR": 54.0,
+   "hrvMs": 64.0,
+   "vo2Max": 46.7,
+   "sleep": {
+    "start": "2026-04-21T23:18:00-07:00",
+    "end": "2026-04-22T07:28:00-07:00",
+    "asleepSeconds": 29400.0,
+    "coreSeconds": 29400.0
+   },
+   "activeEnergy": 396.0,
+   "basalEnergy": 1703.0,
+   "distanceMeters": 6035.04,
+   "steps": 8141.0,
+   "flightsClimbed": 3.0,
+   "exerciseMinutes": 11.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-04-23",
+   "restingHR": 54.0,
+   "hrvMs": 63.0,
+   "vo2Max": 46.8,
+   "sleep": {
+    "start": "2026-04-22T23:18:00-07:00",
+    "end": "2026-04-23T07:16:00-07:00",
+    "asleepSeconds": 28680.0,
+    "coreSeconds": 28680.0
+   },
+   "activeEnergy": 366.0,
+   "basalEnergy": 1697.0,
+   "distanceMeters": 6001.24,
+   "steps": 8291.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 10.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-04-24",
+   "restingHR": 54.0,
+   "hrvMs": 62.0,
+   "vo2Max": 46.8,
+   "sleep": {
+    "start": "2026-04-23T23:18:00-07:00",
+    "end": "2026-04-24T07:03:00-07:00",
+    "asleepSeconds": 27900.0,
+    "coreSeconds": 27900.0
+   },
+   "activeEnergy": 330.0,
+   "basalEnergy": 1692.0,
+   "distanceMeters": 5890.2,
+   "steps": 8308.0,
+   "flightsClimbed": 7.0,
+   "exerciseMinutes": 9.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-04-25",
+   "restingHR": 54.0,
+   "hrvMs": 61.0,
+   "vo2Max": 46.9,
+   "sleep": {
+    "start": "2026-04-24T23:18:00-07:00",
+    "end": "2026-04-25T06:50:00-07:00",
+    "asleepSeconds": 27120.0,
+    "coreSeconds": 27120.0
+   },
+   "activeEnergy": 485.0,
+   "basalEnergy": 1687.0,
+   "distanceMeters": 4248.67,
+   "steps": 7140.0,
+   "flightsClimbed": 10.0,
+   "exerciseMinutes": 43.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-04-26",
+   "restingHR": 54.0,
+   "hrvMs": 60.0,
+   "vo2Max": 47.0,
+   "sleep": {
+    "start": "2026-04-25T23:18:00-07:00",
+    "end": "2026-04-26T06:40:00-07:00",
+    "asleepSeconds": 26520.0,
+    "coreSeconds": 26520.0
+   },
+   "bodyMassLb": 170.5,
+   "activeEnergy": 265.0,
+   "basalEnergy": 1682.0,
+   "distanceMeters": 5437.97,
+   "steps": 7903.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 10.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-04-27",
+   "restingHR": 55.0,
+   "hrvMs": 59.0,
+   "vo2Max": 47.0,
+   "sleep": {
+    "start": "2026-04-26T23:18:00-07:00",
+    "end": "2026-04-27T06:32:00-07:00",
+    "asleepSeconds": 26040.0,
+    "coreSeconds": 26040.0
+   },
+   "activeEnergy": 434.0,
+   "basalEnergy": 1678.0,
+   "distanceMeters": 3701.49,
+   "steps": 6492.0,
+   "flightsClimbed": 11.0,
+   "exerciseMinutes": 45.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-04-28",
+   "restingHR": 55.0,
+   "hrvMs": 58.0,
+   "vo2Max": 47.1,
+   "sleep": {
+    "start": "2026-04-27T23:18:00-07:00",
+    "end": "2026-04-28T06:28:00-07:00",
+    "asleepSeconds": 25800.0,
+    "coreSeconds": 25800.0
+   },
+   "activeEnergy": 425.0,
+   "basalEnergy": 1674.0,
+   "distanceMeters": 3379.62,
+   "steps": 6011.0,
+   "flightsClimbed": 10.0,
+   "exerciseMinutes": 47.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-04-29",
+   "restingHR": 56.0,
+   "hrvMs": 56.0,
+   "vo2Max": 47.2,
+   "sleep": {
+    "start": "2026-04-28T23:18:00-07:00",
+    "end": "2026-04-29T06:28:00-07:00",
+    "asleepSeconds": 25800.0,
+    "coreSeconds": 25800.0
+   },
+   "activeEnergy": 240.0,
+   "basalEnergy": 1671.0,
+   "distanceMeters": 4506.16,
+   "steps": 6509.0,
+   "flightsClimbed": 6.0,
+   "exerciseMinutes": 15.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-04-30",
+   "restingHR": 56.0,
+   "hrvMs": 55.0,
+   "vo2Max": 47.2,
+   "sleep": {
+    "start": "2026-04-29T23:18:00-07:00",
+    "end": "2026-04-30T06:32:00-07:00",
+    "asleepSeconds": 26040.0,
+    "coreSeconds": 26040.0
+   },
+   "activeEnergy": 448.0,
+   "basalEnergy": 1668.0,
+   "distanceMeters": 2751.98,
+   "steps": 4911.0,
+   "flightsClimbed": 7.0,
+   "exerciseMinutes": 52.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-05-01",
+   "restingHR": 57.0,
+   "hrvMs": 54.0,
+   "vo2Max": 47.3,
+   "sleep": {
+    "start": "2026-04-30T23:18:00-07:00",
+    "end": "2026-05-01T06:40:00-07:00",
+    "asleepSeconds": 26520.0,
+    "coreSeconds": 26520.0
+   },
+   "activeEnergy": 286.0,
+   "basalEnergy": 1666.0,
+   "distanceMeters": 3958.99,
+   "steps": 5438.0,
+   "flightsClimbed": 3.0,
+   "exerciseMinutes": 21.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-05-02",
+   "restingHR": 58.0,
+   "hrvMs": 53.0,
+   "vo2Max": 47.4,
+   "sleep": {
+    "start": "2026-05-01T23:18:00-07:00",
+    "end": "2026-05-02T06:50:00-07:00",
+    "asleepSeconds": 27120.0,
+    "coreSeconds": 27120.0
+   },
+   "activeEnergy": 510.0,
+   "basalEnergy": 1665.0,
+   "distanceMeters": 2317.46,
+   "steps": 3945.0,
+   "flightsClimbed": 3.0,
+   "exerciseMinutes": 57.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-05-03",
+   "restingHR": 67.0,
+   "hrvMs": 33.0,
+   "vo2Max": 47.4,
+   "sleep": {
+    "start": "2026-05-02T23:18:00-07:00",
+    "end": "2026-05-03T05:20:00-07:00",
+    "asleepSeconds": 21720.0,
+    "coreSeconds": 21720.0
+   },
+   "activeEnergy": 356.0,
+   "basalEnergy": 1665.0,
+   "distanceMeters": 7195.38,
+   "steps": 9364.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 25.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-05-04",
+   "restingHR": 59.0,
+   "hrvMs": 50.0,
+   "vo2Max": 47.5,
+   "sleep": {
+    "start": "2026-05-03T23:18:00-07:00",
+    "end": "2026-05-04T07:15:00-07:00",
+    "asleepSeconds": 28620.0,
+    "coreSeconds": 28620.0
+   },
+   "activeEnergy": 578.0,
+   "basalEnergy": 1665.0,
+   "distanceMeters": 2172.61,
+   "steps": 3385.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 60.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-05-05",
+   "restingHR": 60.0,
+   "hrvMs": 49.0,
+   "vo2Max": 47.6,
+   "sleep": {
+    "start": "2026-05-04T23:18:00-07:00",
+    "end": "2026-05-05T07:27:00-07:00",
+    "asleepSeconds": 29340.0,
+    "coreSeconds": 29340.0
+   },
+   "activeEnergy": 602.0,
+   "basalEnergy": 1667.0,
+   "distanceMeters": 2236.99,
+   "steps": 3338.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 61.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-05-06",
+   "restingHR": 61.0,
+   "hrvMs": 49.0,
+   "vo2Max": 47.6,
+   "sleep": {
+    "start": "2026-05-05T23:18:00-07:00",
+    "end": "2026-05-06T07:37:00-07:00",
+    "asleepSeconds": 29940.0,
+    "coreSeconds": 29940.0
+   },
+   "activeEnergy": 424.0,
+   "basalEnergy": 1669.0,
+   "distanceMeters": 3828.63,
+   "steps": 4487.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 27.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-05-07",
+   "restingHR": 61.0,
+   "hrvMs": 48.0,
+   "vo2Max": 47.7,
+   "sleep": {
+    "start": "2026-05-06T23:18:00-07:00",
+    "end": "2026-05-07T07:43:00-07:00",
+    "asleepSeconds": 30300.0,
+    "coreSeconds": 30300.0
+   },
+   "activeEnergy": 613.0,
+   "basalEnergy": 1671.0,
+   "distanceMeters": 2591.04,
+   "steps": 3713.0,
+   "flightsClimbed": 4.0,
+   "exerciseMinutes": 60.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-05-08",
+   "restingHR": 62.0,
+   "hrvMs": 48.0,
+   "vo2Max": 47.7,
+   "sleep": {
+    "start": "2026-05-07T23:18:00-07:00",
+    "end": "2026-05-08T07:45:00-07:00",
+    "asleepSeconds": 30420.0,
+    "coreSeconds": 30420.0
+   },
+   "activeEnergy": 408.0,
+   "basalEnergy": 1674.0,
+   "distanceMeters": 4311.43,
+   "steps": 5156.0,
+   "flightsClimbed": 4.0,
+   "exerciseMinutes": 25.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-05-09",
+   "restingHR": 62.0,
+   "hrvMs": 48.0,
+   "vo2Max": 47.8,
+   "sleep": {
+    "start": "2026-05-08T23:18:00-07:00",
+    "end": "2026-05-09T07:43:00-07:00",
+    "asleepSeconds": 30300.0,
+    "coreSeconds": 30300.0
+   },
+   "activeEnergy": 573.0,
+   "basalEnergy": 1678.0,
+   "distanceMeters": 3172.02,
+   "steps": 4629.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 57.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-05-10",
+   "restingHR": 62.0,
+   "hrvMs": 48.0,
+   "vo2Max": 47.8,
+   "sleep": {
+    "start": "2026-05-09T23:18:00-07:00",
+    "end": "2026-05-10T07:37:00-07:00",
+    "asleepSeconds": 29940.0,
+    "coreSeconds": 29940.0
+   },
+   "bodyMassLb": 169.2,
+   "activeEnergy": 350.0,
+   "basalEnergy": 1683.0,
+   "distanceMeters": 4955.17,
+   "steps": 6265.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 20.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-05-11",
+   "restingHR": 62.0,
+   "hrvMs": 49.0,
+   "vo2Max": 47.9,
+   "sleep": {
+    "start": "2026-05-10T23:18:00-07:00",
+    "end": "2026-05-11T07:28:00-07:00",
+    "asleepSeconds": 29400.0,
+    "coreSeconds": 29400.0
+   },
+   "activeEnergy": 504.0,
+   "basalEnergy": 1688.0,
+   "distanceMeters": 3815.75,
+   "steps": 5821.0,
+   "flightsClimbed": 11.0,
+   "exerciseMinutes": 52.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-05-12",
+   "restingHR": 62.0,
+   "hrvMs": 49.0,
+   "vo2Max": 47.9,
+   "sleep": {
+    "start": "2026-05-11T23:18:00-07:00",
+    "end": "2026-05-12T07:16:00-07:00",
+    "asleepSeconds": 28680.0,
+    "coreSeconds": 28680.0
+   },
+   "activeEnergy": 470.0,
+   "basalEnergy": 1693.0,
+   "distanceMeters": 4103.83,
+   "steps": 6407.0,
+   "flightsClimbed": 11.0,
+   "exerciseMinutes": 49.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-05-13",
+   "activeEnergy": 254.0,
+   "basalEnergy": 1698.0,
+   "distanceMeters": 5777.54,
+   "steps": 7940.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 13.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-05-14",
+   "restingHR": 61.0,
+   "hrvMs": 51.0,
+   "vo2Max": 48.0,
+   "sleep": {
+    "start": "2026-05-13T23:18:00-07:00",
+    "end": "2026-05-14T06:51:00-07:00",
+    "asleepSeconds": 27180.0,
+    "coreSeconds": 27180.0
+   },
+   "activeEnergy": 428.0,
+   "basalEnergy": 1704.0,
+   "distanceMeters": 4490.07,
+   "steps": 7296.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 45.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-05-15",
+   "restingHR": 61.0,
+   "hrvMs": 52.0,
+   "vo2Max": 48.1,
+   "sleep": {
+    "start": "2026-05-14T23:18:00-07:00",
+    "end": "2026-05-15T06:40:00-07:00",
+    "asleepSeconds": 26520.0,
+    "coreSeconds": 26520.0
+   },
+   "activeEnergy": 86.0,
+   "basalEnergy": 1710.0,
+   "distanceMeters": 2961.19,
+   "steps": 4491.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 10.0,
+   "standHours": 8.0
+  },
+  {
+   "dateKey": "2026-05-16",
+   "restingHR": 60.0,
+   "hrvMs": 54.0,
+   "vo2Max": 48.1,
+   "sleep": {
+    "start": "2026-05-15T23:18:00-07:00",
+    "end": "2026-05-16T06:32:00-07:00",
+    "asleepSeconds": 26040.0,
+    "coreSeconds": 26040.0
+   },
+   "activeEnergy": 437.0,
+   "basalEnergy": 1716.0,
+   "distanceMeters": 4570.54,
+   "steps": 7629.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 43.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-05-17",
+   "restingHR": 59.0,
+   "hrvMs": 55.0,
+   "vo2Max": 48.1,
+   "sleep": {
+    "start": "2026-05-16T23:18:00-07:00",
+    "end": "2026-05-17T06:28:00-07:00",
+    "asleepSeconds": 25800.0,
+    "coreSeconds": 25800.0
+   },
+   "activeEnergy": 270.0,
+   "basalEnergy": 1722.0,
+   "distanceMeters": 5920.78,
+   "steps": 8562.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 9.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-05-18",
+   "restingHR": 59.0,
+   "hrvMs": 56.0,
+   "vo2Max": 48.2,
+   "sleep": {
+    "start": "2026-05-17T23:18:00-07:00",
+    "end": "2026-05-18T06:28:00-07:00",
+    "asleepSeconds": 25800.0,
+    "coreSeconds": 25800.0
+   },
+   "activeEnergy": 491.0,
+   "basalEnergy": 1727.0,
+   "distanceMeters": 4311.43,
+   "steps": 7279.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 44.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-05-19",
+   "restingHR": 58.0,
+   "hrvMs": 58.0,
+   "vo2Max": 48.2,
+   "sleep": {
+    "start": "2026-05-18T23:18:00-07:00",
+    "end": "2026-05-19T06:31:00-07:00",
+    "asleepSeconds": 25980.0,
+    "coreSeconds": 25980.0
+   },
+   "activeEnergy": 527.0,
+   "basalEnergy": 1732.0,
+   "distanceMeters": 4070.03,
+   "steps": 6862.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 46.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-05-20",
+   "restingHR": 57.0,
+   "hrvMs": 59.0,
+   "vo2Max": 48.2,
+   "sleep": {
+    "start": "2026-05-19T23:18:00-07:00",
+    "end": "2026-05-20T06:39:00-07:00",
+    "asleepSeconds": 26460.0,
+    "coreSeconds": 26460.0
+   },
+   "activeEnergy": 371.0,
+   "basalEnergy": 1737.0,
+   "distanceMeters": 5230.37,
+   "steps": 7367.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 14.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-05-21",
+   "restingHR": 56.0,
+   "hrvMs": 60.0,
+   "vo2Max": 48.2,
+   "sleep": {
+    "start": "2026-05-20T23:18:00-07:00",
+    "end": "2026-05-21T06:50:00-07:00",
+    "asleepSeconds": 27120.0,
+    "coreSeconds": 27120.0
+   },
+   "activeEnergy": 590.0,
+   "basalEnergy": 1742.0,
+   "distanceMeters": 3460.09,
+   "steps": 5723.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 50.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-05-22",
+   "restingHR": 56.0,
+   "hrvMs": 61.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-05-21T23:18:00-07:00",
+    "end": "2026-05-22T07:02:00-07:00",
+    "asleepSeconds": 27840.0,
+    "coreSeconds": 27840.0
+   },
+   "activeEnergy": 419.0,
+   "basalEnergy": 1746.0,
+   "distanceMeters": 8127.19,
+   "steps": 10860.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 19.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-05-23",
+   "restingHR": 55.0,
+   "hrvMs": 62.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-05-22T23:18:00-07:00",
+    "end": "2026-05-23T07:14:00-07:00",
+    "asleepSeconds": 28560.0,
+    "coreSeconds": 28560.0
+   },
+   "activeEnergy": 615.0,
+   "basalEnergy": 1749.0,
+   "distanceMeters": 2832.45,
+   "steps": 4488.0,
+   "flightsClimbed": 5.0,
+   "exerciseMinutes": 55.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-05-24",
+   "restingHR": 55.0,
+   "hrvMs": 63.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-05-23T23:18:00-07:00",
+    "end": "2026-05-24T07:26:00-07:00",
+    "asleepSeconds": 29280.0,
+    "coreSeconds": 29280.0
+   },
+   "bodyMassLb": 168.7,
+   "activeEnergy": 417.0,
+   "basalEnergy": 1751.0,
+   "distanceMeters": 4007.27,
+   "steps": 4979.0,
+   "flightsClimbed": 6.0,
+   "exerciseMinutes": 24.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-05-25",
+   "restingHR": 62.0,
+   "hrvMs": 46.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-05-24T23:18:00-07:00",
+    "end": "2026-05-25T05:54:00-07:00",
+    "asleepSeconds": 23760.0,
+    "coreSeconds": 23760.0
+   },
+   "activeEnergy": 588.0,
+   "basalEnergy": 1753.0,
+   "distanceMeters": 2367.35,
+   "steps": 3541.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 59.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-05-26",
+   "restingHR": 54.0,
+   "hrvMs": 64.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-05-25T23:18:00-07:00",
+    "end": "2026-05-26T07:43:00-07:00",
+    "asleepSeconds": 30300.0,
+    "coreSeconds": 30300.0
+   },
+   "activeEnergy": 558.0,
+   "basalEnergy": 1755.0,
+   "distanceMeters": 2219.29,
+   "steps": 3253.0,
+   "flightsClimbed": 11.0,
+   "exerciseMinutes": 61.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-05-27",
+   "restingHR": 54.0,
+   "hrvMs": 64.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-05-26T23:18:00-07:00",
+    "end": "2026-05-27T07:45:00-07:00",
+    "asleepSeconds": 30420.0,
+    "coreSeconds": 30420.0
+   },
+   "activeEnergy": 333.0,
+   "basalEnergy": 1755.0,
+   "distanceMeters": 3621.02,
+   "steps": 4188.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 27.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-05-28",
+   "restingHR": 54.0,
+   "hrvMs": 64.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-05-27T23:18:00-07:00",
+    "end": "2026-05-28T07:43:00-07:00",
+    "asleepSeconds": 30300.0,
+    "coreSeconds": 30300.0
+   },
+   "activeEnergy": 487.0,
+   "basalEnergy": 1755.0,
+   "distanceMeters": 2206.41,
+   "steps": 3221.0,
+   "flightsClimbed": 11.0,
+   "exerciseMinutes": 61.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-05-29",
+   "restingHR": 54.0,
+   "hrvMs": 64.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-05-28T23:18:00-07:00",
+    "end": "2026-05-29T07:37:00-07:00",
+    "asleepSeconds": 29940.0,
+    "coreSeconds": 29940.0
+   },
+   "activeEnergy": 267.0,
+   "basalEnergy": 1754.0,
+   "distanceMeters": 3781.96,
+   "steps": 4514.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 26.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-05-30",
+   "restingHR": 55.0,
+   "hrvMs": 63.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-05-29T23:18:00-07:00",
+    "end": "2026-05-30T07:28:00-07:00",
+    "asleepSeconds": 29400.0,
+    "coreSeconds": 29400.0
+   },
+   "activeEnergy": 435.0,
+   "basalEnergy": 1752.0,
+   "distanceMeters": 2528.28,
+   "steps": 3874.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 58.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-05-31",
+   "restingHR": 55.0,
+   "hrvMs": 62.0,
+   "vo2Max": 48.3,
+   "sleep": {
+    "start": "2026-05-30T23:18:00-07:00",
+    "end": "2026-05-31T07:17:00-07:00",
+    "asleepSeconds": 28740.0,
+    "coreSeconds": 28740.0
+   },
+   "activeEnergy": 235.0,
+   "basalEnergy": 1749.0,
+   "distanceMeters": 4230.97,
+   "steps": 5429.0,
+   "flightsClimbed": 4.0,
+   "exerciseMinutes": 22.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-06-01",
+   "restingHR": 56.0,
+   "hrvMs": 61.0,
+   "vo2Max": 48.2,
+   "sleep": {
+    "start": "2026-05-31T23:18:00-07:00",
+    "end": "2026-06-01T07:04:00-07:00",
+    "asleepSeconds": 27960.0,
+    "coreSeconds": 27960.0
+   },
+   "activeEnergy": 429.0,
+   "basalEnergy": 1746.0,
+   "distanceMeters": 3091.55,
+   "steps": 4997.0,
+   "flightsClimbed": 4.0,
+   "exerciseMinutes": 53.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-06-02",
+   "restingHR": 56.0,
+   "hrvMs": 60.0,
+   "vo2Max": 48.2,
+   "sleep": {
+    "start": "2026-06-01T23:18:00-07:00",
+    "end": "2026-06-02T06:52:00-07:00",
+    "asleepSeconds": 27240.0,
+    "coreSeconds": 27240.0
+   },
+   "activeEnergy": 446.0,
+   "basalEnergy": 1742.0,
+   "distanceMeters": 3413.42,
+   "steps": 5629.0,
+   "flightsClimbed": 2.0,
+   "exerciseMinutes": 51.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-06-03",
+   "restingHR": 65.0,
+   "hrvMs": 41.0,
+   "vo2Max": 48.2,
+   "sleep": {
+    "start": "2026-06-02T23:18:00-07:00",
+    "end": "2026-06-03T04:58:00-07:00",
+    "asleepSeconds": 20400.0,
+    "coreSeconds": 20400.0
+   },
+   "activeEnergy": 283.0,
+   "basalEnergy": 1738.0,
+   "distanceMeters": 5183.7,
+   "steps": 7276.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 14.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-06-04",
+   "restingHR": 58.0,
+   "hrvMs": 58.0,
+   "vo2Max": 48.2,
+   "sleep": {
+    "start": "2026-06-03T23:18:00-07:00",
+    "end": "2026-06-04T06:32:00-07:00",
+    "asleepSeconds": 26040.0,
+    "coreSeconds": 26040.0
+   },
+   "activeEnergy": 508.0,
+   "basalEnergy": 1733.0,
+   "distanceMeters": 4023.36,
+   "steps": 6779.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 46.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-06-05",
+   "activeEnergy": 353.0,
+   "basalEnergy": 1728.0,
+   "distanceMeters": 5729.26,
+   "steps": 8259.0,
+   "flightsClimbed": 0.0,
+   "exerciseMinutes": 10.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-06-06",
+   "restingHR": 59.0,
+   "hrvMs": 55.0,
+   "vo2Max": 48.1,
+   "sleep": {
+    "start": "2026-06-05T23:18:00-07:00",
+    "end": "2026-06-06T06:28:00-07:00",
+    "asleepSeconds": 25800.0,
+    "coreSeconds": 25800.0
+   },
+   "activeEnergy": 576.0,
+   "basalEnergy": 1722.0,
+   "distanceMeters": 4459.49,
+   "steps": 7504.0,
+   "flightsClimbed": 3.0,
+   "exerciseMinutes": 43.0,
+   "standHours": 9.0
+  },
+  {
+   "dateKey": "2026-06-07",
+   "restingHR": 60.0,
+   "hrvMs": 54.0,
+   "vo2Max": 48.1,
+   "sleep": {
+    "start": "2026-06-06T23:18:00-07:00",
+    "end": "2026-06-07T06:31:00-07:00",
+    "asleepSeconds": 25980.0,
+    "coreSeconds": 25980.0
+   },
+   "bodyMassLb": 167.4,
+   "activeEnergy": 410.0,
+   "basalEnergy": 1717.0,
+   "distanceMeters": 6018.95,
+   "steps": 8671.0,
+   "flightsClimbed": 3.0,
+   "exerciseMinutes": 9.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-06-08",
+   "restingHR": 61.0,
+   "hrvMs": 52.0,
+   "vo2Max": 48.0,
+   "sleep": {
+    "start": "2026-06-07T23:18:00-07:00",
+    "end": "2026-06-08T06:38:00-07:00",
+    "asleepSeconds": 26400.0,
+    "coreSeconds": 26400.0
+   },
+   "activeEnergy": 613.0,
+   "basalEnergy": 1711.0,
+   "distanceMeters": 4586.63,
+   "steps": 7579.0,
+   "flightsClimbed": 7.0,
+   "exerciseMinutes": 43.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-06-09",
+   "restingHR": 61.0,
+   "hrvMs": 51.0,
+   "vo2Max": 48.0,
+   "sleep": {
+    "start": "2026-06-08T23:18:00-07:00",
+    "end": "2026-06-09T06:49:00-07:00",
+    "asleepSeconds": 27060.0,
+    "coreSeconds": 27060.0
+   },
+   "activeEnergy": 613.0,
+   "basalEnergy": 1705.0,
+   "distanceMeters": 4522.26,
+   "steps": 7364.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 45.0,
+   "standHours": 10.0
+  },
+  {
+   "dateKey": "2026-06-10",
+   "restingHR": 62.0,
+   "hrvMs": 50.0,
+   "vo2Max": 47.9,
+   "sleep": {
+    "start": "2026-06-09T23:18:00-07:00",
+    "end": "2026-06-10T07:01:00-07:00",
+    "asleepSeconds": 27780.0,
+    "coreSeconds": 27780.0
+   },
+   "activeEnergy": 410.0,
+   "basalEnergy": 1699.0,
+   "distanceMeters": 9350.29,
+   "steps": 12743.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 12.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-06-11",
+   "restingHR": 62.0,
+   "hrvMs": 49.0,
+   "vo2Max": 47.9,
+   "sleep": {
+    "start": "2026-06-10T23:18:00-07:00",
+    "end": "2026-06-11T07:14:00-07:00",
+    "asleepSeconds": 28560.0,
+    "coreSeconds": 28560.0
+   },
+   "activeEnergy": 575.0,
+   "basalEnergy": 1694.0,
+   "distanceMeters": 4137.62,
+   "steps": 6482.0,
+   "flightsClimbed": 11.0,
+   "exerciseMinutes": 49.0,
+   "standHours": 11.0
+  },
+  {
+   "dateKey": "2026-06-12",
+   "restingHR": 62.0,
+   "hrvMs": 49.0,
+   "vo2Max": 47.8,
+   "sleep": {
+    "start": "2026-06-11T23:18:00-07:00",
+    "end": "2026-06-12T07:26:00-07:00",
+    "asleepSeconds": 29280.0,
+    "coreSeconds": 29280.0
+   },
+   "activeEnergy": 352.0,
+   "basalEnergy": 1688.0,
+   "distanceMeters": 5310.84,
+   "steps": 6950.0,
+   "flightsClimbed": 9.0,
+   "exerciseMinutes": 17.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-06-13",
+   "restingHR": 62.0,
+   "hrvMs": 48.0,
+   "vo2Max": 47.8,
+   "sleep": {
+    "start": "2026-06-12T23:18:00-07:00",
+    "end": "2026-06-13T07:36:00-07:00",
+    "asleepSeconds": 29880.0,
+    "coreSeconds": 29880.0
+   },
+   "activeEnergy": 316.0,
+   "basalEnergy": 1684.0,
+   "distanceMeters": 5005.06,
+   "steps": 6356.0,
+   "flightsClimbed": 8.0,
+   "exerciseMinutes": 20.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-06-14",
+   "restingHR": 62.0,
+   "hrvMs": 48.0,
+   "vo2Max": 47.7,
+   "sleep": {
+    "start": "2026-06-13T23:18:00-07:00",
+    "end": "2026-06-14T07:43:00-07:00",
+    "asleepSeconds": 30300.0,
+    "coreSeconds": 30300.0
+   },
+   "activeEnergy": 282.0,
+   "basalEnergy": 1679.0,
+   "distanceMeters": 4683.19,
+   "steps": 5771.0,
+   "flightsClimbed": 6.0,
+   "exerciseMinutes": 22.0,
+   "standHours": 12.0
+  },
+  {
+   "dateKey": "2026-06-15",
+   "restingHR": 62.0,
+   "hrvMs": 48.0,
+   "vo2Max": 47.7,
+   "sleep": {
+    "start": "2026-06-14T23:18:00-07:00",
+    "end": "2026-06-15T07:45:00-07:00",
+    "asleepSeconds": 30420.0,
+    "coreSeconds": 30420.0
+   },
+   "activeEnergy": 255.0,
+   "basalEnergy": 1675.0,
+   "distanceMeters": 4361.32,
+   "steps": 5232.0,
+   "flightsClimbed": 4.0,
+   "exerciseMinutes": 24.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-06-16",
+   "restingHR": 61.0,
+   "hrvMs": 48.0,
+   "vo2Max": 47.6,
+   "sleep": {
+    "start": "2026-06-15T23:18:00-07:00",
+    "end": "2026-06-16T07:43:00-07:00",
+    "asleepSeconds": 30300.0,
+    "coreSeconds": 30300.0
+   },
+   "activeEnergy": 429.0,
+   "basalEnergy": 1672.0,
+   "distanceMeters": 2639.32,
+   "steps": 3779.0,
+   "flightsClimbed": 4.0,
+   "exerciseMinutes": 60.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-06-17",
+   "restingHR": 61.0,
+   "hrvMs": 49.0,
+   "vo2Max": 47.5,
+   "sleep": {
+    "start": "2026-06-16T23:18:00-07:00",
+    "end": "2026-06-17T07:38:00-07:00",
+    "asleepSeconds": 30000.0,
+    "coreSeconds": 30000.0
+   },
+   "activeEnergy": 235.0,
+   "basalEnergy": 1669.0,
+   "distanceMeters": 3862.43,
+   "steps": 4523.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 27.0,
+   "standHours": 13.0
+  },
+  {
+   "dateKey": "2026-06-18",
+   "restingHR": 60.0,
+   "hrvMs": 49.0,
+   "vo2Max": 47.5,
+   "sleep": {
+    "start": "2026-06-17T23:18:00-07:00",
+    "end": "2026-06-18T07:29:00-07:00",
+    "asleepSeconds": 29460.0,
+    "coreSeconds": 29460.0
+   },
+   "activeEnergy": 436.0,
+   "basalEnergy": 1667.0,
+   "distanceMeters": 2253.08,
+   "steps": 3343.0,
+   "flightsClimbed": 1.0,
+   "exerciseMinutes": 61.0,
+   "standHours": 13.0
+  }
+ ],
+ "workouts": [
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2025-12-22T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2025-12-22T18:00:00-07:00",
+   "end": "2025-12-22T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2025-12-22T18:00:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2025-12-22T18:07:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2025-12-22T18:14:00-07:00",
+     "bpm": 121.0
+    },
+    {
+     "t": "2025-12-22T18:21:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2025-12-22T18:28:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2025-12-22T18:35:00-07:00",
+     "bpm": 113.0
+    }
+   ],
+   "avgHR": 117.7,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2025-12-23T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2025-12-23T18:00:00-07:00",
+   "end": "2025-12-23T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2025-12-23T18:00:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2025-12-23T18:07:00-07:00",
+     "bpm": 121.0
+    },
+    {
+     "t": "2025-12-23T18:14:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2025-12-23T18:21:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2025-12-23T18:28:00-07:00",
+     "bpm": 113.0
+    },
+    {
+     "t": "2025-12-23T18:35:00-07:00",
+     "bpm": 130.0
+    }
+   ],
+   "avgHR": 117.2,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2025-12-25T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2025-12-25T18:00:00-07:00",
+   "end": "2025-12-25T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2025-12-25T18:00:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2025-12-25T18:07:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2025-12-25T18:14:00-07:00",
+     "bpm": 113.0
+    },
+    {
+     "t": "2025-12-25T18:21:00-07:00",
+     "bpm": 130.0
+    },
+    {
+     "t": "2025-12-25T18:28:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2025-12-25T18:35:00-07:00",
+     "bpm": 125.0
+    }
+   ],
+   "avgHR": 118.2,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2025-12-27T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2025-12-27T18:00:00-07:00",
+   "end": "2025-12-27T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2025-12-27T18:00:00-07:00",
+     "bpm": 113.0
+    },
+    {
+     "t": "2025-12-27T18:07:00-07:00",
+     "bpm": 130.0
+    },
+    {
+     "t": "2025-12-27T18:14:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2025-12-27T18:21:00-07:00",
+     "bpm": 125.0
+    },
+    {
+     "t": "2025-12-27T18:28:00-07:00",
+     "bpm": 108.0
+    },
+    {
+     "t": "2025-12-27T18:35:00-07:00",
+     "bpm": 100.0
+    }
+   ],
+   "avgHR": 118.7,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2025-12-29T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2025-12-29T18:00:00-07:00",
+   "end": "2025-12-29T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2025-12-29T18:00:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2025-12-29T18:07:00-07:00",
+     "bpm": 125.0
+    },
+    {
+     "t": "2025-12-29T18:14:00-07:00",
+     "bpm": 108.0
+    },
+    {
+     "t": "2025-12-29T18:21:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2025-12-29T18:28:00-07:00",
+     "bpm": 108.0
+    },
+    {
+     "t": "2025-12-29T18:35:00-07:00",
+     "bpm": 126.0
+    }
+   ],
+   "avgHR": 117.2,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2025-12-30T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2025-12-30T18:00:00-07:00",
+   "end": "2025-12-30T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2025-12-30T18:00:00-07:00",
+     "bpm": 125.0
+    },
+    {
+     "t": "2025-12-30T18:07:00-07:00",
+     "bpm": 108.0
+    },
+    {
+     "t": "2025-12-30T18:14:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2025-12-30T18:21:00-07:00",
+     "bpm": 108.0
+    },
+    {
+     "t": "2025-12-30T18:28:00-07:00",
+     "bpm": 126.0
+    },
+    {
+     "t": "2025-12-30T18:35:00-07:00",
+     "bpm": 136.0
+    }
+   ],
+   "avgHR": 117.2,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-01T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-01T18:00:00-07:00",
+   "end": "2026-01-01T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-01T18:00:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-01-01T18:07:00-07:00",
+     "bpm": 108.0
+    },
+    {
+     "t": "2026-01-01T18:14:00-07:00",
+     "bpm": 126.0
+    },
+    {
+     "t": "2026-01-01T18:21:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-01-01T18:28:00-07:00",
+     "bpm": 130.0
+    },
+    {
+     "t": "2026-01-01T18:35:00-07:00",
+     "bpm": 113.0
+    }
+   ],
+   "avgHR": 118.8,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-03T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-03T18:00:00-07:00",
+   "end": "2026-01-03T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-03T18:00:00-07:00",
+     "bpm": 126.0
+    },
+    {
+     "t": "2026-01-03T18:07:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-01-03T18:14:00-07:00",
+     "bpm": 130.0
+    },
+    {
+     "t": "2026-01-03T18:21:00-07:00",
+     "bpm": 113.0
+    },
+    {
+     "t": "2026-01-03T18:28:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-01-03T18:35:00-07:00",
+     "bpm": 104.0
+    }
+   ],
+   "avgHR": 118.3,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-05T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-05T18:00:00-07:00",
+   "end": "2026-01-05T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-05T18:00:00-07:00",
+     "bpm": 130.0
+    },
+    {
+     "t": "2026-01-05T18:07:00-07:00",
+     "bpm": 113.0
+    },
+    {
+     "t": "2026-01-05T18:14:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-01-05T18:21:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2026-01-05T18:28:00-07:00",
+     "bpm": 121.0
+    },
+    {
+     "t": "2026-01-05T18:35:00-07:00",
+     "bpm": 134.0
+    }
+   ],
+   "avgHR": 117.2,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-06T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-06T18:00:00-07:00",
+   "end": "2026-01-06T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-06T18:00:00-07:00",
+     "bpm": 113.0
+    },
+    {
+     "t": "2026-01-06T18:07:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-01-06T18:14:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2026-01-06T18:21:00-07:00",
+     "bpm": 121.0
+    },
+    {
+     "t": "2026-01-06T18:28:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-01-06T18:35:00-07:00",
+     "bpm": 133.0
+    }
+   ],
+   "avgHR": 117.7,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-08T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-08T18:00:00-07:00",
+   "end": "2026-01-08T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-08T18:00:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2026-01-08T18:07:00-07:00",
+     "bpm": 121.0
+    },
+    {
+     "t": "2026-01-08T18:14:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-01-08T18:21:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-01-08T18:28:00-07:00",
+     "bpm": 118.0
+    },
+    {
+     "t": "2026-01-08T18:35:00-07:00",
+     "bpm": 103.0
+    }
+   ],
+   "avgHR": 118.8,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-10T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-10T18:00:00-07:00",
+   "end": "2026-01-10T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-10T18:00:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-01-10T18:07:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-01-10T18:14:00-07:00",
+     "bpm": 118.0
+    },
+    {
+     "t": "2026-01-10T18:21:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-01-10T18:28:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-01-10T18:35:00-07:00",
+     "bpm": 116.0
+    }
+   ],
+   "avgHR": 117.7,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-12T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-12T18:00:00-07:00",
+   "end": "2026-01-12T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-12T18:00:00-07:00",
+     "bpm": 118.0
+    },
+    {
+     "t": "2026-01-12T18:07:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-01-12T18:14:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-01-12T18:21:00-07:00",
+     "bpm": 116.0
+    },
+    {
+     "t": "2026-01-12T18:28:00-07:00",
+     "bpm": 132.0
+    },
+    {
+     "t": "2026-01-12T18:35:00-07:00",
+     "bpm": 135.0
+    }
+   ],
+   "avgHR": 117.7,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-13T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-13T18:00:00-07:00",
+   "end": "2026-01-13T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-13T18:00:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-01-13T18:07:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-01-13T18:14:00-07:00",
+     "bpm": 116.0
+    },
+    {
+     "t": "2026-01-13T18:21:00-07:00",
+     "bpm": 132.0
+    },
+    {
+     "t": "2026-01-13T18:28:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-01-13T18:35:00-07:00",
+     "bpm": 123.0
+    }
+   ],
+   "avgHR": 118.5,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-15T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-15T18:00:00-07:00",
+   "end": "2026-01-15T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-15T18:00:00-07:00",
+     "bpm": 116.0
+    },
+    {
+     "t": "2026-01-15T18:07:00-07:00",
+     "bpm": 132.0
+    },
+    {
+     "t": "2026-01-15T18:14:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-01-15T18:21:00-07:00",
+     "bpm": 123.0
+    },
+    {
+     "t": "2026-01-15T18:28:00-07:00",
+     "bpm": 106.0
+    },
+    {
+     "t": "2026-01-15T18:35:00-07:00",
+     "bpm": 100.0
+    }
+   ],
+   "avgHR": 118.7,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-17T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-17T18:00:00-07:00",
+   "end": "2026-01-17T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-17T18:00:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-01-17T18:07:00-07:00",
+     "bpm": 123.0
+    },
+    {
+     "t": "2026-01-17T18:14:00-07:00",
+     "bpm": 106.0
+    },
+    {
+     "t": "2026-01-17T18:21:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-01-17T18:28:00-07:00",
+     "bpm": 111.0
+    },
+    {
+     "t": "2026-01-17T18:35:00-07:00",
+     "bpm": 128.0
+    }
+   ],
+   "avgHR": 117.2,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-19T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-19T18:00:00-07:00",
+   "end": "2026-01-19T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-19T18:00:00-07:00",
+     "bpm": 106.0
+    },
+    {
+     "t": "2026-01-19T18:07:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-01-19T18:14:00-07:00",
+     "bpm": 111.0
+    },
+    {
+     "t": "2026-01-19T18:21:00-07:00",
+     "bpm": 128.0
+    },
+    {
+     "t": "2026-01-19T18:28:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-01-19T18:35:00-07:00",
+     "bpm": 128.0
+    }
+   ],
+   "avgHR": 118.2,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-20T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-20T18:00:00-07:00",
+   "end": "2026-01-20T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-20T18:00:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-01-20T18:07:00-07:00",
+     "bpm": 111.0
+    },
+    {
+     "t": "2026-01-20T18:14:00-07:00",
+     "bpm": 128.0
+    },
+    {
+     "t": "2026-01-20T18:21:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-01-20T18:28:00-07:00",
+     "bpm": 128.0
+    },
+    {
+     "t": "2026-01-20T18:35:00-07:00",
+     "bpm": 110.0
+    }
+   ],
+   "avgHR": 118.8,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeWalking-2026-01-21T12:10:00-07:00",
+   "activityType": "Walk",
+   "start": "2026-01-21T12:10:00-07:00",
+   "end": "2026-01-21T12:42:00-07:00",
+   "durationSeconds": 1920.0,
+   "hrSamples": []
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-22T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-22T18:00:00-07:00",
+   "end": "2026-01-22T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-22T18:00:00-07:00",
+     "bpm": 128.0
+    },
+    {
+     "t": "2026-01-22T18:07:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-01-22T18:14:00-07:00",
+     "bpm": 128.0
+    },
+    {
+     "t": "2026-01-22T18:21:00-07:00",
+     "bpm": 110.0
+    },
+    {
+     "t": "2026-01-22T18:28:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-01-22T18:35:00-07:00",
+     "bpm": 106.0
+    }
+   ],
+   "avgHR": 118.0,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-24T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-24T18:00:00-07:00",
+   "end": "2026-01-24T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-24T18:00:00-07:00",
+     "bpm": 128.0
+    },
+    {
+     "t": "2026-01-24T18:07:00-07:00",
+     "bpm": 110.0
+    },
+    {
+     "t": "2026-01-24T18:14:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-01-24T18:21:00-07:00",
+     "bpm": 106.0
+    },
+    {
+     "t": "2026-01-24T18:28:00-07:00",
+     "bpm": 123.0
+    },
+    {
+     "t": "2026-01-24T18:35:00-07:00",
+     "bpm": 135.0
+    }
+   ],
+   "avgHR": 117.0,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-26T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-26T18:00:00-07:00",
+   "end": "2026-01-26T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-26T18:00:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-01-26T18:07:00-07:00",
+     "bpm": 106.0
+    },
+    {
+     "t": "2026-01-26T18:14:00-07:00",
+     "bpm": 123.0
+    },
+    {
+     "t": "2026-01-26T18:21:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-01-26T18:28:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-01-26T18:35:00-07:00",
+     "bpm": 115.0
+    }
+   ],
+   "avgHR": 118.3,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-27T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-27T18:00:00-07:00",
+   "end": "2026-01-27T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-27T18:00:00-07:00",
+     "bpm": 106.0
+    },
+    {
+     "t": "2026-01-27T18:07:00-07:00",
+     "bpm": 123.0
+    },
+    {
+     "t": "2026-01-27T18:14:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-01-27T18:21:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-01-27T18:28:00-07:00",
+     "bpm": 115.0
+    },
+    {
+     "t": "2026-01-27T18:35:00-07:00",
+     "bpm": 102.0
+    }
+   ],
+   "avgHR": 118.7,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-29T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-29T18:00:00-07:00",
+   "end": "2026-01-29T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-29T18:00:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-01-29T18:07:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-01-29T18:14:00-07:00",
+     "bpm": 115.0
+    },
+    {
+     "t": "2026-01-29T18:21:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-01-29T18:28:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-01-29T18:35:00-07:00",
+     "bpm": 118.0
+    }
+   ],
+   "avgHR": 117.3,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-01-31T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-01-31T18:00:00-07:00",
+   "end": "2026-01-31T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-01-31T18:00:00-07:00",
+     "bpm": 115.0
+    },
+    {
+     "t": "2026-01-31T18:07:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-01-31T18:14:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-01-31T18:21:00-07:00",
+     "bpm": 118.0
+    },
+    {
+     "t": "2026-01-31T18:28:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-01-31T18:35:00-07:00",
+     "bpm": 134.0
+    }
+   ],
+   "avgHR": 117.5,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-02T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-02T18:00:00-07:00",
+   "end": "2026-02-02T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-02T18:00:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-02-02T18:07:00-07:00",
+     "bpm": 118.0
+    },
+    {
+     "t": "2026-02-02T18:14:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-02-02T18:21:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-02-02T18:28:00-07:00",
+     "bpm": 120.0
+    },
+    {
+     "t": "2026-02-02T18:35:00-07:00",
+     "bpm": 104.0
+    }
+   ],
+   "avgHR": 118.7,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-03T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-03T18:00:00-07:00",
+   "end": "2026-02-03T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-03T18:00:00-07:00",
+     "bpm": 118.0
+    },
+    {
+     "t": "2026-02-03T18:07:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-02-03T18:14:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-02-03T18:21:00-07:00",
+     "bpm": 120.0
+    },
+    {
+     "t": "2026-02-03T18:28:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2026-02-03T18:35:00-07:00",
+     "bpm": 101.0
+    }
+   ],
+   "avgHR": 118.3,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-05T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-05T18:00:00-07:00",
+   "end": "2026-02-05T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-05T18:00:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-02-05T18:07:00-07:00",
+     "bpm": 120.0
+    },
+    {
+     "t": "2026-02-05T18:14:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2026-02-05T18:21:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-02-05T18:28:00-07:00",
+     "bpm": 113.0
+    },
+    {
+     "t": "2026-02-05T18:35:00-07:00",
+     "bpm": 130.0
+    }
+   ],
+   "avgHR": 117.0,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-07T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-07T18:00:00-07:00",
+   "end": "2026-02-07T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-07T18:00:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2026-02-07T18:07:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-02-07T18:14:00-07:00",
+     "bpm": 113.0
+    },
+    {
+     "t": "2026-02-07T18:21:00-07:00",
+     "bpm": 130.0
+    },
+    {
+     "t": "2026-02-07T18:28:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-02-07T18:35:00-07:00",
+     "bpm": 125.0
+    }
+   ],
+   "avgHR": 118.2,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-09T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-09T18:00:00-07:00",
+   "end": "2026-02-09T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-09T18:00:00-07:00",
+     "bpm": 113.0
+    },
+    {
+     "t": "2026-02-09T18:07:00-07:00",
+     "bpm": 130.0
+    },
+    {
+     "t": "2026-02-09T18:14:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-02-09T18:21:00-07:00",
+     "bpm": 125.0
+    },
+    {
+     "t": "2026-02-09T18:28:00-07:00",
+     "bpm": 108.0
+    },
+    {
+     "t": "2026-02-09T18:35:00-07:00",
+     "bpm": 100.0
+    }
+   ],
+   "avgHR": 118.7,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-12T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-12T18:00:00-07:00",
+   "end": "2026-02-12T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-12T18:00:00-07:00",
+     "bpm": 125.0
+    },
+    {
+     "t": "2026-02-12T18:07:00-07:00",
+     "bpm": 108.0
+    },
+    {
+     "t": "2026-02-12T18:14:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-02-12T18:21:00-07:00",
+     "bpm": 109.0
+    },
+    {
+     "t": "2026-02-12T18:28:00-07:00",
+     "bpm": 126.0
+    },
+    {
+     "t": "2026-02-12T18:35:00-07:00",
+     "bpm": 136.0
+    }
+   ],
+   "avgHR": 117.3,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-14T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-14T18:00:00-07:00",
+   "end": "2026-02-14T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-14T18:00:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-02-14T18:07:00-07:00",
+     "bpm": 109.0
+    },
+    {
+     "t": "2026-02-14T18:14:00-07:00",
+     "bpm": 126.0
+    },
+    {
+     "t": "2026-02-14T18:21:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-02-14T18:28:00-07:00",
+     "bpm": 129.0
+    },
+    {
+     "t": "2026-02-14T18:35:00-07:00",
+     "bpm": 113.0
+    }
+   ],
+   "avgHR": 118.8,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-16T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-16T18:00:00-07:00",
+   "end": "2026-02-16T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-16T18:00:00-07:00",
+     "bpm": 126.0
+    },
+    {
+     "t": "2026-02-16T18:07:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-02-16T18:14:00-07:00",
+     "bpm": 129.0
+    },
+    {
+     "t": "2026-02-16T18:21:00-07:00",
+     "bpm": 113.0
+    },
+    {
+     "t": "2026-02-16T18:28:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-02-16T18:35:00-07:00",
+     "bpm": 105.0
+    }
+   ],
+   "avgHR": 118.3,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-17T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-17T18:00:00-07:00",
+   "end": "2026-02-17T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-17T18:00:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-02-17T18:07:00-07:00",
+     "bpm": 129.0
+    },
+    {
+     "t": "2026-02-17T18:14:00-07:00",
+     "bpm": 113.0
+    },
+    {
+     "t": "2026-02-17T18:21:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-02-17T18:28:00-07:00",
+     "bpm": 105.0
+    },
+    {
+     "t": "2026-02-17T18:35:00-07:00",
+     "bpm": 121.0
+    }
+   ],
+   "avgHR": 117.5,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-19T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-19T18:00:00-07:00",
+   "end": "2026-02-19T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-19T18:00:00-07:00",
+     "bpm": 113.0
+    },
+    {
+     "t": "2026-02-19T18:07:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-02-19T18:14:00-07:00",
+     "bpm": 105.0
+    },
+    {
+     "t": "2026-02-19T18:21:00-07:00",
+     "bpm": 121.0
+    },
+    {
+     "t": "2026-02-19T18:28:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-02-19T18:35:00-07:00",
+     "bpm": 133.0
+    }
+   ],
+   "avgHR": 118.0,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-21T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-21T18:00:00-07:00",
+   "end": "2026-02-21T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-21T18:00:00-07:00",
+     "bpm": 105.0
+    },
+    {
+     "t": "2026-02-21T18:07:00-07:00",
+     "bpm": 121.0
+    },
+    {
+     "t": "2026-02-21T18:14:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-02-21T18:21:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-02-21T18:28:00-07:00",
+     "bpm": 118.0
+    },
+    {
+     "t": "2026-02-21T18:35:00-07:00",
+     "bpm": 103.0
+    }
+   ],
+   "avgHR": 119.2,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-23T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-23T18:00:00-07:00",
+   "end": "2026-02-23T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-23T18:00:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-02-23T18:07:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-02-23T18:14:00-07:00",
+     "bpm": 118.0
+    },
+    {
+     "t": "2026-02-23T18:21:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-02-23T18:28:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-02-23T18:35:00-07:00",
+     "bpm": 116.0
+    }
+   ],
+   "avgHR": 117.8,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-24T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-24T18:00:00-07:00",
+   "end": "2026-02-24T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-24T18:00:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-02-24T18:07:00-07:00",
+     "bpm": 118.0
+    },
+    {
+     "t": "2026-02-24T18:14:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-02-24T18:21:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-02-24T18:28:00-07:00",
+     "bpm": 116.0
+    },
+    {
+     "t": "2026-02-24T18:35:00-07:00",
+     "bpm": 132.0
+    }
+   ],
+   "avgHR": 117.3,
+   "maxHR": 133.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-26T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-26T18:00:00-07:00",
+   "end": "2026-02-26T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-26T18:00:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-02-26T18:07:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-02-26T18:14:00-07:00",
+     "bpm": 116.0
+    },
+    {
+     "t": "2026-02-26T18:21:00-07:00",
+     "bpm": 132.0
+    },
+    {
+     "t": "2026-02-26T18:28:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-02-26T18:35:00-07:00",
+     "bpm": 123.0
+    }
+   ],
+   "avgHR": 118.5,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-02-28T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-02-28T18:00:00-07:00",
+   "end": "2026-02-28T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-02-28T18:00:00-07:00",
+     "bpm": 116.0
+    },
+    {
+     "t": "2026-02-28T18:07:00-07:00",
+     "bpm": 132.0
+    },
+    {
+     "t": "2026-02-28T18:14:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-02-28T18:21:00-07:00",
+     "bpm": 123.0
+    },
+    {
+     "t": "2026-02-28T18:28:00-07:00",
+     "bpm": 106.0
+    },
+    {
+     "t": "2026-02-28T18:35:00-07:00",
+     "bpm": 100.0
+    }
+   ],
+   "avgHR": 118.7,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-02T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-02T18:00:00-07:00",
+   "end": "2026-03-02T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-02T18:00:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-03-02T18:07:00-07:00",
+     "bpm": 123.0
+    },
+    {
+     "t": "2026-03-02T18:14:00-07:00",
+     "bpm": 106.0
+    },
+    {
+     "t": "2026-03-02T18:21:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-03-02T18:28:00-07:00",
+     "bpm": 111.0
+    },
+    {
+     "t": "2026-03-02T18:35:00-07:00",
+     "bpm": 128.0
+    }
+   ],
+   "avgHR": 117.2,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-03T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-03T18:00:00-07:00",
+   "end": "2026-03-03T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-03T18:00:00-07:00",
+     "bpm": 123.0
+    },
+    {
+     "t": "2026-03-03T18:07:00-07:00",
+     "bpm": 106.0
+    },
+    {
+     "t": "2026-03-03T18:14:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-03-03T18:21:00-07:00",
+     "bpm": 111.0
+    },
+    {
+     "t": "2026-03-03T18:28:00-07:00",
+     "bpm": 128.0
+    },
+    {
+     "t": "2026-03-03T18:35:00-07:00",
+     "bpm": 136.0
+    }
+   ],
+   "avgHR": 117.3,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-05T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-05T18:00:00-07:00",
+   "end": "2026-03-05T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-05T18:00:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-03-05T18:07:00-07:00",
+     "bpm": 111.0
+    },
+    {
+     "t": "2026-03-05T18:14:00-07:00",
+     "bpm": 128.0
+    },
+    {
+     "t": "2026-03-05T18:21:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-03-05T18:28:00-07:00",
+     "bpm": 127.0
+    },
+    {
+     "t": "2026-03-05T18:35:00-07:00",
+     "bpm": 110.0
+    }
+   ],
+   "avgHR": 118.7,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-07T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-07T18:00:00-07:00",
+   "end": "2026-03-07T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-07T18:00:00-07:00",
+     "bpm": 128.0
+    },
+    {
+     "t": "2026-03-07T18:07:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-03-07T18:14:00-07:00",
+     "bpm": 127.0
+    },
+    {
+     "t": "2026-03-07T18:21:00-07:00",
+     "bpm": 110.0
+    },
+    {
+     "t": "2026-03-07T18:28:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-03-07T18:35:00-07:00",
+     "bpm": 107.0
+    }
+   ],
+   "avgHR": 118.0,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-09T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-09T18:00:00-07:00",
+   "end": "2026-03-09T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-09T18:00:00-07:00",
+     "bpm": 127.0
+    },
+    {
+     "t": "2026-03-09T18:07:00-07:00",
+     "bpm": 110.0
+    },
+    {
+     "t": "2026-03-09T18:14:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-03-09T18:21:00-07:00",
+     "bpm": 107.0
+    },
+    {
+     "t": "2026-03-09T18:28:00-07:00",
+     "bpm": 124.0
+    },
+    {
+     "t": "2026-03-09T18:35:00-07:00",
+     "bpm": 135.0
+    }
+   ],
+   "avgHR": 117.2,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-10T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-10T18:00:00-07:00",
+   "end": "2026-03-10T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-10T18:00:00-07:00",
+     "bpm": 110.0
+    },
+    {
+     "t": "2026-03-10T18:07:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-03-10T18:14:00-07:00",
+     "bpm": 107.0
+    },
+    {
+     "t": "2026-03-10T18:21:00-07:00",
+     "bpm": 124.0
+    },
+    {
+     "t": "2026-03-10T18:28:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-03-10T18:35:00-07:00",
+     "bpm": 131.0
+    }
+   ],
+   "avgHR": 117.8,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-12T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-12T18:00:00-07:00",
+   "end": "2026-03-12T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-12T18:00:00-07:00",
+     "bpm": 107.0
+    },
+    {
+     "t": "2026-03-12T18:07:00-07:00",
+     "bpm": 124.0
+    },
+    {
+     "t": "2026-03-12T18:14:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-03-12T18:21:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-03-12T18:28:00-07:00",
+     "bpm": 115.0
+    },
+    {
+     "t": "2026-03-12T18:35:00-07:00",
+     "bpm": 101.0
+    }
+   ],
+   "avgHR": 118.8,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-14T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-14T18:00:00-07:00",
+   "end": "2026-03-14T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-14T18:00:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-03-14T18:07:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-03-14T18:14:00-07:00",
+     "bpm": 115.0
+    },
+    {
+     "t": "2026-03-14T18:21:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-03-14T18:28:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-03-14T18:35:00-07:00",
+     "bpm": 119.0
+    }
+   ],
+   "avgHR": 117.3,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-16T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-16T18:00:00-07:00",
+   "end": "2026-03-16T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-16T18:00:00-07:00",
+     "bpm": 115.0
+    },
+    {
+     "t": "2026-03-16T18:07:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-03-16T18:14:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-03-16T18:21:00-07:00",
+     "bpm": 119.0
+    },
+    {
+     "t": "2026-03-16T18:28:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-03-16T18:35:00-07:00",
+     "bpm": 134.0
+    }
+   ],
+   "avgHR": 117.5,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-17T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-17T18:00:00-07:00",
+   "end": "2026-03-17T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-17T18:00:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-03-17T18:07:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-03-17T18:14:00-07:00",
+     "bpm": 119.0
+    },
+    {
+     "t": "2026-03-17T18:21:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-03-17T18:28:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-03-17T18:35:00-07:00",
+     "bpm": 120.0
+    }
+   ],
+   "avgHR": 118.3,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-19T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-19T18:00:00-07:00",
+   "end": "2026-03-19T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-19T18:00:00-07:00",
+     "bpm": 119.0
+    },
+    {
+     "t": "2026-03-19T18:07:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-03-19T18:14:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-03-19T18:21:00-07:00",
+     "bpm": 120.0
+    },
+    {
+     "t": "2026-03-19T18:28:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2026-03-19T18:35:00-07:00",
+     "bpm": 101.0
+    }
+   ],
+   "avgHR": 118.5,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-21T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-21T18:00:00-07:00",
+   "end": "2026-03-21T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-21T18:00:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-03-21T18:07:00-07:00",
+     "bpm": 120.0
+    },
+    {
+     "t": "2026-03-21T18:14:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2026-03-21T18:21:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-03-21T18:28:00-07:00",
+     "bpm": 114.0
+    },
+    {
+     "t": "2026-03-21T18:35:00-07:00",
+     "bpm": 130.0
+    }
+   ],
+   "avgHR": 117.2,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-24T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-24T18:00:00-07:00",
+   "end": "2026-03-24T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-24T18:00:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-03-24T18:07:00-07:00",
+     "bpm": 114.0
+    },
+    {
+     "t": "2026-03-24T18:14:00-07:00",
+     "bpm": 130.0
+    },
+    {
+     "t": "2026-03-24T18:21:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-03-24T18:28:00-07:00",
+     "bpm": 125.0
+    },
+    {
+     "t": "2026-03-24T18:35:00-07:00",
+     "bpm": 108.0
+    }
+   ],
+   "avgHR": 119.0,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-26T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-26T18:00:00-07:00",
+   "end": "2026-03-26T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-26T18:00:00-07:00",
+     "bpm": 130.0
+    },
+    {
+     "t": "2026-03-26T18:07:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-03-26T18:14:00-07:00",
+     "bpm": 125.0
+    },
+    {
+     "t": "2026-03-26T18:21:00-07:00",
+     "bpm": 108.0
+    },
+    {
+     "t": "2026-03-26T18:28:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-03-26T18:35:00-07:00",
+     "bpm": 109.0
+    }
+   ],
+   "avgHR": 118.0,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-28T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-28T18:00:00-07:00",
+   "end": "2026-03-28T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-28T18:00:00-07:00",
+     "bpm": 125.0
+    },
+    {
+     "t": "2026-03-28T18:07:00-07:00",
+     "bpm": 108.0
+    },
+    {
+     "t": "2026-03-28T18:14:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-03-28T18:21:00-07:00",
+     "bpm": 109.0
+    },
+    {
+     "t": "2026-03-28T18:28:00-07:00",
+     "bpm": 126.0
+    },
+    {
+     "t": "2026-03-28T18:35:00-07:00",
+     "bpm": 136.0
+    }
+   ],
+   "avgHR": 117.3,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-30T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-30T18:00:00-07:00",
+   "end": "2026-03-30T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-30T18:00:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-03-30T18:07:00-07:00",
+     "bpm": 109.0
+    },
+    {
+     "t": "2026-03-30T18:14:00-07:00",
+     "bpm": 126.0
+    },
+    {
+     "t": "2026-03-30T18:21:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-03-30T18:28:00-07:00",
+     "bpm": 129.0
+    },
+    {
+     "t": "2026-03-30T18:35:00-07:00",
+     "bpm": 112.0
+    }
+   ],
+   "avgHR": 118.7,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-03-31T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-03-31T18:00:00-07:00",
+   "end": "2026-03-31T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-03-31T18:00:00-07:00",
+     "bpm": 109.0
+    },
+    {
+     "t": "2026-03-31T18:07:00-07:00",
+     "bpm": 126.0
+    },
+    {
+     "t": "2026-03-31T18:14:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-03-31T18:21:00-07:00",
+     "bpm": 129.0
+    },
+    {
+     "t": "2026-03-31T18:28:00-07:00",
+     "bpm": 112.0
+    },
+    {
+     "t": "2026-03-31T18:35:00-07:00",
+     "bpm": 101.0
+    }
+   ],
+   "avgHR": 118.8,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-02T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-02T18:00:00-07:00",
+   "end": "2026-04-02T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-02T18:00:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-04-02T18:07:00-07:00",
+     "bpm": 129.0
+    },
+    {
+     "t": "2026-04-02T18:14:00-07:00",
+     "bpm": 112.0
+    },
+    {
+     "t": "2026-04-02T18:21:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-04-02T18:28:00-07:00",
+     "bpm": 105.0
+    },
+    {
+     "t": "2026-04-02T18:35:00-07:00",
+     "bpm": 121.0
+    }
+   ],
+   "avgHR": 117.3,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-04T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-04T18:00:00-07:00",
+   "end": "2026-04-04T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-04T18:00:00-07:00",
+     "bpm": 112.0
+    },
+    {
+     "t": "2026-04-04T18:07:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-04-04T18:14:00-07:00",
+     "bpm": 105.0
+    },
+    {
+     "t": "2026-04-04T18:21:00-07:00",
+     "bpm": 121.0
+    },
+    {
+     "t": "2026-04-04T18:28:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-04-04T18:35:00-07:00",
+     "bpm": 133.0
+    }
+   ],
+   "avgHR": 117.8,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-06T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-06T18:00:00-07:00",
+   "end": "2026-04-06T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-06T18:00:00-07:00",
+     "bpm": 105.0
+    },
+    {
+     "t": "2026-04-06T18:07:00-07:00",
+     "bpm": 121.0
+    },
+    {
+     "t": "2026-04-06T18:14:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-04-06T18:21:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-04-06T18:28:00-07:00",
+     "bpm": 117.0
+    },
+    {
+     "t": "2026-04-06T18:35:00-07:00",
+     "bpm": 102.0
+    }
+   ],
+   "avgHR": 118.8,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-07T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-07T18:00:00-07:00",
+   "end": "2026-04-07T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-07T18:00:00-07:00",
+     "bpm": 121.0
+    },
+    {
+     "t": "2026-04-07T18:07:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-04-07T18:14:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-04-07T18:21:00-07:00",
+     "bpm": 117.0
+    },
+    {
+     "t": "2026-04-07T18:28:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-04-07T18:35:00-07:00",
+     "bpm": 102.0
+    }
+   ],
+   "avgHR": 118.3,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-09T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-09T18:00:00-07:00",
+   "end": "2026-04-09T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-09T18:00:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-04-09T18:07:00-07:00",
+     "bpm": 117.0
+    },
+    {
+     "t": "2026-04-09T18:14:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-04-09T18:21:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-04-09T18:28:00-07:00",
+     "bpm": 116.0
+    },
+    {
+     "t": "2026-04-09T18:35:00-07:00",
+     "bpm": 132.0
+    }
+   ],
+   "avgHR": 117.0,
+   "maxHR": 133.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-11T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-11T18:00:00-07:00",
+   "end": "2026-04-11T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-11T18:00:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-04-11T18:07:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-04-11T18:14:00-07:00",
+     "bpm": 116.0
+    },
+    {
+     "t": "2026-04-11T18:21:00-07:00",
+     "bpm": 132.0
+    },
+    {
+     "t": "2026-04-11T18:28:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-04-11T18:35:00-07:00",
+     "bpm": 122.0
+    }
+   ],
+   "avgHR": 118.2,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeWalking-2026-04-12T12:10:00-07:00",
+   "activityType": "Walk",
+   "start": "2026-04-12T12:10:00-07:00",
+   "end": "2026-04-12T12:42:00-07:00",
+   "durationSeconds": 1920.0,
+   "hrSamples": []
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-13T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-13T18:00:00-07:00",
+   "end": "2026-04-13T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-13T18:00:00-07:00",
+     "bpm": 116.0
+    },
+    {
+     "t": "2026-04-13T18:07:00-07:00",
+     "bpm": 132.0
+    },
+    {
+     "t": "2026-04-13T18:14:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-04-13T18:21:00-07:00",
+     "bpm": 122.0
+    },
+    {
+     "t": "2026-04-13T18:28:00-07:00",
+     "bpm": 106.0
+    },
+    {
+     "t": "2026-04-13T18:35:00-07:00",
+     "bpm": 100.0
+    }
+   ],
+   "avgHR": 118.5,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-14T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-14T18:00:00-07:00",
+   "end": "2026-04-14T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-14T18:00:00-07:00",
+     "bpm": 132.0
+    },
+    {
+     "t": "2026-04-14T18:07:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-04-14T18:14:00-07:00",
+     "bpm": 122.0
+    },
+    {
+     "t": "2026-04-14T18:21:00-07:00",
+     "bpm": 106.0
+    },
+    {
+     "t": "2026-04-14T18:28:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-04-14T18:35:00-07:00",
+     "bpm": 111.0
+    }
+   ],
+   "avgHR": 117.7,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-16T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-16T18:00:00-07:00",
+   "end": "2026-04-16T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-16T18:00:00-07:00",
+     "bpm": 122.0
+    },
+    {
+     "t": "2026-04-16T18:07:00-07:00",
+     "bpm": 106.0
+    },
+    {
+     "t": "2026-04-16T18:14:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-04-16T18:21:00-07:00",
+     "bpm": 111.0
+    },
+    {
+     "t": "2026-04-16T18:28:00-07:00",
+     "bpm": 128.0
+    },
+    {
+     "t": "2026-04-16T18:35:00-07:00",
+     "bpm": 136.0
+    }
+   ],
+   "avgHR": 117.2,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-18T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-18T18:00:00-07:00",
+   "end": "2026-04-18T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-18T18:00:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-04-18T18:07:00-07:00",
+     "bpm": 111.0
+    },
+    {
+     "t": "2026-04-18T18:14:00-07:00",
+     "bpm": 128.0
+    },
+    {
+     "t": "2026-04-18T18:21:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-04-18T18:28:00-07:00",
+     "bpm": 127.0
+    },
+    {
+     "t": "2026-04-18T18:35:00-07:00",
+     "bpm": 110.0
+    }
+   ],
+   "avgHR": 118.7,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-20T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-20T18:00:00-07:00",
+   "end": "2026-04-20T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-20T18:00:00-07:00",
+     "bpm": 128.0
+    },
+    {
+     "t": "2026-04-20T18:07:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-04-20T18:14:00-07:00",
+     "bpm": 127.0
+    },
+    {
+     "t": "2026-04-20T18:21:00-07:00",
+     "bpm": 110.0
+    },
+    {
+     "t": "2026-04-20T18:28:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-04-20T18:35:00-07:00",
+     "bpm": 107.0
+    }
+   ],
+   "avgHR": 118.0,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-21T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-21T18:00:00-07:00",
+   "end": "2026-04-21T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-21T18:00:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-04-21T18:07:00-07:00",
+     "bpm": 127.0
+    },
+    {
+     "t": "2026-04-21T18:14:00-07:00",
+     "bpm": 110.0
+    },
+    {
+     "t": "2026-04-21T18:21:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-04-21T18:28:00-07:00",
+     "bpm": 107.0
+    },
+    {
+     "t": "2026-04-21T18:35:00-07:00",
+     "bpm": 124.0
+    }
+   ],
+   "avgHR": 117.3,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-25T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-25T18:00:00-07:00",
+   "end": "2026-04-25T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-25T18:00:00-07:00",
+     "bpm": 107.0
+    },
+    {
+     "t": "2026-04-25T18:07:00-07:00",
+     "bpm": 124.0
+    },
+    {
+     "t": "2026-04-25T18:14:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-04-25T18:21:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-04-25T18:28:00-07:00",
+     "bpm": 115.0
+    },
+    {
+     "t": "2026-04-25T18:35:00-07:00",
+     "bpm": 101.0
+    }
+   ],
+   "avgHR": 119.0,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-27T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-27T18:00:00-07:00",
+   "end": "2026-04-27T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-27T18:00:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-04-27T18:07:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-04-27T18:14:00-07:00",
+     "bpm": 115.0
+    },
+    {
+     "t": "2026-04-27T18:21:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-04-27T18:28:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-04-27T18:35:00-07:00",
+     "bpm": 119.0
+    }
+   ],
+   "avgHR": 117.5,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-28T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-28T18:00:00-07:00",
+   "end": "2026-04-28T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-28T18:00:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-04-28T18:07:00-07:00",
+     "bpm": 115.0
+    },
+    {
+     "t": "2026-04-28T18:14:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-04-28T18:21:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-04-28T18:28:00-07:00",
+     "bpm": 119.0
+    },
+    {
+     "t": "2026-04-28T18:35:00-07:00",
+     "bpm": 134.0
+    }
+   ],
+   "avgHR": 117.2,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-04-30T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-04-30T18:00:00-07:00",
+   "end": "2026-04-30T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-04-30T18:00:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-04-30T18:07:00-07:00",
+     "bpm": 103.0
+    },
+    {
+     "t": "2026-04-30T18:14:00-07:00",
+     "bpm": 119.0
+    },
+    {
+     "t": "2026-04-30T18:21:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-04-30T18:28:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-04-30T18:35:00-07:00",
+     "bpm": 120.0
+    }
+   ],
+   "avgHR": 118.5,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-02T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-02T18:00:00-07:00",
+   "end": "2026-05-02T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-02T18:00:00-07:00",
+     "bpm": 119.0
+    },
+    {
+     "t": "2026-05-02T18:07:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-05-02T18:14:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-05-02T18:21:00-07:00",
+     "bpm": 120.0
+    },
+    {
+     "t": "2026-05-02T18:28:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2026-05-02T18:35:00-07:00",
+     "bpm": 101.0
+    }
+   ],
+   "avgHR": 118.7,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-04T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-04T18:00:00-07:00",
+   "end": "2026-05-04T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-04T18:00:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-05-04T18:07:00-07:00",
+     "bpm": 120.0
+    },
+    {
+     "t": "2026-05-04T18:14:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2026-05-04T18:21:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-05-04T18:28:00-07:00",
+     "bpm": 114.0
+    },
+    {
+     "t": "2026-05-04T18:35:00-07:00",
+     "bpm": 131.0
+    }
+   ],
+   "avgHR": 117.3,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-05T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-05T18:00:00-07:00",
+   "end": "2026-05-05T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-05T18:00:00-07:00",
+     "bpm": 120.0
+    },
+    {
+     "t": "2026-05-05T18:07:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2026-05-05T18:14:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-05-05T18:21:00-07:00",
+     "bpm": 114.0
+    },
+    {
+     "t": "2026-05-05T18:28:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-05-05T18:35:00-07:00",
+     "bpm": 136.0
+    }
+   ],
+   "avgHR": 117.7,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-07T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-07T18:00:00-07:00",
+   "end": "2026-05-07T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-07T18:00:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-05-07T18:07:00-07:00",
+     "bpm": 114.0
+    },
+    {
+     "t": "2026-05-07T18:14:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-05-07T18:21:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-05-07T18:28:00-07:00",
+     "bpm": 125.0
+    },
+    {
+     "t": "2026-05-07T18:35:00-07:00",
+     "bpm": 107.0
+    }
+   ],
+   "avgHR": 119.0,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-09T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-09T18:00:00-07:00",
+   "end": "2026-05-09T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-09T18:00:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-05-09T18:07:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-05-09T18:14:00-07:00",
+     "bpm": 125.0
+    },
+    {
+     "t": "2026-05-09T18:21:00-07:00",
+     "bpm": 107.0
+    },
+    {
+     "t": "2026-05-09T18:28:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-05-09T18:35:00-07:00",
+     "bpm": 109.0
+    }
+   ],
+   "avgHR": 118.0,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-11T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-11T18:00:00-07:00",
+   "end": "2026-05-11T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-11T18:00:00-07:00",
+     "bpm": 125.0
+    },
+    {
+     "t": "2026-05-11T18:07:00-07:00",
+     "bpm": 107.0
+    },
+    {
+     "t": "2026-05-11T18:14:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-05-11T18:21:00-07:00",
+     "bpm": 109.0
+    },
+    {
+     "t": "2026-05-11T18:28:00-07:00",
+     "bpm": 126.0
+    },
+    {
+     "t": "2026-05-11T18:35:00-07:00",
+     "bpm": 136.0
+    }
+   ],
+   "avgHR": 117.2,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-12T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-12T18:00:00-07:00",
+   "end": "2026-05-12T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-12T18:00:00-07:00",
+     "bpm": 107.0
+    },
+    {
+     "t": "2026-05-12T18:07:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-05-12T18:14:00-07:00",
+     "bpm": 109.0
+    },
+    {
+     "t": "2026-05-12T18:21:00-07:00",
+     "bpm": 126.0
+    },
+    {
+     "t": "2026-05-12T18:28:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-05-12T18:35:00-07:00",
+     "bpm": 129.0
+    }
+   ],
+   "avgHR": 117.8,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-14T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-14T18:00:00-07:00",
+   "end": "2026-05-14T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-14T18:00:00-07:00",
+     "bpm": 109.0
+    },
+    {
+     "t": "2026-05-14T18:07:00-07:00",
+     "bpm": 126.0
+    },
+    {
+     "t": "2026-05-14T18:14:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-05-14T18:21:00-07:00",
+     "bpm": 129.0
+    },
+    {
+     "t": "2026-05-14T18:28:00-07:00",
+     "bpm": 112.0
+    },
+    {
+     "t": "2026-05-14T18:35:00-07:00",
+     "bpm": 100.0
+    }
+   ],
+   "avgHR": 118.7,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-16T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-16T18:00:00-07:00",
+   "end": "2026-05-16T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-16T18:00:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-05-16T18:07:00-07:00",
+     "bpm": 129.0
+    },
+    {
+     "t": "2026-05-16T18:14:00-07:00",
+     "bpm": 112.0
+    },
+    {
+     "t": "2026-05-16T18:21:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-05-16T18:28:00-07:00",
+     "bpm": 105.0
+    },
+    {
+     "t": "2026-05-16T18:35:00-07:00",
+     "bpm": 122.0
+    }
+   ],
+   "avgHR": 117.3,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-18T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-18T18:00:00-07:00",
+   "end": "2026-05-18T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-18T18:00:00-07:00",
+     "bpm": 112.0
+    },
+    {
+     "t": "2026-05-18T18:07:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-05-18T18:14:00-07:00",
+     "bpm": 105.0
+    },
+    {
+     "t": "2026-05-18T18:21:00-07:00",
+     "bpm": 122.0
+    },
+    {
+     "t": "2026-05-18T18:28:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-05-18T18:35:00-07:00",
+     "bpm": 133.0
+    }
+   ],
+   "avgHR": 117.8,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-19T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-19T18:00:00-07:00",
+   "end": "2026-05-19T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-19T18:00:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-05-19T18:07:00-07:00",
+     "bpm": 105.0
+    },
+    {
+     "t": "2026-05-19T18:14:00-07:00",
+     "bpm": 122.0
+    },
+    {
+     "t": "2026-05-19T18:21:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-05-19T18:28:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-05-19T18:35:00-07:00",
+     "bpm": 117.0
+    }
+   ],
+   "avgHR": 118.7,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-21T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-21T18:00:00-07:00",
+   "end": "2026-05-21T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-21T18:00:00-07:00",
+     "bpm": 122.0
+    },
+    {
+     "t": "2026-05-21T18:07:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-05-21T18:14:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-05-21T18:21:00-07:00",
+     "bpm": 117.0
+    },
+    {
+     "t": "2026-05-21T18:28:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-05-21T18:35:00-07:00",
+     "bpm": 102.0
+    }
+   ],
+   "avgHR": 118.5,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-23T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-23T18:00:00-07:00",
+   "end": "2026-05-23T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-23T18:00:00-07:00",
+     "bpm": 133.0
+    },
+    {
+     "t": "2026-05-23T18:07:00-07:00",
+     "bpm": 117.0
+    },
+    {
+     "t": "2026-05-23T18:14:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-05-23T18:21:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-05-23T18:28:00-07:00",
+     "bpm": 117.0
+    },
+    {
+     "t": "2026-05-23T18:35:00-07:00",
+     "bpm": 132.0
+    }
+   ],
+   "avgHR": 117.2,
+   "maxHR": 133.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-25T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-25T18:00:00-07:00",
+   "end": "2026-05-25T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-25T18:00:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-05-25T18:07:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-05-25T18:14:00-07:00",
+     "bpm": 117.0
+    },
+    {
+     "t": "2026-05-25T18:21:00-07:00",
+     "bpm": 132.0
+    },
+    {
+     "t": "2026-05-25T18:28:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-05-25T18:35:00-07:00",
+     "bpm": 122.0
+    }
+   ],
+   "avgHR": 118.3,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-26T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-26T18:00:00-07:00",
+   "end": "2026-05-26T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-26T18:00:00-07:00",
+     "bpm": 102.0
+    },
+    {
+     "t": "2026-05-26T18:07:00-07:00",
+     "bpm": 117.0
+    },
+    {
+     "t": "2026-05-26T18:14:00-07:00",
+     "bpm": 132.0
+    },
+    {
+     "t": "2026-05-26T18:21:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-05-26T18:28:00-07:00",
+     "bpm": 122.0
+    },
+    {
+     "t": "2026-05-26T18:35:00-07:00",
+     "bpm": 105.0
+    }
+   ],
+   "avgHR": 118.8,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-28T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-28T18:00:00-07:00",
+   "end": "2026-05-28T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-28T18:00:00-07:00",
+     "bpm": 132.0
+    },
+    {
+     "t": "2026-05-28T18:07:00-07:00",
+     "bpm": 135.0
+    },
+    {
+     "t": "2026-05-28T18:14:00-07:00",
+     "bpm": 122.0
+    },
+    {
+     "t": "2026-05-28T18:21:00-07:00",
+     "bpm": 105.0
+    },
+    {
+     "t": "2026-05-28T18:28:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-05-28T18:35:00-07:00",
+     "bpm": 112.0
+    }
+   ],
+   "avgHR": 117.7,
+   "maxHR": 135.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-05-30T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-05-30T18:00:00-07:00",
+   "end": "2026-05-30T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-05-30T18:00:00-07:00",
+     "bpm": 122.0
+    },
+    {
+     "t": "2026-05-30T18:07:00-07:00",
+     "bpm": 105.0
+    },
+    {
+     "t": "2026-05-30T18:14:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-05-30T18:21:00-07:00",
+     "bpm": 112.0
+    },
+    {
+     "t": "2026-05-30T18:28:00-07:00",
+     "bpm": 129.0
+    },
+    {
+     "t": "2026-05-30T18:35:00-07:00",
+     "bpm": 136.0
+    }
+   ],
+   "avgHR": 117.3,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-06-01T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-06-01T18:00:00-07:00",
+   "end": "2026-06-01T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-06-01T18:00:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-06-01T18:07:00-07:00",
+     "bpm": 112.0
+    },
+    {
+     "t": "2026-06-01T18:14:00-07:00",
+     "bpm": 129.0
+    },
+    {
+     "t": "2026-06-01T18:21:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-06-01T18:28:00-07:00",
+     "bpm": 127.0
+    },
+    {
+     "t": "2026-06-01T18:35:00-07:00",
+     "bpm": 109.0
+    }
+   ],
+   "avgHR": 118.8,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-06-02T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-06-02T18:00:00-07:00",
+   "end": "2026-06-02T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-06-02T18:00:00-07:00",
+     "bpm": 112.0
+    },
+    {
+     "t": "2026-06-02T18:07:00-07:00",
+     "bpm": 129.0
+    },
+    {
+     "t": "2026-06-02T18:14:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-06-02T18:21:00-07:00",
+     "bpm": 127.0
+    },
+    {
+     "t": "2026-06-02T18:28:00-07:00",
+     "bpm": 109.0
+    },
+    {
+     "t": "2026-06-02T18:35:00-07:00",
+     "bpm": 100.0
+    }
+   ],
+   "avgHR": 118.8,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-06-04T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-06-04T18:00:00-07:00",
+   "end": "2026-06-04T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-06-04T18:00:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-06-04T18:07:00-07:00",
+     "bpm": 127.0
+    },
+    {
+     "t": "2026-06-04T18:14:00-07:00",
+     "bpm": 109.0
+    },
+    {
+     "t": "2026-06-04T18:21:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-06-04T18:28:00-07:00",
+     "bpm": 107.0
+    },
+    {
+     "t": "2026-06-04T18:35:00-07:00",
+     "bpm": 124.0
+    }
+   ],
+   "avgHR": 117.2,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeWalking-2026-06-05T12:10:00-07:00",
+   "activityType": "Walk",
+   "start": "2026-06-05T12:10:00-07:00",
+   "end": "2026-06-05T12:42:00-07:00",
+   "durationSeconds": 1920.0,
+   "hrSamples": []
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-06-06T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-06-06T18:00:00-07:00",
+   "end": "2026-06-06T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-06-06T18:00:00-07:00",
+     "bpm": 109.0
+    },
+    {
+     "t": "2026-06-06T18:07:00-07:00",
+     "bpm": 100.0
+    },
+    {
+     "t": "2026-06-06T18:14:00-07:00",
+     "bpm": 107.0
+    },
+    {
+     "t": "2026-06-06T18:21:00-07:00",
+     "bpm": 124.0
+    },
+    {
+     "t": "2026-06-06T18:28:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-06-06T18:35:00-07:00",
+     "bpm": 131.0
+    }
+   ],
+   "avgHR": 117.8,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-06-08T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-06-08T18:00:00-07:00",
+   "end": "2026-06-08T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-06-08T18:00:00-07:00",
+     "bpm": 107.0
+    },
+    {
+     "t": "2026-06-08T18:07:00-07:00",
+     "bpm": 124.0
+    },
+    {
+     "t": "2026-06-08T18:14:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-06-08T18:21:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-06-08T18:28:00-07:00",
+     "bpm": 114.0
+    },
+    {
+     "t": "2026-06-08T18:35:00-07:00",
+     "bpm": 101.0
+    }
+   ],
+   "avgHR": 118.8,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-06-09T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-06-09T18:00:00-07:00",
+   "end": "2026-06-09T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-06-09T18:00:00-07:00",
+     "bpm": 124.0
+    },
+    {
+     "t": "2026-06-09T18:07:00-07:00",
+     "bpm": 136.0
+    },
+    {
+     "t": "2026-06-09T18:14:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-06-09T18:21:00-07:00",
+     "bpm": 114.0
+    },
+    {
+     "t": "2026-06-09T18:28:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-06-09T18:35:00-07:00",
+     "bpm": 104.0
+    }
+   ],
+   "avgHR": 118.3,
+   "maxHR": 136.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-06-11T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-06-11T18:00:00-07:00",
+   "end": "2026-06-11T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-06-11T18:00:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-06-11T18:07:00-07:00",
+     "bpm": 114.0
+    },
+    {
+     "t": "2026-06-11T18:14:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-06-11T18:21:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2026-06-11T18:28:00-07:00",
+     "bpm": 119.0
+    },
+    {
+     "t": "2026-06-11T18:35:00-07:00",
+     "bpm": 134.0
+    }
+   ],
+   "avgHR": 117.2,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-06-16T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-06-16T18:00:00-07:00",
+   "end": "2026-06-16T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-06-16T18:00:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-06-16T18:07:00-07:00",
+     "bpm": 134.0
+    },
+    {
+     "t": "2026-06-16T18:14:00-07:00",
+     "bpm": 119.0
+    },
+    {
+     "t": "2026-06-16T18:21:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2026-06-16T18:28:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-06-16T18:35:00-07:00",
+     "bpm": 114.0
+    }
+   ],
+   "avgHR": 117.7,
+   "maxHR": 134.0
+  },
+  {
+   "id": "HKWorkoutActivityTypeFunctionalStrengthTraining-2026-06-18T18:00:00-07:00",
+   "activityType": "Strength Training",
+   "start": "2026-06-18T18:00:00-07:00",
+   "end": "2026-06-18T18:50:00-07:00",
+   "durationSeconds": 3000.0,
+   "hrSamples": [
+    {
+     "t": "2026-06-18T18:00:00-07:00",
+     "bpm": 119.0
+    },
+    {
+     "t": "2026-06-18T18:07:00-07:00",
+     "bpm": 104.0
+    },
+    {
+     "t": "2026-06-18T18:14:00-07:00",
+     "bpm": 101.0
+    },
+    {
+     "t": "2026-06-18T18:21:00-07:00",
+     "bpm": 114.0
+    },
+    {
+     "t": "2026-06-18T18:28:00-07:00",
+     "bpm": 131.0
+    },
+    {
+     "t": "2026-06-18T18:35:00-07:00",
+     "bpm": 136.0
+    }
+   ],
+   "avgHR": 117.5,
+   "maxHR": 136.0
+  }
+ ]
+}
