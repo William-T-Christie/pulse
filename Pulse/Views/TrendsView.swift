@@ -44,6 +44,7 @@ struct TrendsView: View {
                     .frame(width: 190)
                 }
 
+                WeekPanel(cards: model.scorecards)
                 recoveryChart
                 strainChart
                 sleepChart
@@ -201,6 +202,96 @@ struct TrendsView: View {
                     }
                     .frame(height: 128)
             }
+        }
+    }
+}
+
+// MARK: - Week summary
+
+/// The weekly signal: this week's averages against last week's.
+struct WeekPanel: View {
+    let cards: [DayScore]
+
+    private struct WeekStats {
+        var avgRecovery: Double?
+        var recoveryZone: StatusZone?
+        var avgStrain: Double?
+        var sessions: Int = 0
+        var debtHours: Double?
+    }
+
+    private func stats(_ slice: ArraySlice<DayScore>) -> WeekStats {
+        var s = WeekStats()
+        let recoveries = slice.compactMap { $0.recovery?.score }
+        if !recoveries.isEmpty {
+            let avg = recoveries.reduce(0, +) / Double(recoveries.count)
+            s.avgRecovery = avg
+            s.recoveryZone = avg >= 67 ? .green : avg >= 34 ? .amber : .red
+        }
+        if !slice.isEmpty {
+            s.avgStrain = slice.map { $0.strain.score }.reduce(0, +) / Double(slice.count)
+        }
+        s.sessions = slice.map { $0.strain.workouts.count }.reduce(0, +)
+        s.debtHours = slice.last?.sleep?.debtHours
+        return s
+    }
+
+    var body: some View {
+        let thisWeek = stats(cards.suffix(7))
+        let lastWeek = stats(cards.dropLast(7).suffix(7))
+        Panel {
+            VStack(alignment: .leading, spacing: 14) {
+                Text("This week").eyebrow()
+                let columns = [
+                    GridItem(.flexible()), GridItem(.flexible()),
+                    GridItem(.flexible()), GridItem(.flexible()),
+                ]
+                LazyVGrid(columns: columns, alignment: .leading, spacing: 14) {
+                    cell(
+                        "Recovery",
+                        value: thisWeek.avgRecovery.map { Fmt.num($0) },
+                        unit: "%",
+                        zone: thisWeek.recoveryZone,
+                        prior: lastWeek.avgRecovery.map { Fmt.num($0) }
+                    )
+                    cell(
+                        "Strain",
+                        value: thisWeek.avgStrain.map { Fmt.num($0, 1) },
+                        unit: nil,
+                        zone: nil,
+                        prior: lastWeek.avgStrain.map { Fmt.num($0, 1) }
+                    )
+                    cell(
+                        "Sessions",
+                        value: "\(thisWeek.sessions)",
+                        unit: nil,
+                        zone: nil,
+                        prior: "\(lastWeek.sessions)"
+                    )
+                    cell(
+                        "Sleep debt",
+                        value: thisWeek.debtHours.map { Fmt.num($0, 1) },
+                        unit: "hr",
+                        zone: nil,
+                        prior: lastWeek.debtHours.map { Fmt.num($0, 1) }
+                    )
+                }
+            }
+        }
+    }
+
+    private func cell(
+        _ label: String, value: String?, unit: String?, zone: StatusZone?, prior: String?
+    ) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(label).eyebrow()
+            HStack(spacing: 5) {
+                if let zone { StatusDot(zone: zone) }
+                ValueText(value: value ?? "--", unit: unit, size: 17)
+            }
+            Text(prior.map { "last wk \($0)" } ?? " ")
+                .font(.label(10))
+                .foregroundStyle(Theme.ink3)
         }
     }
 }

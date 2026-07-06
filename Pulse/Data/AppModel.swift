@@ -72,6 +72,7 @@ final class AppModel {
         dataset = DemoDataSource.load()
         sourceKind = .demo
         recompute()
+        applyLaunchDayOffset()
     }
 
     func recompute() {
@@ -80,6 +81,16 @@ final class AppModel {
         if let key = selectedDateKey, !scorecards.contains(where: { $0.dateKey == key }) {
             selectedDateKey = nil
         }
+    }
+
+    /// Honors a "-day -N" launch argument (CLI screenshot hook).
+    func applyLaunchDayOffset() {
+        let args = ProcessInfo.processInfo.arguments
+        guard let i = args.firstIndex(of: "-day"), i + 1 < args.count,
+              let offset = Int(args[i + 1]), offset < 0,
+              scorecards.count + offset - 1 >= 0
+        else { return }
+        selectedDateKey = scorecards[scorecards.count - 1 + offset].dateKey
     }
 
     func step(_ delta: Int) {
