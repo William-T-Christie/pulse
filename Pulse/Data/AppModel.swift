@@ -30,6 +30,7 @@ final class AppModel {
     }
 
     private var dataset: HealthDataset?
+    private var lastFetch: Date?
     private let healthKit = HealthKitSource()
 
     var selectedCard: DayScore? {
@@ -46,6 +47,7 @@ final class AppModel {
     }
 
     func load() async {
+        guard !isLoading else { return }   // MainActor: coalesces re-entrant loads
         isLoading = true
         statusNote = nil
         defer { isLoading = false }
@@ -58,11 +60,17 @@ final class AppModel {
                 if usableDays >= 7 {
                     dataset = live
                     sourceKind = .healthKit
+                    lastFetch = .now
                     recompute()
                     return
                 }
-                statusNote = "Not enough Health data yet — showing demo data."
+                statusNote = "No usable Health data — check Settings › Privacy › Health › Pulse if you expected it. Showing demo data."
             } catch {
+                // A failed refresh must not replace good live data with demo.
+                if sourceKind == .healthKit, dataset != nil {
+                    statusNote = "Refresh failed — showing previously loaded data."
+                    return
+                }
                 statusNote = "Health access unavailable — showing demo data."
             }
         } else if !preferDemo {
@@ -71,8 +79,21 @@ final class AppModel {
 
         dataset = DemoDataSource.load()
         sourceKind = .demo
+        lastFetch = .now
         recompute()
         applyLaunchDayOffset()
+    }
+
+    /// Foreground hook: refetch when data is stale (new calendar day or
+    /// >15 min old) so mornings never show yesterday's scores.
+    func refreshIfStale() async {
+        guard let lastFetch else { return }
+        let newDay = DayKey.key(for: lastFetch) != DayKey.key(for: .now)
+        let aged = Date.now.timeIntervalSince(lastFetch) > 15 * 60
+        if newDay || (sourceKind == .healthKit && aged) {
+            if newDay { selectedDateKey = nil }   // snap back to today
+            await load()
+        }
     }
 
     func recompute() {

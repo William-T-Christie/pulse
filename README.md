@@ -70,6 +70,22 @@ xcrun simctl launch Pulse-iPhone com.wchristie.pulse
 swift tools/render_icon.swift Pulse/Assets.xcassets/AppIcon.appiconset/icon-1024.png
 ```
 
+## Known limitations
+
+From an adversarial multi-agent review (2026-07-06, full findings in
+`docs/review-2026-07-06.json`); judged not worth fixing for a personal app,
+in rough priority order if they ever start to matter:
+
+- Recovery baselines use the last N *recorded* days, not calendar days — if
+  you stop wearing the watch for weeks, the baseline blends stale readings.
+- Sleep bucketing evaluates clock hours in the device's current time zone;
+  heavy travel across zones can misfile a night.
+- Read-permission denial is indistinguishable from "no data" (HealthKit hides
+  it), so denial shows demo data with a generic note.
+- Workouts crossing midnight are counted entirely on their start day.
+- HR series per workout capped at 4,000 samples (~5.5 h at watch cadence).
+- Custom dials/charts have no VoiceOver labels.
+
 ## Roadmap
 
 - **Phase 2 — planner & exercise tracking**: bring over the N=1 workout

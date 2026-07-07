@@ -118,6 +118,8 @@ struct TrendsView: View {
 
     private var sleepChart: some View {
         let points = cards.compactMap { c in c.sleep.map { (c.date, $0.asleepHours, $0.neededHours) } }
+        let lo = max(0, min(4, (points.map(\.1).min() ?? 4) - 0.5))
+        let hi = max(10, (points.map(\.2).max() ?? 10) + 0.5)
         return chartPanel(
             "Sleep",
             latest: points.last.map { Fmt.hours($0.1) },
@@ -146,7 +148,7 @@ struct TrendsView: View {
                         .symbolSize(28)
                 }
             }
-            .chartYScale(domain: 4...10)
+            .chartYScale(domain: lo...hi)
         }
     }
 
@@ -226,7 +228,7 @@ struct WeekPanel: View {
         if !recoveries.isEmpty {
             let avg = recoveries.reduce(0, +) / Double(recoveries.count)
             s.avgRecovery = avg
-            s.recoveryZone = avg >= 67 ? .green : avg >= 34 ? .amber : .red
+            s.recoveryZone = avg.rounded() >= 67 ? .green : avg.rounded() >= 34 ? .amber : .red
         }
         if !slice.isEmpty {
             s.avgStrain = slice.map { $0.strain.score }.reduce(0, +) / Double(slice.count)

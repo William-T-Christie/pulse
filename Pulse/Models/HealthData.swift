@@ -65,8 +65,11 @@ struct HealthDataset: Codable {
 enum DayKey {
     static let formatter: DateFormatter = {
         let f = DateFormatter()
+        // POSIX locale + Gregorian: device calendar/locale settings must not
+        // change the shape of stored keys.
+        f.locale = Locale(identifier: "en_US_POSIX")
+        f.calendar = Calendar(identifier: .gregorian)
         f.dateFormat = "yyyy-MM-dd"
-        f.calendar = Calendar.current
         f.timeZone = .current
         return f
     }()

@@ -22,9 +22,12 @@ struct RecoveryScore {
     var rhrComponent: Double     // 0–1
     var sleepComponent: Double   // 0–1
 
+    /// Zone derives from the rounded value shown in the UI, so 66.6 can't
+    /// display as "67" while carrying an amber dot.
     var zone: StatusZone {
-        if score >= 67 { return .green }
-        if score >= 34 { return .amber }
+        let shown = score.rounded()
+        if shown >= 67 { return .green }
+        if shown >= 34 { return .amber }
         return .red
     }
 }

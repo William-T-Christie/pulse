@@ -222,7 +222,7 @@ struct SleepPanel: View {
                         ValueText(value: Fmt.hours(s.asleepHours), unit: "hr", size: 28)
                         Spacer()
                         HStack(spacing: 6) {
-                            StatusDot(zone: s.performance >= 85 ? .green : s.performance >= 70 ? .amber : .red)
+                            StatusDot(zone: s.performance.rounded() >= 85 ? .green : s.performance.rounded() >= 70 ? .amber : .red)
                             ValueText(value: Fmt.num(s.performance), unit: "%", size: 15)
                         }
                     }

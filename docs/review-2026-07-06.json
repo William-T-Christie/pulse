@@ -1,0 +1,398 @@
+{
+ "confirmed": [
+  {
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Data/HealthKitSource.swift",
+   "line": 181,
+   "title": "Naps are merged into night sleep, inflating sleep/recovery scores and corrupting the night window",
+   "severity": "medium",
+   "description": "sleepNights() assigns every sleep sample to a night purely by end date, with samples ending at/after 15:00 rolled to the next day's key (lines 180-184); there is no nap/main-sleep separation. Two modes: (a) a nap ending before 15:00 merges into the night that ended that morning; (b) a nap ending at/after 15:00 rolls into the NEXT night. night.start/end are then min/max over all pieces (lines 198-201), so the 'night' can span from an afternoon nap to the next morning. watchOS 11+ auto-records naps, so this is live for Apple Watch users. Downstream, asleepSeconds includes the nap, inflating SleepScore.performance, the 0.20 sleep component of recovery, and the sleep-debt chain; the Today sleep panel shows a bogus start/end window. [Merged from 2 reviewers.]",
+   "failure_scenario": "Watch records night sleep 23:00-07:00 (7.2h) plus an auto-detected nap 13:30-14:20: the nap ends before 15:00 so it joins that morning's night key \u2014 asleepSeconds becomes ~8.0h, night.end becomes 14:20, sleep performance jumps ~11%, and the sleep panel shows a 15-hour in-bed window ending mid-afternoon. Alternate: a 4pm nap rolls into the following night, so the 'night' starts at 4pm with inflated asleep hours the next morning.",
+   "status": "CONFIRMED",
+   "votes": [
+    {
+     "verdict": "real",
+     "severity": "medium",
+     "reasoning": "Confirmed by reading HealthKitSource.swift: sleepNights() keys every sleep sample solely by end date with a >=15:00 next-day rollover (lines 180-184) and has no nap/main-sleep separation, duration filter, or gap clustering. The only guard is per-night best-source selection (lines 190-196), which cannot help because a nap and night sleep from the same Apple Watch share one bundle identifier \u2014 and the max-asleep-seconds picker would prefer the merged set anyway. night.start/end are min/max over all pieces (lines 199-200), so a merged nap corrupts the window. Downstream is unguarded: ScoringEngine.swift line 55 computes performance from inflated asleepHours (feeding the 0.20 recovery component at line 104 and sleep debt at line 204), and TodayView.swift line 241 displays the corrupted start-end window verbatim. The finding's premise that watchOS 11+ auto-detects naps is inaccurate (Apple Watch records sleep only under Sleep Focus; no automatic nap detection as of watchOS releases through 2025), but the scenario remains plausible for a real user: manually enabling Sleep Focus for a nap or any third-party sleep app (AutoSleep, Pillow, NapBot) writing nap samples to HealthKit triggers both failure modes exactly as described. Severity medium: impact is real (double-digit sleep-performance inflation plus a visibly bogus 15-hour sleep window) but conditional on nap samples existing, and nap-credit toward sleep is partially defensible Whoop-like behavior \u2014 the window corruption and misattribution are not.",
+     "line": 181
+    },
+    {
+     "verdict": "real",
+     "severity": "medium",
+     "reasoning": "Verified in HealthKitSource.swift: sleepNights() assigns samples to nights purely by end-date with an hour>=15 roll-forward (lines 180-184), and the per-source dedup (lines 191-196) groups by bundleIdentifier, so a Watch-recorded nap merges with Watch-recorded night sleep instead of being filtered. night.start/end are min/max over merged pieces (lines 198-201) and nap seconds add directly to asleepSeconds/stage totals (lines 203-226). Trigger is plausible for this user: watchOS 11+ auto-detects naps without Sleep Focus, so an Apple Watch wearer in 2026 gets nap samples with no deliberate action. Consequences are silent: inflated SleepScore.performance, ~0.20-weighted recovery component, under-counted 7-day sleep debt (propagating across subsequent days' need), plus a visibly wrong Today sleep window (e.g. 23:00->14:20), and a >=15:00 nap corrupts the NEXT night's key. Kept at medium rather than high because naps are occasional rather than daily, the score shift per event is modest (~10% performance, a few recovery points), and crediting nap sleep toward need is arguably consistent with Whoop-style intent \u2014 the unambiguous bugs are the corrupted window, wrong-night assignment for late naps, and debt-chain distortion.",
+     "line": 181
+    }
+   ]
+  },
+  {
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/PulseApp.swift",
+   "line": 12,
+   "title": "Data only loads once per process \u2014 app resumed from background shows stale scores with no automatic refresh",
+   "severity": "medium",
+   "description": ".task { await model.load() } runs once when RootView first appears. There is no scenePhase observation, no re-load on foreground, and AppModel has no notion of data age. iOS keeps the app suspended for days between launches, so the primary usage pattern of a daily-readiness dashboard \u2014 open it each morning \u2014 resumes the process without re-running .task. Only TodayView has .refreshable; Trends and Workouts have no refresh affordance at all.",
+   "failure_scenario": "User checks Pulse Tuesday evening; iOS suspends the app. Thursday morning they tap the icon: the app resumes showing Tuesday as the latest day, with Tuesday's recovery dial presented as the current reading (selectedCard falls back to scorecards.last). Last night's sleep and yesterday's strain are absent until they think to pull-to-refresh on the Today tab.",
+   "status": "CONFIRMED",
+   "votes": [
+    {
+     "verdict": "real",
+     "severity": "medium",
+     "reasoning": "Confirmed by reading the code. PulseApp.swift:12 attaches `.task { await model.load() }` to the WindowGroup root; SwiftUI's .task runs on view appearance and does NOT re-run when a suspended process is resumed from background. A repo-wide grep finds zero occurrences of scenePhase/ScenePhase, willEnterForegroundNotification, HKObserverQuery, or enableBackgroundDelivery \u2014 there is no foreground-refresh path of any kind. The only other load() call sites are TodayView.swift:34 (.refreshable, manual pull-to-refresh on the Today tab only) and AppModel.swift:28 (preferDemo toggle). TrendsView and WorkoutsView have no refresh affordance. AppModel keeps no fetch timestamp or staleness notion, and selectedCard falls back to scorecards.last (AppModel.swift:40), so after a multi-day suspension the app presents the stale last-fetched day's recovery/strain/sleep as current. The scenario is highly plausible for a sideloaded daily-readiness app: iOS keeps apps suspended for days, and the dominant usage pattern (tap icon each morning) resumes rather than relaunches. Severity medium is appropriate: core purpose (current readiness) is undermined, but pull-to-refresh on Today provides a manual workaround and no data is corrupted.",
+     "line": 12
+    },
+    {
+     "verdict": "real",
+     "severity": "medium",
+     "reasoning": "Confirmed by reading the code: PulseApp.swift:12 runs `.task { await model.load() }` once per process; grep shows no scenePhase/willEnterForeground/didBecomeActive handling anywhere, and only TodayView.swift:34 has `.refreshable` (Trends/Workouts have none). AppModel.selectedCard falls back to scorecards.last with no data-age tracking, so a process resumed from suspension presents the last-fetched day as the current reading. For this user's real usage \u2014 a morning-readiness glance on a sideloaded iPhone app \u2014 resume-from-suspension is the dominant open path, so the trigger is near-certain, not hypothetical. However, it stops short of high severity: scores are not corrupted (they are correct for their day), the TodayView header displays the full weekday+date of the shown card so staleness is visible rather than silent, and pull-to-refresh on the Today tab provides recovery. Medium is the right severity: a real, frequently-triggered freshness defect in the app's core workflow, but visible and recoverable rather than silently corrupting.",
+     "line": 12
+    }
+   ]
+  },
+  {
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Data/HealthKitSource.swift",
+   "line": 282,
+   "title": "Workout HR query pulls all heart-rate samples in the time window with no source or workout-association filter",
+   "severity": "low",
+   "description": "workoutHeartRate() runs a plain HKSampleQuery on .heartRate bounded only by the workout's start/end dates (lines 281-283), with no HKQuery.predicateForObjects(from: workout) or source/device filter. If any other writer logs HR during the same window (chest-strap companion app, gym equipment, second wearable, Polar/Wahoo/Strava), the streams interleave: avgHR (line 274) becomes a mixed density-weighted average dominated by the faster-sampling source, maxHR takes the max across devices, and workoutStrain() assigns each inter-sample segment's minutes to the zone of an alternating-source bpm, corrupting zone minutes and strain. Two workouts recorded simultaneously by two apps also both get fed the same double-source HR. [Merged from 2 reviewers.]",
+   "failure_scenario": "User records a ride with the Watch while a Wahoo/Polar chest strap app also writes HR to Health at 1 Hz: the strap's stream (different calibration, dropout spikes) dominates the 240-sample thinned series \u2014 avgHR shifts several bpm, maxHR picks up a strap artifact spike, and zone minutes/strain no longer reflect either device's actual recording; strain overcounts.",
+   "status": "CONFIRMED",
+   "votes": [
+    {
+     "verdict": "real",
+     "severity": "medium",
+     "reasoning": "Confirmed by reading HealthKitSource.swift: workoutHeartRate (lines 280-294) queries .heartRate through the generic samples() helper (lines 113-127), whose only predicate is HKQuery.predicateForSamples(withStart:end:) at line 116 \u2014 no predicateForObjects(from: workout), no source/device filter, and no post-filtering by sourceRevision anywhere in the workout path. avgHR (line 274) and maxHR (line 275) are computed over the merged time-sorted array, and the 240-sample thinning (lines 290-293) strides across interleaved sources, so a second HR writer (chest-strap app, Strava, gym equipment, second wearable) contaminates avg/max/zone-minutes/strain exactly as described. No other code guards it \u2014 notably the sleep path DOES do per-source dedup (lines 190-196, 'avoids double counting Watch + iPhone'), proving the multi-source hazard is real in this codebase and simply unhandled for workouts. The scenario is plausible for this user (fitness-tracking enthusiast; dual-recording with a strap or phone app is common), Apple's recommended pattern is predicateForObjects(from: workout) with a source-filtered fallback. Severity medium: real silent corruption of the app's core strain metric, but conditional on a second HR source being present; Watch-only setups are unaffected.",
+     "line": 282
+    },
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "Mechanically confirmed: workoutHeartRate() (HealthKitSource.swift lines 281-283) uses the generic samples() helper whose only predicate is HKQuery.predicateForSamples(withStart:end:) (line 116) \u2014 no predicateForObjects(from: workout) and no source filter, so any HR written by another app/device in the workout window would blend into avgHR, maxHR, and zone-minute/strain computation. However, for this app's actual usage \u2014 one user, one iPhone + one Apple Watch, sideloaded personal app \u2014 the only HR writer during a workout is the Watch itself; Watch background readings in the window are the same source and legitimately part of the workout. The corruption path requires a second concurrent HR stream (chest-strap companion app, second wearable, gym-equipment app), none of which is indicated anywhere in the project or user context. If triggered it would corrupt strain silently (no UI hint), and the fix is the standard one-line predicateForObjects(from:) compound predicate, so it is worth reporting as hardening \u2014 but as a latent low-severity hazard, not the medium the finding claims. Downgraded medium \u2192 low.",
+     "line": 282
+    }
+   ]
+  },
+  {
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Data/HealthKitSource.swift",
+   "line": 273,
+   "title": "avgHR and maxHR are computed from the thinned 240-sample series, understating max HR on most real workouts",
+   "severity": "low",
+   "description": "workoutRecord() computes record.avgHR and record.maxHR (lines 273-276) from the array returned by workoutHeartRate(), which has already been thinned to at most 240 points (lines 290-293). During workouts the Watch writes HR roughly every 5 seconds, so any workout longer than ~20 minutes gets strided (1-in-3 for an hour, 1-in-6 for two hours). A short peak (final sprint, hill interval) falling between strided indices is absent, so displayed max HR is systematically understated, and avgHR (also the strain fallback when hrSamples < 3) is computed from a subset. Max/avg should be computed over the full array before thinning or taken from workout.statistics(for: .heartRate).",
+   "failure_scenario": "A 90-minute run has ~1080 HR samples; thinning keeps every ~4.5th. The user's 20-second peak at 182 bpm lies entirely between retained indices, so the workout detail shows max 171 bpm \u2014 wrong on essentially every workout over 20 minutes.",
+   "status": "CONFIRMED",
+   "votes": [
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "Confirmed by reading HealthKitSource.swift: workoutRecord() (line 258) receives the already-thinned array from workoutHeartRate(), whose strided thinning to 240 samples (lines 290-293) runs before avgHR/maxHR are computed at lines 273-276. No other code populates or corrects these fields (no workout.statistics(for: .heartRate) anywhere), and WorkoutsView.swift:131-134 displays them directly. The scenario is plausible for live Apple Watch data: HR is sampled ~every 5 s during workouts, so any workout >~20 min exceeds 240 samples; for a 90-min run stride=4.5 drops 4-5 consecutive samples (~20-25 s) between retained points and can drop the final ~25 s entirely, so displayed max HR is systematically <= true max on most real workouts. Demo data (7-min HR spacing) never triggers thinning, so only the live path is affected. However, severity is lower than claimed: because HR is highly autocorrelated, the typical understatement is 1-3 bpm (the finding's 11 bpm example requires an implausibly sharp 20 s spike); the avgHR error from uniform subsampling is negligible; and the strain fallback via avgHR (ScoringEngine.swift:144) only fires when hrSamples.count < 3, which cannot coincide with thinning (thinned arrays have exactly 240 samples), so scoring is essentially unaffected. Net: a real, easily fixed accuracy defect (compute max/avg over the full array before thinning or use workout.statistics), but its impact is a small cosmetic understatement of one displayed stat.",
+     "line": 275
+    },
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "Mechanically confirmed: avgHR/maxHR (HealthKitSource.swift lines 274-275) are computed from the array already thinned to 240 points (lines 290-293), and with Watch HR every ~5s this triggers on virtually every real workout over ~20 minutes for this user. However, the finding's severity rests on two overstated legs. (a) The scoring-impact claim is false: the avgHR strain fallback in ScoringEngine.swift (line 144) only executes when hrSamples.count < 3, and thinning only occurs when the count exceeded 240 \u2014 mutually exclusive, so no score is ever computed from a thinning-degraded avgHR; strain zone minutes use segment-duration weighting over the strided series, which preserves zone-time proportions. (b) The magnitude is exaggerated: HR is a smooth physiological signal, so a 20s peak spans ~4 consecutive samples with ramps on both sides; a stride of 4-6 retains a point within ~25-30s of the peak, making the realistic understatement a few bpm, not 11. avgHR over a uniform stride is essentially unbiased and shown rounded. Net: a real, easily fixed data-quality defect (compute max/avg before thinning or use workout.statistics(for: .heartRate)) that mildly understates the displayed workout max HR on most workouts \u2014 display-only, no silent score corruption \u2014 so downgraded from medium to low.",
+     "line": 275
+    }
+   ]
+  },
+  {
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Data/HealthKitSource.swift",
+   "line": 248,
+   "title": "Unbounded task-group fan-out of per-workout HR queries; one transient failure discards the entire live dataset",
+   "severity": "low",
+   "description": "workouts() adds one task per HKWorkout to a throwing task group with no width limit (lines 247-250). Over 180 days an active user easily has 150-400 workouts, so 150-400 HKSampleQueries (each buffering up to 4000 samples) hit HealthKit simultaneously \u2014 a memory/latency spike and possible throttling on first load. Worse, because the group is throwing and fetchDataset() awaits it, a single failed HR query (transient HK error, database busy) throws out of the whole group; AppModel.load() catches it and silently swaps the entire app to demo data even though the rest of the real data fetched fine. A bounded window (e.g. 8 concurrent) plus per-workout error tolerance would fix both. [Merged from 2 reviewers.]",
+   "failure_scenario": "User with 300 logged workouts opens the app; 300 concurrent queries fire and one returns errorDatabaseInaccessible while the phone is unlocking. The whole fetch throws and the user sees synthetic demo scores instead of their real data for that session; even without a failure, first load is slow/throttled.",
+   "status": "CONFIRMED",
+   "votes": [
+    {
+     "verdict": "real",
+     "severity": "medium",
+     "reasoning": "Verified in HealthKitSource.swift: workouts() (lines 243-255) adds one child task per HKWorkout to withThrowingTaskGroup with no concurrency limit (lines 247-250); each child's workoutRecord() throws on any HR query failure (line 258). A throwing task group rethrows the first child error, fetchDataset() propagates it via `try await workoutList` (line 74), and AppModel.load() catches any error (AppModel.swift line 65) and unconditionally swaps the entire app to demo data (lines 72-74). Nothing guards this: no retry, no per-workout error tolerance, no partial results. With ~180 days of history (100-400 workouts; the project's own demo fixture has 101), one transient HK error (e.g. errorDatabaseInaccessible during lock/background races, or database busy) among hundreds of concurrent queries discards all successfully-fetched real data \u2014 the multiplied failure probability makes the scenario plausible. Caveats that keep it medium rather than high: the fallback is labeled via statusNote (\"Health access unavailable \u2014 showing demo data\"), relaunch recovers, and the memory/thread-explosion half of the finding is overstated (child tasks suspend on continuations; queries execute in healthd; per-query buffer capped at 4000 samples), though hundreds of simultaneous HKSampleQueries on first load is still a legitimate latency concern. Core defect (all-or-nothing error propagation into a synthetic-data fallback) is real.",
+     "line": 247
+    },
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "Mechanically confirmed: HealthKitSource.workouts() (lines 247-252) uses an unbounded withThrowingTaskGroup with one task per HKWorkout, and `for try await` rethrows the first per-workout HR query failure out of fetchDataset(); AppModel.load() (lines 65-67) catches it and swaps the whole session to demo data. However, the impact is downgraded for this app's real usage: (1) the fallback is NOT silent \u2014 TodayView's header shows \"Pulse \u00b7 Demo data\" and a statusNote banner appears on both TodayView and SettingsView, so the user cannot mistake synthetic scores for real ones; (2) the trigger (e.g. errorDatabaseInaccessible) primarily occurs while the device is locked, but this is a foreground personal app opened unlocked, making a transient failure infrequent; (3) fan-out scale is ~100-200 workouts for this user (their own fixture has 101 over 180 days), which HealthKit's healthd handles \u2014 at worst a slow first load, not a crash; (4) the failure is session-scoped and self-heals on next launch with no persisted state. It remains a real robustness flaw worth a small fix (per-workout error tolerance, optional bounded concurrency), but it is a visible one-session annoyance, not silent score corruption \u2014 hence real/low rather than medium.",
+     "line": 247
+    }
+   ]
+  },
+  {
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Models/HealthData.swift",
+   "line": 66,
+   "title": "DayKey formatter lacks en_US_POSIX locale and pins the user's device calendar",
+   "severity": "low",
+   "description": "DayKey.formatter sets f.calendar = Calendar.current and never sets f.locale = Locale(identifier: \"en_US_POSIX\"). With a non-Gregorian device calendar (Buddhist, Japanese) or a locale with non-ASCII digits, the \"yyyy-MM-dd\" contract breaks: keys are emitted with era years or Arabic-Indic digits, and DayKey.date(for:) (line 78) parses the Gregorian ASCII dateKeys baked into DemoData.json with the wrong calendar; the silent `?? .now` fallback on line 79 hides parse failures. [Merged from 2 reviewers.]",
+   "failure_scenario": "Device calendar set to Buddhist: DemoDataSource.shiftToToday parses lastDateKey \"2026-06-18\" as BE year 2026 = 1483 CE, computes a delta of ~+198,000 days, and shifts sleep/workout/HR-sample instants (decoded as correct CE instants via ISO8601) ~543 years into the future while day dateKeys land on today \u2014 WorkoutRecord.dateKey never matches any DayRecord.dateKey, strain drops to non-workout-only, sleep panels show 26th-century timestamps. On the live path, a Japanese-calendar era boundary inside the 180-day window breaks the `$0.dateKey < $1.dateKey` sorts (HealthData.swift:62, HealthKitSource.swift:73) because era years reset to 1.",
+   "status": "CONFIRMED",
+   "votes": [
+    {
+     "verdict": "real",
+     "severity": "medium",
+     "reasoning": "Confirmed by reading HealthData.swift:66-80 and running a swiftc harness. DayKey.formatter sets calendar = Calendar.current with no en_US_POSIX locale, violating the \"yyyy-MM-dd\" contract with DemoData.json's baked ASCII Gregorian keys. Harness reproduces the exact failure: with a Buddhist device calendar, key(for:) emits \"2569-07-06\" and date(for: \"2026-06-18\") parses to 1483 CE, making DemoDataSource.shiftToToday compute a +198,336-day delta \u2014 sleep/workout ISO8601 instants shift ~543 years into the future while day keys land on today, so WorkoutRecord.dateKey never matches any DayRecord. Japanese calendar parses the same key to 4044 CE (equally broken); the era-boundary/sort sub-claim on the live path is speculative (no era change since 2019, live keys internally consistent) but the demo-path failure alone sustains the finding. No other code guards this \u2014 line 79's `?? .now` silently hides parse failures, and the demo path runs on-device as the fallback when HK auth fails or <7 usable days. Severity medium not high: the actual user's US/Gregorian settings mean it likely never fires today, but the brief says not to assume locale, Buddhist is the default calendar for Thai locale and a one-tap Settings change, the failure is silent and total, and the fix is one line.",
+     "line": 66
+    },
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "Mechanically confirmed: DayKey.formatter (HealthData.swift:66-72) omits en_US_POSIX and pins Calendar.current, and DemoDataSource.shiftToToday (DemoDataSource.swift:21,30) does parse the ASCII Gregorian dateKeys from DemoData.json through it, with the ?? .now fallback (line 79) silently masking any parse failure. However, the trigger is implausible for this app's real usage: a single US-based user on a personal iPhone runs Gregorian calendar with Latin digits by default, and would have to deliberately switch the device to a Buddhist/Japanese calendar or a non-Latin numbering system. On the live HealthKit path (the only path on the real device), keys are generated and parsed by the same formatter, so they remain internally self-consistent even under a non-Gregorian calendar; the era-boundary sort break additionally requires a Japanese era transition inside the 180-day window (last one was 2019). The demo-corruption scenario only exists in the simulator, whose locale the user controls. The finding survives as a genuine latent defect because failure, if ever triggered, is silent score corruption rather than a crash, and the fix is the canonical one-line en_US_POSIX addition \u2014 but severity is downgraded from medium to low because no realistic configuration of this user's device produces the failure.",
+     "line": 66
+    }
+   ]
+  },
+  {
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Data/AppModel.swift",
+   "line": 48,
+   "title": "Concurrent load() calls race \u2014 dataset/sourceKind can contradict preferDemo and isLoading tears",
+   "severity": "low",
+   "description": "load() is async with multiple suspension points (requestAuthorization, fetchDataset) and is triggered from three uncoordinated places: PulseApp's .task, TodayView's .refreshable (TodayView.swift:34), and the preferDemo didSet (AppModel.swift:25-30). There is no cancellation of in-flight loads, no generation counter, no serialization. Each call captures preferDemo at its own entry, so a late-finishing call overwrites a newer one's results; and each call's `defer { isLoading = false }` means the first finisher clears the loading flag while another load is still in flight.",
+   "failure_scenario": "Initial HealthKit load is awaiting fetchDataset. User taps \"Demo data\" in Settings: the didSet load sets dataset=demo, sourceKind=.demo. The original load then resumes and sets dataset=live, sourceKind=.healthKit \u2014 the app displays HealthKit data while Settings shows \"Demo data\" selected. Pull-to-refresh during initial load runs two full HK fetches; whichever finishes last wins, and isLoading flips false early, hiding the ProgressView or showing \"No data yet.\" prematurely.",
+   "status": "CONFIRMED",
+   "votes": [
+    {
+     "verdict": "real",
+     "severity": "medium",
+     "reasoning": "Confirmed by reading the code. AppModel.load() (AppModel.swift:48) is a @MainActor async func with suspension points at requestAuthorization (line 55) and fetchDataset (line 56), and it is invoked from three uncoordinated sites: PulseApp.swift:12 (.task), TodayView.swift:34 (.refreshable), and the preferDemo didSet (AppModel.swift:28). There is no re-entrancy guard, task cancellation, or generation counter anywhere. The claimed interleaving is real: the demo branch (lines 72-75) is fully synchronous, so when the user taps \"Demo data\" (SettingsView.swift:30) while an HK fetch is suspended, the didSet load completes (dataset=demo, sourceKind=.demo) and then the original load resumes and overwrites with dataset=live, sourceKind=.healthKit (lines 59-60) \u2014 leaving Settings showing \"Demo data\" selected (bound to preferDemo) while the app displays HealthKit data; this mismatch is sticky until the next load. The isLoading tear is also as described: each overlapping call's defer (line 51) clears the flag independently, so the first finisher hides the ProgressView / can show \"No data yet.\" (TodayView.swift:21-28) while another fetch is in flight. Plausibility: on a real device the 180-day HK fetch (daily statistics plus per-workout HR queries) takes long enough that toggling the source or pulling to refresh during the launch load is realistic. Severity medium: no crash or data corruption (MainActor prevents memory races; UserDefaults keeps the correct preference so the next launch recovers), but it produces a persistent user-visible source/data contradiction and redundant double fetches in a core code path.",
+     "line": 48
+    },
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "Verified in AppModel.swift: load() (line 48) suspends at requestAuthorization/fetchDataset (lines 55-56) and is called from PulseApp .task, TodayView .refreshable (TodayView.swift:34), and the preferDemo didSet (line 28) with no cancellation, generation counter, or serialization; the demo branch (lines 72-75) is synchronous, so a demo toggle mid-HK-fetch completes instantly and is then overwritten when the suspended HK load resumes (lines 59-60), yielding sourceKind=.healthKit while preferDemo=true; defer isLoading=false (line 51) also clears the flag early under concurrent loads. However, for this app's real usage the impact is small: the contradictory-state trigger requires toggling demo mode within the few-second window of an in-flight HK fetch on a real device, and it self-heals on the next refresh/toggle; concurrent pull-to-refresh races fetch identical HK data so the only effect is an isLoading flicker; and critically there is no silent score corruption \u2014 every winning load writes one coherent HealthDataset and recompute() derives all scores from it, so displayed numbers are always internally consistent. Real defect, but transient recoverable UI/state inconsistency for a single-user sideloaded app \u2192 downgrade from medium to low.",
+     "line": 48
+    }
+   ]
+  },
+  {
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Data/AppModel.swift",
+   "line": 72,
+   "title": "Any refresh failure discards a good live dataset and silently replaces it with synthetic demo data",
+   "severity": "low",
+   "description": "In load(), the catch block (lines 65-67) and the usableDays<7 branch both fall through to `dataset = DemoDataSource.load(); sourceKind = .demo; recompute()` unconditionally \u2014 even when dataset already holds a previously fetched live HealthKit dataset. The blanket catch also swallows CancellationError (.refreshable's task can be cancelled by leaving the view mid-refresh), indistinguishable from a real HK failure. There is no keep-last-good-dataset path.",
+   "failure_scenario": "User has live Apple Watch data on screen, pulls to refresh, and a transient HealthKit error occurs (or the refresh task is cancelled by navigating away, or HK momentarily returns <7 usable days): the app throws away the real scores and renders the bundled 180-day synthetic fixture \u2014 numbers that are not the user's \u2014 with only the small \"Pulse \u00b7 Demo data\" eyebrow and a one-line statusNote as indication.",
+   "status": "CONFIRMED",
+   "votes": [
+    {
+     "verdict": "real",
+     "severity": "medium",
+     "reasoning": "Confirmed in /Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Data/AppModel.swift: load() lines 48-76 has no keep-last-good path \u2014 both the catch (lines 65-67) and the usableDays<7 fall-through unconditionally reach line 72 `dataset = DemoDataSource.load(); sourceKind = .demo; recompute()`, replacing an already-loaded live HealthKit dataset. The trigger is real: TodayView.swift:34 `.refreshable { await model.load() }` and the preferDemo didSet (AppModel.swift:28) re-invoke load() while live data is displayed. HealthKitSource propagates every HK query error (continuations resume(throwing:) at lines 100/122, withThrowingTaskGroup at 247), and a plausible on-device failure exists: pull-to-refresh followed by locking the phone mid-fetch yields errorDatabaseInaccessible (HealthKit data is unavailable while locked), which the blanket catch converts into a full swap to the 180-day synthetic fixture. One sub-claim is overstated: the HK continuations do not observe task cancellation, so a cancelled .refreshable task generally will not throw from these awaits \u2014 the CancellationError path is mostly theoretical \u2014 but the finding stands without it. Severity medium is appropriate: real health scores are silently replaced by synthetic numbers (only a small demo eyebrow and one-line statusNote indicate it), though it is recoverable by a later successful refresh. Trivial fix: only fall back to demo when no live dataset is already held.",
+     "line": 72
+    },
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "Mechanically confirmed: in AppModel.load(), both the catch block (lines 65-67) and the usableDays<7 branch fall through to line 72, which unconditionally overwrites `dataset` with DemoDataSource.load() \u2014 even when it holds a previously fetched live HealthKit dataset \u2014 and load() is reachable mid-session via .refreshable (TodayView.swift:34). However, the impact is smaller than claimed for this user: (1) trigger is implausible \u2014 with authorization granted on a personal device, fetchDataset() rarely throws, the pre-first-unlock HK-inaccessible window can't coincide with pull-to-refresh, and 180 days of Watch data makes usableDays<7 unrealistic; (2) the cancellation scenario is overstated \u2014 HealthKitSource's withCheckedThrowingContinuation wrappers and task-group children never check cancellation, so a cancelled .refreshable task most likely completes normally rather than throwing; (3) it is not silent \u2014 sourceKind=.demo changes the header to \"Pulse \u00b7 Demo data\" (TodayView.swift:40) and statusNote renders an explanatory line in TodayView and Settings; (4) it self-heals \u2014 preferDemo is unchanged, so the next pull-to-refresh retries HealthKit. The one aggravating factor is that demo data is date-shifted so the last day equals today, making synthetic numbers look current. Real robustness flaw worth a one-line keep-last-good guard, but low severity for this app's actual usage \u2014 not medium.",
+     "line": 72
+    }
+   ]
+  },
+  {
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Views/WorkoutsView.swift",
+   "line": 45,
+   "title": "navigationDestination re-resolves against the recomputed workouts array \u2014 pushed detail goes blank if the id disappears",
+   "severity": "low",
+   "description": "The destination closure looks up `workouts.first(where: { $0.workout.id == id })`, and workouts is derived from model.scorecards. Any data reload re-evaluates the destination for the currently pushed value; NavigationPath keeps the String id, but if the id no longer exists in the new dataset the `if let` produces an empty view: the pushed screen renders completely blank (no content, no Theme.canvas background, hidden nav title) with only the back gesture to escape.",
+   "failure_scenario": "User opens a workout detail, switches to Settings, and toggles the data source (demo ids and HealthKit UUIDs never match), or a pull-to-refresh error swaps live data for demo. Returning to the Workouts tab shows a blank white page instead of the detail. Same result if a refetch window drops the workout.",
+   "status": "CONFIRMED",
+   "votes": [
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "Confirmed by reading the code. WorkoutsView.swift:44-48 resolves the pushed String id against the recomputed `workouts` array with an else-less `if let`, and SwiftUI does not pop a path entry whose destination builder returns empty content. The trigger is real: SettingsView's data-source rows set `model.preferDemo`, whose didSet (AppModel.swift:25-30) runs `load()` and replaces the whole dataset; HealthKit ids are HKWorkout UUIDs (HealthKitSource.swift:260) while demo ids are \"{type}-{iso(start)}\" strings (export_to_demo.py:140), so no id survives a swap; RootView's TabView keeps WorkoutsView's @State NavigationPath alive across tab switches. So on a real device with live data: push detail \u2192 Settings \u2192 toggle to demo \u2192 back to Workouts tab = blank pushed screen. However, severity is lower than claimed: it cannot occur in the simulator (both toggle states yield the same demo dataset), config changes (recompute) preserve ids, there is no pull-to-refresh in the app (that part of the scenario is invented), and the empty destination still shows the default nav-bar back button plus the swipe-back gesture, so recovery is one tap with no crash or data loss. Real defect, edge-case impact for a single-user sideloaded app.",
+     "line": 45
+    },
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "Mechanically confirmed: WorkoutsView.swift:44-48 re-resolves the pushed id against the recomputed workouts array with an else-less `if let`, so a vanished id renders a completely blank pushed screen (EmptyView, hidden toolbar context) escapable only by swipe-back. The trigger paths exist in the real UI: SettingsView's demo/live toggle fires load() via preferDemo didSet, TodayView's .refreshable calls load() and silently falls back to demo on any HK error or <7 usable days, and TabView preserves the Workouts tab's NavigationStack across tab switches; demo ids (activity-type+timestamp strings) and HealthKit ids (UUID strings, HealthKitSource.swift:260) never overlap, so any source swap invalidates every pushed id. But for this app's actual usage \u2014 one user on-device with live HealthKit \u2014 the common refresh path is benign because HK workout UUIDs are stable across fetches; hitting the bug requires leaving a detail pushed AND toggling the data source or suffering a mid-session HK failure. The consequence is a recoverable UI dead-end with zero score/data corruption and no persisted state. Real and worth a one-line fix (else-branch fallback or ContentUnavailableView), but downgraded from medium to low because the trigger is rare for this user and the failure is transient and non-corrupting.",
+     "line": 45
+    }
+   ]
+  },
+  {
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Views/TodayView.swift",
+   "line": 87,
+   "title": "Displayed rounded score contradicts status zone at zone thresholds",
+   "severity": "low",
+   "description": "Scores are displayed with Fmt.num (Theme.swift:66-68, String(format: \"%.0f\"), rounds half-up), but StatusZone is computed from the unrounded score (Scores.swift:26-28: green >= 67, amber >= 34). TodayView.swift:87-94 shows Fmt.num(r.score) next to StatusDot(zone: r.zone) and r.zone.label. Same pattern for the sleep-performance dot at TodayView.swift:225-226 (thresholds 85/70 vs Fmt.num(s.performance)) and the weekly average at TrendsView.swift:229/252 (avg >= 67 vs Fmt.num($0)).",
+   "failure_scenario": "Recovery score 66.6: dial reads \"67%\" (the documented green threshold) but the dot and label render amber \"Adequate\". Score 33.7 reads \"34%\" but shows red \"Run down\". Sleep performance 84.6 reads \"85%\" with an amber dot. Each 0.5-wide window is hit regularly over months of daily use, showing a number that contradicts its own color/label.",
+   "status": "CONFIRMED",
+   "votes": [
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "Confirmed in source: Fmt.num (Theme.swift:66-68) formats scores with \"%.0f\" (rounds to nearest int) while zones are computed from the unrounded Double \u2014 Scores.swift:26-28 (green >= 67, amber >= 34), TodayView.swift:225 (sleep dot >= 85 / >= 70), TrendsView.swift:229 (weekly avg >= 67). TodayView.swift:87 shows Fmt.num(r.score) directly beside StatusDot(zone: r.zone) and r.zone.label (lines 93-94). ScoringEngine never rounds scores (sigmoid-weighted continuous values; sleep performance = asleep/needed*100), so fractional scores near thresholds are routine, and no other code reconciles displayed value with zone. Thus a score of 66.6 renders \"67%\" (the green threshold) with an amber \"Adequate\" dot/label \u2014 a visible self-contradiction hit in each 0.5-wide window (~0.5% of days per threshold, five such comparisons across Today and Trends), so it will recur over months of daily use. Downgraded to low severity because it is purely cosmetic: no scoring, trend, or persisted data is wrong, the contradiction is transient and off-by-under-0.5, and the fix is trivial (compute zone from the rounded value shown).",
+     "line": 87
+    },
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "Mechanically confirmed: ScoringEngine produces continuous scores; StatusZone (Scores.swift:26-28, thresholds 67/34) is computed from the unrounded score while TodayView.swift:87 displays Fmt.num(r.score) (Theme.swift:66-68, \"%.0f\", rounds half-up) beside the zone dot/label (lines 93-94). Same pattern at TodayView.swift:225-226 (sleep 85/70) and TrendsView.swift:229/252 (weekly avg). A score in any 0.5-wide window below a threshold (e.g. 66.5-66.99) renders as the threshold number (\"67%\") with the lower zone's color/label. For a daily-use personal app this will visibly occur a handful of times per year across the four thresholds, so it is present and worth fixing \u2014 but it is purely cosmetic: the zone and stored score are both correct, nothing downstream is affected, and the mismatch is transient and off by less than 0.5 points. No silent corruption, so downgraded from medium to low. Fix: derive zones from the same rounded value that is displayed.",
+     "line": 87
+    }
+   ]
+  }
+ ],
+ "plausible": [
+  {
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Data/HealthKitSource.swift",
+   "line": 194,
+   "title": "Per-night winner-take-all source selection drops Watch stage data (and inBed data) when another source records more asleep time",
+   "severity": "low",
+   "description": "sleepNights() groups a night's samples by source bundleIdentifier and keeps ONLY the source with the largest asleepSeconds (lines 191-196), discarding all others. If a third-party sleep app (AutoSleep, Sleep Cycle, Pillow, etc.) writes asleepUnspecified samples covering more time than the Watch's stage samples \u2014 common, since such apps subtract awake time less aggressively \u2014 the Watch's deep/REM/core breakdown is thrown away: deepSeconds/remSeconds/coreSeconds are nil and the sleep-stage bar in TodayView is empty, while the asleep total comes from the cruder source. Conversely, when the Watch wins, the iPhone's inBed samples are dropped so inBedSeconds is nil even though the data exists.",
+   "failure_scenario": "User runs Sleep Cycle alongside native Watch tracking. Sleep Cycle logs 7.9h asleepUnspecified; the Watch logs 7.3h across core/deep/REM. Sleep Cycle wins every night: the stage bar never renders, and asleep hours reflect the phone app's looser estimate rather than the Watch's stage-scored sleep.",
+   "status": "PLAUSIBLE",
+   "votes": [
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "Confirmed at HealthKitSource.swift lines 190-196: sleepNights() groups a night's samples by source bundleIdentifier and line 194 keeps only the source with max asleepSeconds, discarding all others; no other code re-merges sources. The mechanism and both sub-claims are factually accurate. However, impact is weaker than the finding states: (1) in the intended Apple-only setup the Watch always wins, because iPhone contributes only inBed samples which count 0 in asleepSeconds() (lines 232-239), so stages are preserved in the common case; (2) the dropped inBedSeconds is never consumed anywhere \u2014 it exists in the model but no view or scoring code reads it, so that half of the finding has zero user-visible effect; (3) in the third-party-app scenario the failure is graceful: TodayView.hasStages() (line 261) just hides the stage bar, and the sleep score still computes from the winning source's asleep total (scoring uses only asleepHours, never stages). The failure scenario requires the user to run a competing sleep app alongside native Watch tracking \u2014 plausible for a quantified-self user but unevidenced in this repo \u2014 and the winner-take-all rule is an explicit, commented anti-double-counting design choice. Genuine limitation worth a refinement (e.g., prefer stage-bearing sources), but conditional trigger + graceful degradation + partly dead-field impact makes it low severity for this single-user sideloaded app, not medium.",
+     "line": 194
+    },
+    {
+     "verdict": "refuted",
+     "severity": "low",
+     "reasoning": "The mechanical claim is accurate: line 194 of Pulse/Data/HealthKitSource.swift keeps only the per-night source with maximum asleep seconds, discarding all others. But for this app's real usage it is inconsequential. In the user's actual setup (iPhone + Apple Watch, native tracking), the Watch's stage samples always win because iPhone bedtime-schedule samples are inBed-only and score 0 in asleepSeconds() (lines 232-239) \u2014 stages are never dropped. The only data actually lost is inBedSeconds, which is written to the SleepNight model (HealthData.swift:26) but never read anywhere: ScoringEngine uses only asleepHours, and no view references inBedSeconds. The described failure requires the user to concurrently run a third-party sleep app that logs more asleep time than the Watch \u2014 pure speculation with no supporting evidence for this single-user sideloaded app. Even in that hypothetical, the effect is visible rather than silent (the stage bar is gracefully hidden via hasStages in TodayView.swift:260), the asleep total remains a plausible estimate, and winner-take-all is an explicit commented design choice (lines 171-172) to avoid double-counting overlapping Watch+iPhone data, which would be a worse bug. Not consequential enough to report.",
+     "line": 194
+    }
+   ]
+  },
+  {
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Scoring/ScoringEngine.swift",
+   "line": 53,
+   "title": "Sleep need and debt use record-count windows, so data gaps make 'prior-day strain' and 'this week's debt' stale",
+   "severity": "low",
+   "description": "The days array only contains days that have data. prevStrain (set at line 77, consumed at line 53) is the strain of the previous *record*, not the previous calendar day, though the doc comment (lines 27-28) says need grows with prior-day strain. Similarly trailingDebt (lines 200-208) sums shortfall over cards.suffix(7) \u2014 the last 7 *records*, spanning an arbitrary calendar range \u2014 while SleepScore.debtHours is labeled \"debt this week\" (TodayView.swift:236).",
+   "failure_scenario": "User does a hard workout Friday (strain ~18), then doesn't wear the watch for a week. The first day back, sleep need is inflated by (18/21)*0.75 \u2248 +0.64h from a workout 8 days earlier, plus up to +0.6h from pre-gap sleep debt still counted as \"this week\" \u2014 sleep performance drops ~10-15% and recovery's sleep component drops with it, for reasons that no longer apply.",
+   "status": "PLAUSIBLE",
+   "votes": [
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "Code claims verified: prevStrain (set line 77, used line 53) is the previous record's strain, trailingDebt (lines 200-208) windows over cards.suffix(7) records, HealthKitSource builds days only from query results with no calendar densification (so true gaps produce missing days), and TodayView.swift:236 labels debt as \"this week\" while the engine doc (lines 27-28) says \"prior-day strain\". However, the stated failure scenario (\"doesn't wear the watch for a week\") is mostly defused: the iPhone still logs steps/distance/flights, so gap days get DayRecords with strain\u22480 and no sleep \u2014 prevStrain resets to ~0 after the first gap record (whose inflated need is never consumed since sleepScore requires day.sleep), and 0-debt gap records push pre-gap shortfall out of the 7-record debt window. The defect only manifests when calendar days are entirely absent from HealthKit (watch off AND phone off/left behind), a much rarer event; even then the distortion is ~+0.6h need \u2192 ~8-10% sleep performance \u2192 ~1.5-2 recovery points, self-correcting within days. Real semantic mismatch vs docs/UI, but downgraded from medium to low given the narrow trigger and modest, transient impact.",
+     "line": 53
+    },
+    {
+     "verdict": "refuted",
+     "severity": "low",
+     "reasoning": "Mechanically true \u2014 prevStrain (ScoringEngine.swift:77\u219253) and trailingDebt (lines 200-208, cards.suffix(7)) are record-index windows, not calendar windows. But the failure scenario (\"no watch for a week \u2192 gap\") is refuted by HealthKitSource.fetchDataset (lines 54-69): a DayRecord is created whenever ANY metric has data, and steps/distance/active energy are recorded by the iPhone alone. Not wearing the watch does not create calendar gaps in `days`; the week off still yields dense records with low iPhone-derived strain, so prevStrain is genuinely yesterday's strain and suffix(7) is genuinely the last 7 calendar days. trailingDebt also only counts records that have sleep data, so pre-gap debt isn't misattributed. A true gap requires zero HealthKit data of any kind for a full day (phone AND watch off) \u2014 implausible for this daily-carry user \u2014 and even then the effect is a bounded one-day bump (\u22640.64h need + \u22640.6h debt \u2248 ~2 recovery points) that self-corrects the next day. Demo data is 180 contiguous days, so the simulator path never hits it. At most a doc/label imprecision (\"prior-day\", \"this week\"), not a consequential defect.",
+     "line": 53
+    }
+   ]
+  },
+  {
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/tools/export_to_demo.py",
+   "line": 83,
+   "title": "Sleep night grouping in Python diverges from Swift: no 15:00 rollover and no per-source selection",
+   "severity": "low",
+   "description": "Python assigns every sleep block to date_key(end) with no evening rollover, while HealthKitSource.swift (lines 179-196) rolls samples ending at/after 15:00 to the next night AND keeps only the single source with the most asleep time. Python merges ALL sources and blocks keyed by raw end-date, min/max-ing start/end (lines 90-93) and summing asleepSeconds across sources (line 97). Real Apple Watch data records each sleep stage as a separate Record, so pre-midnight stage segments (e.g. 21:30-23:40) get keyed to the wrong morning; overlapping Watch + third-party records double-count; iPhone InBed blocks stretch the night's span. The bundled fixture (one block per night) masks this.",
+   "failure_scenario": "Run export_to_demo.py on a real export.xml: a night with a stage segment ending 23:40 on day D merges into day D's record \u2014 whose actual night ended that morning \u2014 producing a SleepNight spanning ~07:00 to 23:40 with inflated asleepSeconds, while the following morning's night loses those hours. Sleep scores and debt-driven need are wrong on both days; TodayView shows a 16+ hour night.",
+   "status": "PLAUSIBLE",
+   "votes": [
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "The mechanical claim is verified. In /Users/williamchristie/Documents/Claude/Projects/Pulse/tools/export_to_demo.py line 83, `night_key = date_key(end)` keys every sleep record to the raw calendar date of its end, with no evening rollover, and lines 86-97 min/max the span and sum asleepSeconds across ALL records regardless of source. HealthKitSource.swift (lines 179-196) does both things differently: end-hour >= 15 rolls the sample to the next day's night, and only the single source with the most asleep time is kept per night. So on a real Apple Watch export.xml \u2014 where each sleep stage is a separate Record and pre-midnight segments (e.g. ending 23:40) are common, plus iPhone/third-party InBed records coexist with Watch stage records \u2014 the Python output would split nights, graft evening segments onto the previous morning's record (producing multi-source, 16+ hour spans), and double-count asleep seconds. The described failure scenario is genuine.\n\nImpact, however, is confined to the dev-side demo pipeline. On the user's actual iPhone, live scores come exclusively from HealthKitSource.swift, which is correct; export_to_demo.py never touches the live path. The bundled DemoData.json is a synthetic fixture with exactly one sleep block per night and a single source, so the current artifact is unaffected \u2014 the bug is latent until someone reruns the script on a real export.xml. That rerun is plausible (the script's docstring advertises \"offline import\" use, and CLAUDE.md notes the current fixture is \"NOT real\", implying a real-export run may come), but the failure would not be silent: TodayView would show absurd 16+ hour nights and split/missing mornings, making the corruption obvious rather than subtly skewing scores. Net: a real divergence worth fixing when the tool is next used on real data, but for this single-user setup it cannot corrupt the scores the user actually relies on, and its worst case is a visibly broken simulator demo dataset. Downgraded from medium to low on impact.",
+     "line": 83
+    }
+   ]
+  },
+  {
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/tools/export_to_demo.py",
+   "line": 146,
+   "title": "Workout hrSamples truncated to the FIRST 240 samples instead of stride-thinned; avgHR computed from a different series than the one stored",
+   "severity": "low",
+   "description": "Python stores wk_hr[:240] \u2014 the first 240 samples chronologically \u2014 while the Swift live path (HealthKitSource.swift:289-293) stride-thins across the whole workout to preserve shape. avgHR/maxHR (lines 156-159) are computed from ALL samples, so the stored summary stats disagree with the stored series. The fixture is unaffected only because its HR samples are ~7 min apart (max 6 per workout).",
+   "failure_scenario": "Import a real export.xml where the Watch logs HR every ~4-5s: a 60-minute run has ~800 samples, so the JSON keeps only the first ~18 minutes. WorkoutsView's HR chart ends a third of the way through a workout whose duration reads 60 min, and the chart's visible peak can be far below the displayed maxHR (computed over all samples).",
+   "status": "PLAUSIBLE",
+   "votes": [
+    {
+     "verdict": "real",
+     "severity": "low",
+     "reasoning": "Confirmed by reading the code. tools/export_to_demo.py line 146 stores wk_hr[:240] \u2014 the first 240 samples of the chronologically sorted per-workout HR list (sorted at line 111, filtered at line 138) \u2014 a head-truncation, not the stride-thinning the live Swift path uses (HealthKitSource.swift:289-293, which samples across the full workout and computes avg/max from the same full array). Meanwhile lines 156-159 compute avgHR/maxHR from ALL of wk_hr, so when truncation triggers, the stored maxHR/avgHR disagree with the stored series; nothing downstream (DemoDataSource only date-shifts; WorkoutsView charts hrSamples as-is) re-derives or guards this. The scenario is plausible: the script's docstring explicitly advertises use as an 'offline import' from a real export.xml, and real Apple Watch workouts log HR every ~4-5s, so any workout over ~20 min exceeds 240 samples and the chart would end partway through with a visible peak below the displayed maxHR. However, severity is low rather than medium: the primary use case (sideloaded app reading live HealthKit) uses the correct Swift path, and the current bundled fixture (~7-min HR spacing, max ~6 samples/workout) is unaffected \u2014 the bug only manifests if the user regenerates JSON from a dense real export.",
+     "line": 146
+    }
+   ]
+  }
+ ],
+ "refuted": [
+  {
+   "title": "Workout energy/distance read only from <Workout> attributes, which modern export.xml no longer carries",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/tools/export_to_demo.py",
+   "why": ""
+  },
+  {
+   "title": "zoneIndex misclassifies bpm exactly at the 60% and 70% maxHR boundaries one zone low (floating-point)",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Scoring/ScoringEngine.swift",
+   "why": ""
+  },
+  {
+   "title": "workoutStrain interval accounting: time before the first HR sample is dropped, and samples past workout.end accrue unclamped zone minutes",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Scoring/ScoringEngine.swift",
+   "why": ""
+  },
+  {
+   "title": "Midnight-crossing workouts double-count strain on the next day and over-subtract on the start day",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Scoring/ScoringEngine.swift",
+   "why": ""
+  },
+  {
+   "title": "Recovery baselines are last-N-readings, not 14/28 calendar days, so they can be built from arbitrarily old data",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Scoring/ScoringEngine.swift",
+   "why": ""
+  },
+  {
+   "title": "hrvMs == 0 anywhere in the 14-day history poisons zHRV via NaN and floor-scores recovery regardless of the current day's HRV",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Scoring/ScoringEngine.swift",
+   "why": ""
+  },
+  {
+   "title": "4000-sample cap with ascending sort silently drops the tail of very long workouts",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Data/HealthKitSource.swift",
+   "why": ""
+  },
+  {
+   "title": "Read-permission denial is indistinguishable from no-data, so denial shows demo data with a misleading message",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Data/HealthKitSource.swift",
+   "why": ""
+  },
+  {
+   "title": "Sleep night bucketing evaluates sample end-hour in the current device TZ, merging nights recorded while traveling",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Data/HealthKitSource.swift",
+   "why": ""
+  },
+  {
+   "title": "Demo shift: stored day.dateKey (fixture -0700 civil date) and recomputed WorkoutRecord.dateKey (device TZ) diverge for evening workouts",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Data/DemoDataSource.swift",
+   "why": ""
+  },
+  {
+   "title": ".iso8601 decode strategy rejects fractional seconds and try? hides the failure",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Data/DemoDataSource.swift",
+   "why": ""
+  },
+  {
+   "title": "HR chart ForEach keyed by sample timestamp \u2014 duplicate timestamps from multiple HK sources collide",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Views/WorkoutsView.swift",
+   "why": ""
+  },
+  {
+   "title": "Custom instruments have no accessibility representation",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/Pulse/Views/Components.swift",
+   "why": ""
+  },
+  {
+   "title": "Python emits sleep nights with asleepSeconds == 0; Swift live path filters them out",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/tools/export_to_demo.py",
+   "why": ""
+  },
+  {
+   "title": "Daily distance Records treat any non-'mi' unit as meters \u2014 'km' values come out 1000x too small",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/tools/export_to_demo.py",
+   "why": ""
+  },
+  {
+   "title": "Active/basal energy Records summed with no unit check (kJ exports inflate ~4.2x)",
+   "file": "/Users/williamchristie/Documents/Claude/Projects/Pulse/tools/export_to_demo.py",
+   "why": ""
+  }
+ ]
+}

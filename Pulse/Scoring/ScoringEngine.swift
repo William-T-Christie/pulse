@@ -84,9 +84,10 @@ enum ScoringEngine {
     private static func recoveryScore(
         day: DayRecord, history: ArraySlice<DayRecord>, sleep: SleepScore?
     ) -> RecoveryScore? {
-        guard let hrv = day.hrvMs, let rhr = day.restingHR else { return nil }
+        guard let hrv = day.hrvMs, hrv > 0, let rhr = day.restingHR else { return nil }
 
-        let hrvHistory = history.suffix(21).compactMap(\.hrvMs).suffix(14).map { log($0) }
+        let hrvHistory = history.suffix(21).compactMap(\.hrvMs)
+            .filter { $0 > 0 }.suffix(14).map { log($0) }
         let rhrHistory = history.suffix(35).compactMap(\.restingHR).suffix(28)
         guard hrvHistory.count >= 5, rhrHistory.count >= 5 else { return nil }
 
@@ -121,9 +122,14 @@ enum ScoringEngine {
     static let subZoneWeight = 0.1
 
     static func zoneIndex(bpm: Double, maxHR: Double) -> Int? {
-        let pct = bpm / maxHR
-        if pct < 0.5 { return nil }
-        return min(4, Int((pct - 0.5) / 0.1))
+        // Threshold comparisons: products of integral bpm values are exact,
+        // unlike Int((pct - 0.5) / 0.1), which misclassifies exact boundaries.
+        if bpm * 10 >= maxHR * 9 { return 4 }
+        if bpm * 10 >= maxHR * 8 { return 3 }
+        if bpm * 10 >= maxHR * 7 { return 2 }
+        if bpm * 10 >= maxHR * 6 { return 1 }
+        if bpm * 2 >= maxHR { return 0 }
+        return nil
     }
 
     static func workoutStrain(_ workout: WorkoutRecord, config: EngineConfig) -> WorkoutStrain {

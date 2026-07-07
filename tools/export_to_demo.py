@@ -29,6 +29,17 @@ def parse_dt(ts: str) -> datetime:
     return datetime.strptime(ts, "%Y-%m-%d %H:%M:%S %z")
 
 
+def kcal(value: float, unit: str) -> float:
+    if unit == "kJ":
+        return value * 0.2390057
+    return value  # Cal / kcal
+
+
+def meters(value: float, unit: str) -> float:
+    return value * {"mi": 1609.344, "km": 1000.0, "m": 1.0,
+                    "ft": 0.3048, "yd": 0.9144}.get(unit, 1.0)
+
+
 def main(xml_path: str, out_path: str) -> None:
     xml = open(xml_path).read()
 
@@ -49,15 +60,13 @@ def main(xml_path: str, out_path: str) -> None:
         if rtype == "HKQuantityTypeIdentifierHeartRate":
             hr_samples.append((parse_dt(start), float(val)))
         elif rtype == "HKQuantityTypeIdentifierActiveEnergyBurned":
-            sums[key]["activeEnergy"] += float(val)
+            sums[key]["activeEnergy"] += kcal(float(val), a.get("unit", "Cal"))
         elif rtype == "HKQuantityTypeIdentifierBasalEnergyBurned":
-            sums[key]["basalEnergy"] += float(val)
+            sums[key]["basalEnergy"] += kcal(float(val), a.get("unit", "Cal"))
         elif rtype == "HKQuantityTypeIdentifierStepCount":
             sums[key]["steps"] += float(val)
         elif rtype == "HKQuantityTypeIdentifierDistanceWalkingRunning":
-            unit = a.get("unit", "mi")
-            meters = float(val) * (1609.344 if unit == "mi" else 1.0)
-            sums[key]["distanceMeters"] += meters
+            sums[key]["distanceMeters"] += meters(float(val), a.get("unit", "mi"))
         elif rtype == "HKQuantityTypeIdentifierFlightsClimbed":
             sums[key]["flightsClimbed"] += float(val)
         elif rtype == "HKQuantityTypeIdentifierAppleExerciseTime":
@@ -109,7 +118,10 @@ def main(xml_path: str, out_path: str) -> None:
 
     workouts = []
     hr_samples.sort()
-    workout_re = re.compile(r"<Workout ([^>]+?)>")
+    # Match the whole workout element: modern exports carry energy/distance
+    # in <WorkoutStatistics> children rather than attributes.
+    workout_re = re.compile(r"<Workout\b([^>]*?)(?:/>|>(.*?)</Workout>)", re.S)
+    stats_re = re.compile(r"<WorkoutStatistics ([^>]+?)/?>")
     type_names = {
         "HKWorkoutActivityTypeFunctionalStrengthTraining": "Strength Training",
         "HKWorkoutActivityTypeTraditionalStrengthTraining": "Strength Training",
@@ -126,6 +138,7 @@ def main(xml_path: str, out_path: str) -> None:
     }
     for wm in workout_re.finditer(xml):
         a = dict(attr_re.findall(wm.group(1)))
+        body = wm.group(2) or ""
         start, end = a["startDate"], a["endDate"]
         s, e = parse_dt(start), parse_dt(end)
         dur_min = float(a.get("duration", (e - s).total_seconds() / 60))
@@ -136,6 +149,12 @@ def main(xml_path: str, out_path: str) -> None:
             raw_type, re.sub(r"(?<!^)(?=[A-Z])", " ", raw_type.replace("HKWorkoutActivityType", ""))
         )
         wk_hr = [(t, v) for t, v in hr_samples if s <= t <= e]
+        # Thin by stride (not truncation) so long workouts keep their shape.
+        if len(wk_hr) > 240:
+            step = len(wk_hr) / 240.0
+            thinned = [wk_hr[int(i * step)] for i in range(240)]
+        else:
+            thinned = wk_hr
         workout = {
             "id": f"{raw_type}-{iso(start)}",
             "activityType": name,
@@ -143,16 +162,26 @@ def main(xml_path: str, out_path: str) -> None:
             "end": iso(end),
             "durationSeconds": round(dur_min * 60, 1),
             "hrSamples": [
-                {"t": t.isoformat(), "bpm": v} for t, v in wk_hr[:240]
+                {"t": t.isoformat(), "bpm": v} for t, v in thinned
             ],
         }
         if "totalEnergyBurned" in a:
-            workout["activeEnergy"] = float(a["totalEnergyBurned"])
-        if "totalDistance" in a:
-            unit = a.get("totalDistanceUnit", "mi")
-            workout["distanceMeters"] = float(a["totalDistance"]) * (
-                1609.344 if unit == "mi" else 1000.0 if unit == "km" else 1.0
+            workout["activeEnergy"] = kcal(
+                float(a["totalEnergyBurned"]), a.get("totalEnergyBurnedUnit", "Cal")
             )
+        if "totalDistance" in a:
+            workout["distanceMeters"] = meters(
+                float(a["totalDistance"]), a.get("totalDistanceUnit", "mi")
+            )
+        for sm in stats_re.finditer(body):
+            sa = dict(attr_re.findall(sm.group(1)))
+            stype, sval = sa.get("type", ""), sa.get("sum")
+            if not sval:
+                continue
+            if stype == "HKQuantityTypeIdentifierActiveEnergyBurned" and "activeEnergy" not in workout:
+                workout["activeEnergy"] = kcal(float(sval), sa.get("unit", "Cal"))
+            elif stype.startswith("HKQuantityTypeIdentifierDistance") and "distanceMeters" not in workout:
+                workout["distanceMeters"] = meters(float(sval), sa.get("unit", "mi"))
         if wk_hr:
             vals = [v for _, v in wk_hr]
             workout["avgHR"] = round(sum(vals) / len(vals), 1)

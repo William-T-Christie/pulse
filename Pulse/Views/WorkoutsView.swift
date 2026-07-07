@@ -44,6 +44,12 @@ struct WorkoutsView: View {
             .navigationDestination(for: String.self) { id in
                 if let ws = workouts.first(where: { $0.workout.id == id }) {
                     WorkoutDetailView(ws: ws)
+                } else {
+                    Text("This workout is no longer in range.")
+                        .font(.body())
+                        .foregroundStyle(Theme.ink3)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(Theme.canvas)
                 }
             }
             .toolbar(.hidden, for: .navigationBar)

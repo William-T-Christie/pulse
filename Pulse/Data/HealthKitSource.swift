@@ -164,69 +164,97 @@ final class HealthKitSource {
 
     // MARK: - Sleep
 
+    /// Builds one `SleepNight` per morning. Samples are clustered into
+    /// sessions (a gap over 2 h starts a new session); each morning keeps its
+    /// longest session, so naps never merge into — or masquerade as — the
+    /// night. Within a session, one source wins (avoids Watch + iPhone double
+    /// counting), with stage-bearing sources preferred.
     private func sleepNights(start: Date, end: Date) async throws -> [String: SleepNight] {
         let type = HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!
         let results = try await samples(type, start: start, end: end)
+        let all = results.compactMap { $0 as? HKCategorySample }
+            .filter { HKCategoryValueSleepAnalysis(rawValue: $0.value) != nil }
+            .sorted { $0.startDate < $1.startDate }
+        guard !all.isEmpty else { return [:] }
 
-        // Group per night, keeping only the source that recorded the most
-        // asleep time that night (avoids double counting Watch + iPhone).
-        struct Piece {
-            let sample: HKCategorySample
-            let nightKey: String
+        var sessions: [[HKCategorySample]] = []
+        var current: [HKCategorySample] = []
+        var currentEnd = Date.distantPast
+        for s in all {
+            if !current.isEmpty, s.startDate.timeIntervalSince(currentEnd) > 2 * 3600 {
+                sessions.append(current)
+                current = []
+            }
+            current.append(s)
+            currentEnd = max(currentEnd, s.endDate)
         }
+        sessions.append(current)
+
         let calendar = Calendar.current
-        var pieces: [Piece] = []
-        for case let s as HKCategorySample in results {
-            var key = DayKey.key(for: s.endDate)
-            if calendar.component(.hour, from: s.endDate) >= 15 {
-                let next = calendar.date(byAdding: .day, value: 1, to: s.endDate)!
+        var nights: [String: SleepNight] = [:]
+        for session in sessions {
+            guard let night = buildNight(from: session) else { continue }
+            var key = DayKey.key(for: night.end)
+            if calendar.component(.hour, from: night.end) >= 15 {
+                let next = calendar.date(byAdding: .day, value: 1, to: night.end)!
                 key = DayKey.key(for: next)
             }
-            pieces.append(Piece(sample: s, nightKey: key))
-        }
-
-        var nights: [String: SleepNight] = [:]
-        let byNight = Dictionary(grouping: pieces, by: \.nightKey)
-        for (key, nightPieces) in byNight {
-            let bySource = Dictionary(grouping: nightPieces) {
-                $0.sample.sourceRevision.source.bundleIdentifier
+            if let existing = nights[key], existing.asleepSeconds >= night.asleepSeconds {
+                continue    // keep the longest session; shorter ones are naps
             }
-            let best = bySource.values.max { a, b in
-                asleepSeconds(a.map(\.sample)) < asleepSeconds(b.map(\.sample))
-            } ?? nightPieces
-
-            var night = SleepNight(
-                start: best.map(\.sample.startDate).min()!,
-                end: best.map(\.sample.endDate).max()!,
-                asleepSeconds: 0
-            )
-            for piece in best {
-                let s = piece.sample
-                let secs = s.endDate.timeIntervalSince(s.startDate)
-                guard let value = HKCategoryValueSleepAnalysis(rawValue: s.value) else { continue }
-                switch value {
-                case .asleepDeep:
-                    night.deepSeconds = (night.deepSeconds ?? 0) + secs
-                    night.asleepSeconds += secs
-                case .asleepREM:
-                    night.remSeconds = (night.remSeconds ?? 0) + secs
-                    night.asleepSeconds += secs
-                case .asleepCore:
-                    night.coreSeconds = (night.coreSeconds ?? 0) + secs
-                    night.asleepSeconds += secs
-                case .asleepUnspecified:
-                    night.asleepSeconds += secs
-                case .awake:
-                    night.awakeSeconds = (night.awakeSeconds ?? 0) + secs
-                case .inBed:
-                    night.inBedSeconds = (night.inBedSeconds ?? 0) + secs
-                @unknown default:
-                    break
-                }
-            }
-            if night.asleepSeconds > 0 { nights[key] = night }
+            nights[key] = night
         }
         return nights
+    }
+
+    private func buildNight(from session: [HKCategorySample]) -> SleepNight? {
+        let bySource = Dictionary(grouping: session) {
+            $0.sourceRevision.source.bundleIdentifier
+        }
+        // Prefer the source with the most asleep time; break near-ties toward
+        // sources carrying sleep stages (the Watch) over phone estimates.
+        let best = bySource.values.max { a, b in
+            sourceScore(a) < sourceScore(b)
+        } ?? session
+
+        var night = SleepNight(
+            start: best.map(\.startDate).min()!,
+            end: best.map(\.endDate).max()!,
+            asleepSeconds: 0
+        )
+        for s in best {
+            let secs = s.endDate.timeIntervalSince(s.startDate)
+            guard let value = HKCategoryValueSleepAnalysis(rawValue: s.value) else { continue }
+            switch value {
+            case .asleepDeep:
+                night.deepSeconds = (night.deepSeconds ?? 0) + secs
+                night.asleepSeconds += secs
+            case .asleepREM:
+                night.remSeconds = (night.remSeconds ?? 0) + secs
+                night.asleepSeconds += secs
+            case .asleepCore:
+                night.coreSeconds = (night.coreSeconds ?? 0) + secs
+                night.asleepSeconds += secs
+            case .asleepUnspecified:
+                night.asleepSeconds += secs
+            case .awake:
+                night.awakeSeconds = (night.awakeSeconds ?? 0) + secs
+            case .inBed:
+                night.inBedSeconds = (night.inBedSeconds ?? 0) + secs
+            @unknown default:
+                break
+            }
+        }
+        return night.asleepSeconds > 0 ? night : nil
+    }
+
+    private func sourceScore(_ samples: [HKCategorySample]) -> Double {
+        let asleep = asleepSeconds(samples)
+        let hasStages = samples.contains {
+            let v = HKCategoryValueSleepAnalysis(rawValue: $0.value)
+            return v == .asleepDeep || v == .asleepREM
+        }
+        return asleep * (hasStages ? 1.5 : 1.0)
     }
 
     private func asleepSeconds(_ samples: [HKCategorySample]) -> Double {
@@ -243,19 +271,31 @@ final class HealthKitSource {
     private func workouts(start: Date, end: Date) async throws -> [WorkoutRecord] {
         let results = try await samples(HKObjectType.workoutType(), start: start, end: end)
         let hkWorkouts = results.compactMap { $0 as? HKWorkout }
-        // HR samples fetch is one query per workout; run them concurrently.
-        return try await withThrowingTaskGroup(of: WorkoutRecord.self) { group in
-            for w in hkWorkouts {
-                group.addTask { try await self.workoutRecord(w) }
-            }
+        // One HR query per workout: bounded concurrency, and a failed workout
+        // is skipped rather than sinking the whole dataset.
+        return await withTaskGroup(of: WorkoutRecord?.self) { group in
             var out: [WorkoutRecord] = []
-            for try await record in group { out.append(record) }
+            var iterator = hkWorkouts.makeIterator()
+            var inFlight = 0
+            func addNext() {
+                if let w = iterator.next() {
+                    group.addTask { try? await self.workoutRecord(w) }
+                    inFlight += 1
+                }
+            }
+            for _ in 0..<8 { addNext() }
+            while inFlight > 0 {
+                guard let record = await group.next() else { break }
+                inFlight -= 1
+                if let record { out.append(record) }
+                addNext()
+            }
             return out.sorted { $0.start < $1.start }
         }
     }
 
     private func workoutRecord(_ w: HKWorkout) async throws -> WorkoutRecord {
-        let hr = try await workoutHeartRate(w)
+        let (hr, avg, maxBPM) = try await workoutHeartRate(w)
         var record = WorkoutRecord(
             id: w.uuid.uuidString,
             activityType: w.workoutActivityType.displayName,
@@ -270,27 +310,40 @@ final class HealthKitSource {
         if let distance = w.totalDistance {
             record.distanceMeters = distance.doubleValue(for: .meter())
         }
-        if !hr.isEmpty {
-            record.avgHR = hr.map(\.bpm).reduce(0, +) / Double(hr.count)
-            record.maxHR = hr.map(\.bpm).max()
-        }
+        record.avgHR = avg
+        record.maxHR = maxBPM
         return record
     }
 
-    private func workoutHeartRate(_ workout: HKWorkout) async throws -> [HRSample] {
+    private func workoutHeartRate(
+        _ workout: HKWorkout
+    ) async throws -> ([HRSample], avg: Double?, max: Double?) {
         let results = try await samples(
             quantityType(.heartRate), start: workout.startDate, end: workout.endDate, limit: 4000
         )
         let bpmUnit = HKUnit.count().unitDivided(by: .minute())
         var all: [HRSample] = []
+        // Keep only the workout's own source (usually the Watch) so a paired
+        // chest strap or another app doesn't double-count the same minutes.
+        let workoutSource = workout.sourceRevision.source.bundleIdentifier
+        var own: [HRSample] = []
         for case let s as HKQuantitySample in results {
-            all.append(HRSample(t: s.startDate, bpm: s.quantity.doubleValue(for: bpmUnit)))
+            let sample = HRSample(t: s.startDate, bpm: s.quantity.doubleValue(for: bpmUnit))
+            all.append(sample)
+            if s.sourceRevision.source.bundleIdentifier == workoutSource {
+                own.append(sample)
+            }
         }
-        // Thin to a manageable series while preserving shape.
+        let series = own.count >= 3 ? own : all
+        let avg = series.isEmpty ? nil : series.map(\.bpm).reduce(0, +) / Double(series.count)
+        let maxBPM = series.map(\.bpm).max()
+
+        // Thin the stored series (charts/zones) while keeping avg/max exact.
         let maxSamples = 240
-        guard all.count > maxSamples else { return all }
-        let stride = Double(all.count) / Double(maxSamples)
-        return (0..<maxSamples).map { all[Int(Double($0) * stride)] }
+        guard series.count > maxSamples else { return (series, avg, maxBPM) }
+        let stride = Double(series.count) / Double(maxSamples)
+        let thinned = (0..<maxSamples).map { series[Int(Double($0) * stride)] }
+        return (thinned, avg, maxBPM)
     }
 }
 
