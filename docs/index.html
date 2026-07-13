@@ -59,9 +59,10 @@
   @media (max-width: 620px) { nav .hide-sm { display: none; } }
 
   /* Hero */
-  .hero { display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: center; padding: 72px 0 64px; }
-  .hero h1 { font-size: 44px; line-height: 1.05; letter-spacing: -.02em; font-weight: 600; margin: 0 0 18px; }
-  .hero .lede { font-size: 18px; color: var(--ink2); margin: 0 0 26px; max-width: 30em; }
+  .hero { display: grid; grid-template-columns: 1fr 296px; gap: 56px; align-items: center; padding: 96px 0 80px; }
+  .hero .eyebrow { margin-bottom: 18px; }
+  .hero h1 { font-size: 52px; line-height: 1.02; letter-spacing: -.03em; font-weight: 600; margin: 0 0 22px; }
+  .hero .lede { font-size: 17.5px; color: var(--ink2); margin: 0 0 30px; max-width: 26em; }
   .points { list-style: none; margin: 0 0 30px; padding: 0; display: grid; gap: 12px; }
   .points li { display: flex; gap: 11px; align-items: baseline; font-size: 15px; color: var(--ink); }
   .points .dot { width: 5px; height: 5px; border-radius: 50%; flex: none; transform: translateY(-2px); background: rgba(26,23,20,.28); }
@@ -162,13 +163,9 @@
 
   <div class="hero">
     <div>
-      <h1>A personal recovery dashboard for Apple&nbsp;Watch.</h1>
-      <p class="lede">It reads what your Apple Watch already records and works out recovery, strain, and sleep scores on the phone, the way WHOOP does with its own band.</p>
-      <ul class="points">
-        <li><span class="dot"></span> The scores are relative to your own HRV and resting heart rate history, not a general population.</li>
-        <li><span class="dot"></span> Strain is built from time in each heart rate zone, on a 0 to 21 scale.</li>
-        <li><span class="dot"></span> Everything runs on the phone. There is no account and no server.</li>
-      </ul>
+      <div class="eyebrow">Recovery dashboard for Apple Watch</div>
+      <h1>The data was always there.</h1>
+      <p class="lede">My watch tracked my sleep, my heart, and every workout, then buried it in an app I stopped opening. Pulse turns it into three scores I read each morning.</p>
       <div class="cta">
         <a class="btn" href="#screens">See the screens</a>
         <a class="btn secondary" href="__REPO_URL__">View source</a>
@@ -182,24 +179,24 @@
   <section id="measure">
     <div class="section-head">
       <div class="eyebrow">What it measures</div>
-      <h2>The three scores</h2>
-      <p>Each one is worked out from your Health data and measured against your own recent history.</p>
+      <h2>Three scores</h2>
+      <p>Each one measured against your own history, not a population.</p>
     </div>
     <div class="cards">
       <div class="card">
         <h3>Recovery</h3>
         <div class="metric"><span class="big">80</span><span class="unit">%</span></div>
-        <p>Last night's HRV and resting heart rate, set against your 14 and 28 day baselines and combined with how you slept. Higher means more rested.</p>
+        <p>How rested you are, from HRV and resting heart rate against your baseline.</p>
       </div>
       <div class="card">
         <h3>Strain</h3>
         <div class="metric"><span class="big">12.5</span><span class="unit">of 21</span></div>
-        <p>Time spent in each heart rate zone, across workouts and ordinary movement, on a 0 to 21 scale that counts harder efforts for more.</p>
+        <p>How hard the day was, from time in each heart rate zone.</p>
       </div>
       <div class="card">
         <h3>Sleep</h3>
         <div class="metric"><span class="big">8:11</span><span class="unit">hr</span></div>
-        <p>Hours slept against how much you needed that night, which rises after hard days and when you are behind on sleep. The stage breakdown is there too.</p>
+        <p>How much you slept against what the day actually needed.</p>
       </div>
     </div>
   </section>
@@ -208,32 +205,32 @@
     <div class="section-head">
       <div class="eyebrow">The app</div>
       <h2>Four screens</h2>
-      <p>Today, trends, workouts, and settings. Color only appears where a number is a status, like recovery or sleep, so the rest stays in plain ink.</p>
+      <p>Color only where a number means something.</p>
     </div>
     <div class="gallery">
       <div class="shot">
         <div class="frame"><img src="screenshots/recovery-green.png" loading="lazy" alt="A recovered rest day"></div>
-        <div class="cap">A recovered rest day. HRV is above baseline and resting heart rate below it.</div>
+        <div class="cap">A recovered morning.</div>
       </div>
       <div class="shot">
         <div class="frame"><img src="screenshots/trends.png" loading="lazy" alt="Trends screen with week summary and charts"></div>
-        <div class="cap">This week next to last, then recovery, strain, and sleep over time.</div>
+        <div class="cap">The last month.</div>
       </div>
       <div class="shot">
         <div class="frame"><img src="screenshots/workouts.png" loading="lazy" alt="Workouts list with a strain score per session"></div>
-        <div class="cap">Every workout with its strain score. A walk comes out near 1, a hard lift over 12.</div>
+        <div class="cap">Every workout, scored.</div>
       </div>
       <div class="shot">
         <div class="frame"><img src="screenshots/workout-detail.png" loading="lazy" alt="Workout detail with heart rate trace and zones"></div>
-        <div class="cap">A single workout, with its heart rate trace and time in each zone.</div>
+        <div class="cap">Inside one session.</div>
       </div>
       <div class="shot">
         <div class="frame"><img src="screenshots/settings.png" loading="lazy" alt="Settings screen"></div>
-        <div class="cap">Data source, max heart rate, and sleep need.</div>
+        <div class="cap">The dials you set.</div>
       </div>
       <div class="shot">
         <div class="frame"><img src="screenshots/today.png" loading="lazy" alt="Today screen on a training day"></div>
-        <div class="cap">A training day. Recovery has dropped to amber, strain is climbing, sleep stages sit at the bottom.</div>
+        <div class="cap">A hard training day.</div>
       </div>
     </div>
   </section>
@@ -245,9 +242,8 @@
     </div>
     <div class="build">
       <div class="prose">
-        <p>Pulse reads the last 180 days from HealthKit (HRV, resting and workout heart rate, sleep stages, energy, and VO&#8322; max) and scores each day from that.</p>
-        <p>The scoring is plain Swift with no outside libraries. Each score is worked out straight from the numbers, so it is always possible to see why a given day came out the way it did.</p>
-        <p>The design is deliberately quiet. A warm paper background, one typeface, and color only where a number carries a status. I wanted it to feel closer to a measuring instrument than a fitness app.</p>
+        <p>SwiftUI and Swift Charts, reading the last 180 days from HealthKit on the phone. No dependencies, no backend.</p>
+        <p>The scoring is plain Swift, so any day's number traces straight back to the data behind it. The design stays out of the way, closer to a measuring instrument than a fitness app.</p>
       </div>
       <ul class="spec">
         <li><span>Platform</span><span>iOS 17+ · iPhone</span></li>
