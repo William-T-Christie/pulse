@@ -139,6 +139,13 @@
   .prose p:last-child { margin-bottom: 0; }
   @media (max-width: 720px) { .build { grid-template-columns: 1fr; gap: 28px; } }
 
+  .why-lead { font-size: 20px; line-height: 1.5; letter-spacing: -.01em; color: var(--ink); max-width: 32em; margin: 0 0 38px; }
+  .why-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .why-points > div { display: flex; flex-direction: column; gap: 7px; padding-top: 16px; border-top: 1px solid var(--hairline); }
+  .why-points .l { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--ink); }
+  .why-points .d { font-size: 13.5px; color: var(--ink2); line-height: 1.55; }
+  @media (max-width: 720px) { .why-points { grid-template-columns: 1fr; gap: 0; } .why-points > div { padding: 16px 0; } }
+
   .closing { padding: 64px 0; }
   .closing p { font-size: 21px; line-height: 1.5; letter-spacing: -.01em; color: var(--ink); max-width: 30em; margin: 0 0 26px; }
 
@@ -247,6 +254,28 @@
       <div class="shot">
         <div class="frame"><img src="screenshots/today.png" loading="lazy" alt="Today screen on a training day"></div>
         <div class="cap">A hard training day.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="section-head">
+      <div class="eyebrow">Why</div>
+      <h2>It stays on your phone.</h2>
+    </div>
+    <p class="why-lead">Most of these apps want a subscription and a copy of every heartbeat you've ever recorded, then hand back more charts than anyone reads. Pulse keeps the data on the phone, costs nothing, and shows only the numbers that change what I do that day.</p>
+    <div class="why-points">
+      <div>
+        <span class="l">Your data</span>
+        <span class="d">Read from HealthKit on the device. Nothing is sent anywhere, because there is nowhere to send it.</span>
+      </div>
+      <div>
+        <span class="l">Your money</span>
+        <span class="d">Free and open source. No membership, no unlock, nothing to cancel later.</span>
+      </div>
+      <div>
+        <span class="l">Your attention</span>
+        <span class="d">Three scores that change the day, not forty charts you learn to scroll past.</span>
       </div>
     </div>
   </section>
