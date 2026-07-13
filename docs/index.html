@@ -131,6 +131,9 @@
   .prose p:last-child { margin-bottom: 0; }
   @media (max-width: 720px) { .build { grid-template-columns: 1fr; gap: 28px; } }
 
+  .closing { padding: 64px 0; }
+  .closing p { font-size: 21px; line-height: 1.5; letter-spacing: -.01em; color: var(--ink); max-width: 30em; margin: 0 0 26px; }
+
   footer { border-top: 1px solid var(--hairline); padding: 30px 0 50px; }
   .foot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--ink3); }
   footer a { color: var(--ink2); }
@@ -254,6 +257,11 @@
         <li><span>Scoring</span><span>Deterministic</span></li>
       </ul>
     </div>
+  </section>
+
+  <section class="closing">
+    <p>I like a nice dashboard. I just wasn't going to pay a monthly membership for one when my watch already had the data. Pulse is open source, so now you don't have to either.</p>
+    <a class="btn secondary" href="__REPO_URL__">View source</a>
   </section>
 
 </div>
