@@ -59,10 +59,15 @@
   @media (max-width: 620px) { nav .hide-sm { display: none; } }
 
   /* Hero */
-  .hero { display: grid; grid-template-columns: 1fr 296px; gap: 56px; align-items: center; padding: 96px 0 80px; }
+  .hero { display: grid; grid-template-columns: 1fr 322px; gap: 56px; align-items: center; padding: 60px 0 68px; }
   .hero .eyebrow { margin-bottom: 18px; }
   .hero h1 { font-size: 52px; line-height: 1.02; letter-spacing: -.03em; font-weight: 600; margin: 0 0 22px; }
   .hero .lede { font-size: 17.5px; color: var(--ink2); margin: 0 0 30px; max-width: 26em; }
+  .stats { display: flex; gap: 26px; margin-top: 44px; }
+  .stats > div { display: flex; flex-direction: column; gap: 4px; }
+  .stats > div + div { border-left: 1px solid var(--hairline); padding-left: 26px; }
+  .stats .v { font-size: 25px; font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: -.01em; color: var(--ink); }
+  .stats .l { font-size: 10.5px; font-weight: 500; letter-spacing: .07em; text-transform: uppercase; color: var(--ink3); }
   .points { list-style: none; margin: 0 0 30px; padding: 0; display: grid; gap: 12px; }
   .points li { display: flex; gap: 11px; align-items: baseline; font-size: 15px; color: var(--ink); }
   .points .dot { width: 5px; height: 5px; border-radius: 50%; flex: none; transform: translateY(-2px); background: rgba(26,23,20,.28); }
@@ -87,6 +92,9 @@
     .hero { grid-template-columns: 1fr; gap: 36px; padding: 44px 0 48px; }
     .hero h1 { font-size: 36px; }
     .device { max-width: 260px; }
+    .stats { gap: 18px; margin-top: 36px; }
+    .stats > div + div { padding-left: 18px; }
+    .stats .v { font-size: 22px; }
   }
 
   /* Sections */
@@ -172,6 +180,11 @@
       <div class="cta">
         <a class="btn" href="#screens">See the screens</a>
         <a class="btn secondary" href="__REPO_URL__">View source</a>
+      </div>
+      <div class="stats">
+        <div><span class="v">180</span><span class="l">days of history</span></div>
+        <div><span class="v">3</span><span class="l">scores a day</span></div>
+        <div><span class="v">$0</span><span class="l">per month</span></div>
       </div>
     </div>
     <div class="device">
