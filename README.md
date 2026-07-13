@@ -1,57 +1,84 @@
 # Pulse
 
-A personal Whoop-style dashboard for Apple Watch data. Native SwiftUI iPhone
-app; everything computes on-device from HealthKit — no accounts, no backend,
-no cost.
+**A personal recovery dashboard for Apple Watch.** Pulse turns the data your
+Apple Watch already collects into Whoop-style recovery, strain, and sleep
+scores — computed entirely on your iPhone, from your own history. Native
+SwiftUI, iOS 17+, no dependencies, nothing leaves the device.
+
+🔗 **Live overview:** __PAGES_URL__
+
+<p>
+  <img src="docs/screenshots/today.png" width="240" alt="Today — training day">
+  <img src="docs/screenshots/trends.png" width="240" alt="Trends">
+  <img src="docs/screenshots/workout-detail.png" width="240" alt="Workout detail">
+</p>
+
+## What it does
 
 | Screen | What it shows |
 |---|---|
-| **Today** | Recovery dial (0–100%), strain dial (0–21), sleep vs. need, day vitals. Step back through past days with the chevrons. |
-| **Trends** | Recovery, strain, sleep, HRV, resting HR, VO₂ max over 2 weeks – 6 months. |
-| **Workouts** | Every workout with its strain; detail view has the heart-rate trace and time-in-zones. |
+| **Today** | Recovery dial (0–100%), strain dial (0–21), sleep vs. need with stage breakdown, day vitals. Step back through any past day. |
+| **Trends** | This-week-vs-last summary, then recovery, strain, sleep, HRV, resting HR, and VO₂ max over 2 weeks – 6 months. |
+| **Workouts** | Every session with its strain; detail view has the heart-rate trace and time-in-zone bars. |
 | **Settings** | Data source, max HR (strain zones), base sleep need. |
 
-## How scores work
+## How the scores work
 
 - **Recovery** — last night's HRV (ln-scale) and resting HR are z-scored
   against your personal rolling baselines (14-day HRV, 28-day RHR), blended
   with sleep performance (55/25/20). ≥67 green · 34–66 amber · <34 red.
-  Needs ~a week of history before it starts scoring.
 - **Strain** — time in heart-rate zones (Z1–Z5 as % of max HR) across
-  workouts, plus non-workout active energy, accumulated on a logarithmic
+  workouts plus non-workout active energy, accumulated on a logarithmic
   0–21 scale. Rest days land ~3–5, a solid session ~10–13.
-- **Sleep** — hours slept against a personal need: base need + 0.75 h scaled
-  by yesterday's strain + accumulated weekly debt (capped).
+- **Sleep** — hours slept against a personal need: base + a term scaled by
+  yesterday's strain + accumulated weekly debt.
+
+The scoring engine is pure, testable Swift — every value is reproducible from
+its inputs.
+
+## How it's built
+
+- **SwiftUI + Swift Charts**, iOS 17+, iPhone. Zero third-party dependencies.
+- **HealthKit** (read-only) for HRV, heart rate, sleep stages, energy, VO₂ max.
+- **On-device**: no account, no backend, no network. A bundled 180-day demo
+  dataset stands in when HealthKit is unavailable (e.g. the simulator).
+- **Design**: a deliberate "warm studio" system — paper canvas, one typeface
+  with weight reserved for data values, status color used only where a metric
+  genuinely carries a status.
 
 ## Install on your iPhone
 
 1. Open `Pulse.xcodeproj` in Xcode.
 2. Target **Pulse → Signing & Capabilities**: check *Automatically manage
-   signing* and select your personal team (free Apple ID works — add it in
-   Xcode → Settings → Accounts if it's not there).
+   signing* and pick your personal team (a free Apple ID works — add it in
+   Xcode → Settings → Accounts).
 3. If the bundle id collides, change `com.wchristie.pulse` to anything unique.
-4. Plug in your iPhone (enable Developer Mode: Settings → Privacy & Security
-   → Developer Mode), select it as the run destination, press **Run**.
+4. Enable Developer Mode on the iPhone (Settings → Privacy & Security →
+   Developer Mode), select it as the run destination, press **Run**.
 5. First launch: trust the developer profile if prompted (Settings → General
-   → VPN & Device Management), then grant the Health permissions sheet —
-   **Turn On All** is what you want.
+   → VPN & Device Management), then grant the Health permissions sheet
+   (**Turn On All**). Pulse is read-only — it can't modify your Health data.
 
-Free-team builds expire after 7 days; just press Run again to refresh.
-With a paid developer account they last a year.
+Free-team builds expire after 7 days; press Run again to refresh.
 
-## Data sources
+## Known limitations
 
-On the phone, Pulse reads HealthKit directly (last 180 days) — pull to
-refresh on Today. In the simulator, or before Health access is granted, it
-falls back to the bundled demo dataset (`Pulse/Resources/DemoData.json`),
-date-shifted so the last day is always "today".
+From an adversarial multi-agent code review (findings in
+`docs/review-2026-07-06.json`); accepted as-is for a personal app:
 
-To rebuild the demo dataset from a real Apple Health export
-(Health app → profile photo → Export All Health Data):
+- Recovery baselines use the last N *recorded* days, not calendar days.
+- Sleep bucketing uses the device's current time zone (heavy travel can misfile a night).
+- HealthKit can't distinguish permission-denied from no-data.
+- Workouts crossing midnight count on their start day.
+- Custom dials/charts have no VoiceOver labels yet.
 
-```sh
-python3 tools/export_to_demo.py path/to/export.xml Pulse/Resources/DemoData.json
-```
+## Roadmap
+
+- **Phase 2 — planner & exercise tracking**: a workout planner (plan days,
+  exercises, sets/reps/RIR), session logging, and plan-adherence shown
+  alongside recovery and strain.
+- Later: a watchOS complication with today's recovery; respiratory rate and
+  wrist temperature into the recovery model.
 
 ## Development
 
@@ -63,33 +90,10 @@ xcodebuild -project Pulse.xcodeproj -scheme Pulse \
 xcrun simctl install Pulse-iPhone build/Build/Products/Debug-iphonesimulator/Pulse.app
 xcrun simctl launch Pulse-iPhone com.wchristie.pulse
 
-# Launch args for screenshots/dev: -tab 0..3, -showLatestWorkout
-# Scoring sanity harness (see tools/score_check.swift header)
-
-# Regenerate app icon
-swift tools/render_icon.swift Pulse/Assets.xcassets/AppIcon.appiconset/icon-1024.png
+# Regenerate the demo dataset from an Apple Health export
+python3 tools/export_to_demo.py path/to/export.xml Pulse/Resources/DemoData.json
 ```
 
-## Known limitations
+---
 
-From an adversarial multi-agent review (2026-07-06, full findings in
-`docs/review-2026-07-06.json`); judged not worth fixing for a personal app,
-in rough priority order if they ever start to matter:
-
-- Recovery baselines use the last N *recorded* days, not calendar days — if
-  you stop wearing the watch for weeks, the baseline blends stale readings.
-- Sleep bucketing evaluates clock hours in the device's current time zone;
-  heavy travel across zones can misfile a night.
-- Read-permission denial is indistinguishable from "no data" (HealthKit hides
-  it), so denial shows demo data with a generic note.
-- Workouts crossing midnight are counted entirely on their start day.
-- HR series per workout capped at 4,000 samples (~5.5 h at watch cadence).
-- Custom dials/charts have no VoiceOver labels.
-
-## Roadmap
-
-- **Phase 2 — planner & exercise tracking**: bring over the N=1 workout
-  planner (plan days, exercises, sets/reps/RIR), log sessions, and show plan
-  adherence alongside recovery/strain so the week explains itself.
-- Candidates after that: watchOS complication with today's recovery,
-  respiratory rate + wrist temperature into recovery, journal factors.
+<sub>Built by William Christie. Personal project — not affiliated with WHOOP or Apple.</sub>
