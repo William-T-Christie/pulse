@@ -1,9 +1,8 @@
 # Pulse
 
-**A personal recovery dashboard for Apple Watch.** Pulse turns the data your
-Apple Watch already collects into Whoop style recovery, strain, and sleep
-scores, computed entirely on your iPhone from your own history. Native
-SwiftUI, iOS 17+, no dependencies, nothing leaves the device.
+Pulse reads what your Apple Watch already records and works out recovery,
+strain, and sleep scores on your iPhone, the way WHOOP does with its own band.
+Native SwiftUI, iOS 17+, no dependencies, and nothing leaves the device.
 
 🔗 **Live overview:** __PAGES_URL__
 
@@ -34,8 +33,8 @@ SwiftUI, iOS 17+, no dependencies, nothing leaves the device.
 - **Sleep** measures hours slept against a personal need: a base plus a term
   scaled by yesterday's strain plus any sleep debt built up over the week.
 
-The scoring engine is pure, testable Swift; every value is reproducible from
-its inputs.
+The scoring is plain Swift, and each score can be traced back to the numbers
+it came from.
 
 ## How it's built
 
@@ -43,9 +42,8 @@ its inputs.
 - **HealthKit** (read only) for HRV, heart rate, sleep stages, energy, VO₂ max.
 - **On the device**: no account, no backend, no network. A bundled 180 day demo
   dataset stands in when HealthKit is unavailable (for example, the simulator).
-- **Design**: a deliberate warm studio system. A paper canvas, one typeface
-  with weight reserved for data values, and status color used only where a
-  metric genuinely carries a status.
+- **Design**: deliberately quiet. A warm paper background, one typeface, and
+  color only where a number is a status.
 
 ## Install on your iPhone
 
