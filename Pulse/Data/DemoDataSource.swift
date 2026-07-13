@@ -1,7 +1,7 @@
 import Foundation
 
 /// Loads the bundled dataset (generated from an Apple Health export) and
-/// shifts it forward so its final day lands on today — the dashboard reads
+/// shifts it forward so its final day lands on today, so the dashboard reads
 /// as live while running without HealthKit data (e.g. in the simulator).
 enum DemoDataSource {
 

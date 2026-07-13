@@ -25,7 +25,7 @@ struct SettingsView: View {
                         HairlineDivider()
                         sourceRow(
                             "Demo data",
-                            note: "Bundled 180-day sample dataset",
+                            note: "Bundled 180 day sample dataset",
                             selected: model.preferDemo
                         ) { model.preferDemo = true }
                         if let note = model.statusNote {
@@ -62,7 +62,7 @@ struct SettingsView: View {
                 Panel {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("About").eyebrow()
-                        Text("Pulse computes recovery, strain, and sleep scores from your Apple Watch data, entirely on this device. Recovery weighs HRV and resting heart rate against your rolling baselines; strain accumulates time in heart-rate zones on a 0–21 scale; sleep is measured against a need that grows with strain and debt.")
+                        Text("Pulse computes recovery, strain, and sleep scores from your Apple Watch data, entirely on this device. Recovery weighs HRV and resting heart rate against your rolling baselines; strain accumulates time in heart rate zones on a 0 to 21 scale; sleep is measured against a need that grows with strain and debt.")
                             .font(.body(13))
                             .foregroundStyle(Theme.ink2)
                             .lineSpacing(3)

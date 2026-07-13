@@ -39,7 +39,7 @@ struct TodayView: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text(model.sourceKind == .demo ? "Pulse · Demo data" : "Pulse")
                     .eyebrow()
-                Text(model.selectedCard.map { Fmt.dayTitle($0.date) } ?? "—")
+                Text(model.selectedCard.map { Fmt.dayTitle($0.date) } ?? "No data")
                     .font(.system(size: 21, weight: .medium))
                     .foregroundStyle(Theme.ink)
             }
@@ -238,7 +238,7 @@ struct SleepPanel: View {
                                 .foregroundStyle(Theme.ink3)
                         }
                         if let night = card.day.sleep {
-                            Text("\(Fmt.clock(night.start)) – \(Fmt.clock(night.end))")
+                            Text("\(Fmt.clock(night.start)) to \(Fmt.clock(night.end))")
                                 .font(.label(11))
                                 .foregroundStyle(Theme.ink3)
                         }

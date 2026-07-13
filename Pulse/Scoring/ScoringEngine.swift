@@ -17,14 +17,14 @@ struct EngineConfig {
 
 /// Whoop-style scoring over a `HealthDataset`.
 ///
-/// Recovery — how ready the body is, from last night's autonomic signals
+/// Recovery: how ready the body is, from last night's autonomic signals
 /// measured against personal rolling baselines (ln-HRV over 14 days,
 /// resting HR over 28 days) plus sleep performance.
 ///
-/// Strain — cardiovascular load on a logarithmic 0–21 scale, accumulated
+/// Strain: cardiovascular load on a logarithmic 0 to 21 scale, accumulated
 /// from time in heart-rate zones during workouts plus non-workout activity.
 ///
-/// Sleep — hours slept against a personal need that grows with prior-day
+/// Sleep: hours slept against a personal need that grows with prior-day
 /// strain and accumulated sleep debt.
 enum ScoringEngine {
 
@@ -117,7 +117,7 @@ enum ScoringEngine {
 
     // MARK: - Strain
 
-    /// Per-minute load weights for HR zones Z1–Z5 (50–60% … 90–100% of max HR).
+    /// Per-minute load weights for HR zones Z1 to Z5, spanning 50% to 100% of max HR.
     static let zoneWeights: [Double] = [0.4, 0.85, 1.5, 2.5, 3.5]
     static let subZoneWeight = 0.1
 

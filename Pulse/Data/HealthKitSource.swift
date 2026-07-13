@@ -137,7 +137,7 @@ final class HealthKitSource {
         return out
     }
 
-    /// Daily HRV, preferring overnight/morning readings (midnight–noon) the
+    /// Daily HRV, preferring overnight/morning readings (midnight to noon) the
     /// way recovery products do; falls back to the day's mean.
     private func morningHRV(start: Date, end: Date) async throws -> [String: Double] {
         let results = try await samples(
@@ -166,7 +166,7 @@ final class HealthKitSource {
 
     /// Builds one `SleepNight` per morning. Samples are clustered into
     /// sessions (a gap over 2 h starts a new session); each morning keeps its
-    /// longest session, so naps never merge into — or masquerade as — the
+    /// longest session, so naps never merge into, or masquerade as, the
     /// night. Within a session, one source wins (avoids Watch + iPhone double
     /// counting), with stage-bearing sources preferred.
     private func sleepNights(start: Date, end: Date) async throws -> [String: SleepNight] {

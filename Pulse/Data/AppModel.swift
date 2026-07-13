@@ -64,17 +64,17 @@ final class AppModel {
                     recompute()
                     return
                 }
-                statusNote = "No usable Health data — check Settings › Privacy › Health › Pulse if you expected it. Showing demo data."
+                statusNote = "No usable Health data. Check Settings › Privacy › Health › Pulse if you expected it. Showing demo data."
             } catch {
                 // A failed refresh must not replace good live data with demo.
                 if sourceKind == .healthKit, dataset != nil {
-                    statusNote = "Refresh failed — showing previously loaded data."
+                    statusNote = "Refresh failed. Showing previously loaded data."
                     return
                 }
-                statusNote = "Health access unavailable — showing demo data."
+                statusNote = "Health access unavailable. Showing demo data."
             }
         } else if !preferDemo {
-            statusNote = "Health data unavailable here — showing demo data."
+            statusNote = "Health data unavailable here. Showing demo data."
         }
 
         dataset = DemoDataSource.load()

@@ -168,7 +168,7 @@ struct WorkoutDetailView: View {
 
     private var headerDetail: String {
         let day = ws.workout.start.formatted(.dateTime.weekday(.wide).month(.wide).day())
-        return "\(day) · \(Fmt.clock(ws.workout.start)) – \(Fmt.clock(ws.workout.end))"
+        return "\(day) · \(Fmt.clock(ws.workout.start)) to \(Fmt.clock(ws.workout.end))"
     }
 
     private var heartRatePanel: some View {
@@ -245,6 +245,6 @@ struct WorkoutDetailView: View {
 
     private var zoneLegend: String {
         let m = Int(model.config.maxHR)
-        return "Zones from max HR \(m) · Z1 \(m / 2)–\(Int(0.6 * Double(m))) · Z5 \(Int(0.9 * Double(m)))+"
+        return "Zones from max HR \(m) · Z1 \(m / 2) to \(Int(0.6 * Double(m))) · Z5 \(Int(0.9 * Double(m)))+"
     }
 }

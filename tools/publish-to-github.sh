@@ -15,7 +15,7 @@ set -euo pipefail
 REPO_NAME="pulse"
 cd "$(cd "$(dirname "$0")/.." && pwd)"   # repo root
 
-# --- Identify the active GitHub account ------------------------------------
+# Identify the active GitHub account
 if ! command -v gh >/dev/null 2>&1; then
   echo "✗ GitHub CLI (gh) not found. Install it, then: gh auth login"; exit 1
 fi
@@ -32,7 +32,7 @@ if [ -n "$EXPECT" ] && [ "$EXPECT" != "$USER" ]; then
 fi
 
 if [ "$USER" = "William-Christie" ]; then
-  echo "⚠  Active GitHub account is 'William-Christie' — that's your Altera-linked one."
+  echo "⚠  Active GitHub account is 'William-Christie', which is your Altera linked one."
   echo "   For a personal portfolio repo you probably want a different account."
   echo "   Switch with:  gh auth switch     (or re-run: gh auth login)"
   read -r -p "   Publish under '$USER' anyway? [y/N] " a; [ "$a" = "y" ] || exit 1
@@ -48,9 +48,9 @@ echo "  Pages   : $PAGES_URL"
 echo "  Commits : $(git config user.name) <$(git config user.email)>"
 echo
 read -r -p "Create this PUBLIC repo and push? [y/N] " ans
-[ "$ans" = "y" ] || { echo "Aborted — nothing was pushed."; exit 0; }
+[ "$ans" = "y" ] || { echo "Aborted. Nothing was pushed."; exit 0; }
 
-# --- Fill in the real URLs (placeholders -> live links) ---------------------
+# Fill in the real URLs (placeholders become live links)
 sed -i '' "s|__REPO_URL__|$REPO_URL|g;  s|__PAGES_URL__|$PAGES_URL|g" docs/index.html README.md
 if ! git diff --quiet; then
   git add docs/index.html README.md
@@ -58,18 +58,18 @@ if ! git diff --quiet; then
   echo "✓ URLs written into README and landing page"
 fi
 
-# --- Create (or reuse) the repo and push ------------------------------------
+# Create (or reuse) the repo and push
 if gh repo view "$USER/$REPO_NAME" >/dev/null 2>&1; then
-  echo "• Repo already exists — pushing to it."
+  echo "• Repo already exists, pushing to it."
   git remote get-url origin >/dev/null 2>&1 || git remote add origin "$REPO_URL.git"
   git push -u origin main
 else
   gh repo create "$USER/$REPO_NAME" --public --source=. --remote=origin --push \
-    --description "A personal recovery dashboard for Apple Watch — on-device recovery, strain & sleep scores."
+    --description "A personal recovery dashboard for Apple Watch. On device recovery, strain and sleep scores."
 fi
 echo "✓ Pushed to $REPO_URL"
 
-# --- Turn on GitHub Pages from /docs ----------------------------------------
+# Turn on GitHub Pages from /docs
 if gh api -X POST "repos/$USER/$REPO_NAME/pages" \
      -f "source[branch]=main" -f "source[path]=/docs" >/dev/null 2>&1; then
   echo "✓ GitHub Pages enabled (main branch, /docs folder)"

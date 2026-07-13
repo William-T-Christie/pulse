@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// "Warm Studio, instrument-grade" palette. Color carries status only —
+/// "Warm Studio, instrument-grade" palette. Color carries status only;
 /// neutral metrics stay ink.
 enum Theme {
     static let canvas = Color(hex: 0xF4EFE6)

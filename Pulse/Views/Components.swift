@@ -82,7 +82,7 @@ struct MetricCell: View {
 /// unless the metric is a status, in which case it carries the muted
 /// status color.
 struct InstrumentDial: View {
-    let progress: Double          // 0–1
+    let progress: Double          // 0 to 1
     let value: String
     var unit: String?
     var caption: String?
