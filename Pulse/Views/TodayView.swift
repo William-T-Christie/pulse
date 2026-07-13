@@ -219,11 +219,17 @@ struct SleepPanel: View {
                 Text("Sleep").eyebrow()
                 if let s = card.sleep {
                     HStack(alignment: .firstTextBaseline) {
-                        ValueText(value: Fmt.hours(s.asleepHours), unit: "hr", size: 28)
+                        HStack(alignment: .firstTextBaseline, spacing: 7) {
+                            Text(Fmt.hoursMinutes(s.asleepHours))
+                                .font(.value(28))
+                                .foregroundStyle(Theme.ink)
+                            Text("asleep").eyebrow()
+                        }
                         Spacer()
                         HStack(spacing: 6) {
                             StatusDot(zone: s.performance.rounded() >= 85 ? .green : s.performance.rounded() >= 70 ? .amber : .red)
-                            ValueText(value: Fmt.num(s.performance), unit: "%", size: 15)
+                            ValueText(value: Fmt.num(s.performance), unit: "%", size: 16)
+                            Text("score").eyebrow()
                         }
                     }
                     TargetBar(value: s.asleepHours, target: s.neededHours, maxValue: 10)

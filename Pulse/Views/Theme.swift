@@ -79,6 +79,12 @@ enum Fmt {
         return "\(total / 60):" + String(format: "%02d", total % 60)
     }
 
+    /// Duration as "8h 11m" — unambiguous, unlike the clock-style "8:11".
+    static func hoursMinutes(_ hours: Double) -> String {
+        let total = Int((hours * 60).rounded())
+        return "\(total / 60)h \(total % 60)m"
+    }
+
     static func clock(_ date: Date) -> String {
         date.formatted(date: .omitted, time: .shortened)
     }
