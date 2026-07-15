@@ -48,6 +48,8 @@ The scoring is plain Swift, and every score can be traced back to the numbers it
 
 ## Install on your iPhone
 
+Pulse isn't on the App Store, so you run it from source in Xcode (you'll need a Mac and an iPhone). Just want to see it? The [live overview](https://william-t-christie.github.io/pulse/) and the screenshots above cover it.
+
 1. Open `Pulse.xcodeproj` in Xcode.
 2. Under **Pulse → Signing & Capabilities**, check *Automatically manage signing* and pick your personal team (a free Apple ID works; add it in Xcode → Settings → Accounts).
 3. If the bundle id collides, change `com.wchristie.pulse` to anything unique.
