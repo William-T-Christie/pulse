@@ -4,7 +4,7 @@ Pulse reads what your Apple Watch already records and works out recovery,
 strain, and sleep scores on your iPhone, the way WHOOP does with its own band.
 Native SwiftUI, iOS 17+, no dependencies, and nothing leaves the device.
 
-🔗 **Live overview:** __PAGES_URL__
+🔗 **Live overview:** https://William-T-Christie.github.io/pulse/
 
 <p>
   <img src="docs/screenshots/today.png" width="240" alt="Today, training day">
