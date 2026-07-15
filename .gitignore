@@ -4,3 +4,5 @@ build-device/
 xcuserdata/
 *.xcuserstate
 DerivedData/
+CLAUDE.md
+.claude/

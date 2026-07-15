@@ -44,7 +44,7 @@ The scoring is plain Swift, and every score can be traced back to the numbers it
 
 - **Recovery only means something relative to you.** Absolute HRV varies a lot from person to person, so a raw number on its own is useless. The real work was standardizing each night's HRV and resting HR as z-scores against your own rolling baselines. That's what turns a raw reading into "you're recovered" or "take it easy today."
 - **Designing a score is a judgment call, not just math.** Picking the 55/25/20 blend, the log scale for strain, and where the green/amber/red cutoffs sit meant checking the outputs against real days until they matched how I actually felt. Because every score traces back to its inputs, I could debug the judgment and not just the code.
-- **I ran an adversarial code review on my own project.** The findings are in [`docs/review-2026-07-06.json`](docs/review-2026-07-06.json), and I left them in the Known limitations section below instead of quietly dropping them. Knowing exactly where something falls short is more useful than pretending it doesn't.
+- **I ran an adversarial code review on my own project.** I left the findings in the Known limitations section below instead of quietly dropping them. Knowing exactly where something falls short is more useful than pretending it doesn't.
 
 ## Install on your iPhone
 
@@ -60,7 +60,7 @@ Free team builds expire after seven days; press Run again to refresh.
 
 ## Known limitations
 
-These came out of the adversarial code review (findings in `docs/review-2026-07-06.json`). I left them as they are for a personal app:
+These came out of the adversarial code review I ran on the app. I left them as they are for a personal app:
 
 - Recovery baselines use the last N *recorded* days, not calendar days.
 - Sleep bucketing uses the device's current time zone, so heavy travel can misfile a night.
